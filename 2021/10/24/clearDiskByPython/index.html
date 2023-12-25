@@ -192,7 +192,7 @@
 <span id="more"></span> 
 <p><strong>举例说明：</strong> 把<code>C:\Users\chenzhigao\Music</code>目录下的mp3文件移到我的移动硬盘<code>I:\myDisk\music</code>下。</p>
 <h2 id="1、目标"><a href="#1、目标" class="headerlink" title="1、目标"></a>1、目标</h2><p>通过使用命令<code>python moveFile.py C:\Users\chenzhigao\Music mp3 I:\myDisk\music</code>，完成文件的批量移动。</p>
-<h2 id="2、新建文件moveFile-py，编程实现"><a href="#2、新建文件moveFile-py，编程实现" class="headerlink" title="2、新建文件moveFile.py，编程实现"></a>2、新建文件moveFile.py，编程实现</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> os <span class="keyword">import</span> sys, path, listdir</span><br><span class="line"><span class="keyword">import</span> shutil</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">search</span>(<span class="params">root, fileType</span>):</span><br><span class="line">    <span class="string">&#x27;&#x27;&#x27;定义搜索文件函数，root为搜索的根目录，fileType为目标文件类型&#x27;&#x27;&#x27;</span></span><br><span class="line">    <span class="comment"># 定义一个列表，存储搜索到文件的路径</span></span><br><span class="line">    fileList = []</span><br><span class="line">    <span class="comment"># 取出搜索根目录下的文件和文件夹存放到items中</span></span><br><span class="line">    items = listdir(root)</span><br><span class="line">    <span class="built_in">print</span>(items)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 遍历items，如果是目录，继续向下搜索，如果是文件则判断文件类型是否匹配</span></span><br><span class="line">    <span class="keyword">for</span> item <span class="keyword">in</span> items:</span><br><span class="line">        filepath = path.join(root, item)</span><br><span class="line">        <span class="keyword">if</span> path.isdir(filepath):</span><br><span class="line">            search(filepath, fileType)</span><br><span class="line">        <span class="keyword">elif</span> path.isfile(filepath):</span><br><span class="line">            <span class="keyword">if</span> filepath.split(<span class="string">&#x27;.&#x27;</span>)[-<span class="number">1</span>] == fileType:</span><br><span class="line">                fileList.append(filepath)</span><br><span class="line">    <span class="keyword">return</span> fileList</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">moveFileToDest</span>(<span class="params">files, dest</span>):</span><br><span class="line">    <span class="string">&#x27;&#x27;&#x27; 定义搜索文件函数，files为文件路径列表，dest为目的目录路径 &#x27;&#x27;&#x27;</span></span><br><span class="line">    <span class="keyword">for</span> file <span class="keyword">in</span> files:</span><br><span class="line">        shutil.move(file, dest)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">main</span>(<span class="params">argv</span>):</span><br><span class="line">    path = argv[<span class="number">1</span>]</span><br><span class="line">    fileType = argv[<span class="number">2</span>]</span><br><span class="line">    dest = argv[<span class="number">3</span>]</span><br><span class="line">    files = search(path, fileType)</span><br><span class="line">    moveFileToDest(files, dest)</span><br><span class="line">    <span class="built_in">print</span>(files)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    main(sys.argv)</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="2、新建文件moveFile-py，编程实现"><a href="#2、新建文件moveFile-py，编程实现" class="headerlink" title="2、新建文件moveFile.py，编程实现"></a>2、新建文件moveFile.py，编程实现</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> os <span class="keyword">import</span> sys, path, listdir</span><br><span class="line"><span class="keyword">import</span> shutil</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">search</span>(<span class="params">root, fileType</span>):</span><br><span class="line">    <span class="string">&#x27;&#x27;&#x27;定义搜索文件函数，root为搜索的根目录，fileType为目标文件类型&#x27;&#x27;&#x27;</span></span><br><span class="line">    <span class="comment"># 定义一个列表，存储搜索到文件的路径</span></span><br><span class="line">    fileList = []</span><br><span class="line">    <span class="comment"># 取出搜索根目录下的文件和文件夹存放到items中</span></span><br><span class="line">    items = listdir(root)</span><br><span class="line">    <span class="built_in">print</span>(items)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 遍历items，如果是目录，继续向下搜索，如果是文件则判断文件类型是否匹配</span></span><br><span class="line">    <span class="keyword">for</span> item <span class="keyword">in</span> items:</span><br><span class="line">        filepath = path.join(root, item)</span><br><span class="line">        <span class="keyword">if</span> path.isdir(filepath):</span><br><span class="line">            search(filepath, fileType)</span><br><span class="line">        <span class="keyword">elif</span> path.isfile(filepath):</span><br><span class="line">            <span class="keyword">if</span> filepath.split(<span class="string">&#x27;.&#x27;</span>)[-<span class="number">1</span>] == fileType:</span><br><span class="line">                fileList.append(filepath)</span><br><span class="line">    <span class="keyword">return</span> fileList</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">moveFileToDest</span>(<span class="params">files, dest</span>):</span><br><span class="line">    <span class="string">&#x27;&#x27;&#x27; 定义搜索文件函数，files为文件路径列表，dest为目的目录路径 &#x27;&#x27;&#x27;</span></span><br><span class="line">    <span class="keyword">for</span> file <span class="keyword">in</span> files:</span><br><span class="line">        shutil.move(file, dest)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">main</span>(<span class="params">argv</span>):</span><br><span class="line">    path = argv[<span class="number">1</span>]</span><br><span class="line">    fileType = argv[<span class="number">2</span>]</span><br><span class="line">    dest = argv[<span class="number">3</span>]</span><br><span class="line">    files = search(path, fileType)</span><br><span class="line">    moveFileToDest(files, dest)</span><br><span class="line">    <span class="built_in">print</span>(files)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    main(sys.argv)</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <h2 id="3、命令行输入命令，测试结果如下"><a href="#3、命令行输入命令，测试结果如下" class="headerlink" title="3、命令行输入命令，测试结果如下"></a>3、命令行输入命令，测试结果如下</h2><p><img src="/assets/10/moveFileResult.jpg" alt="avatar"></p>
 <h2 id="4、积累"><a href="#4、积累" class="headerlink" title="4、积累"></a>4、积累</h2><h3 id="相对路径与绝对路径"><a href="#相对路径与绝对路径" class="headerlink" title="相对路径与绝对路径"></a>相对路径与绝对路径</h3><p>绝对路径：从根目录出发的路径；<br>相对路径：从用户当前目录出发。</p>
 <h2 id="python文件目录管理"><a href="#python文件目录管理" class="headerlink" title="python文件目录管理"></a>python文件目录管理</h2><p>1、获取当前工作目录：<code>os.getcwd()</code><br>2、改变当前工作目录:<code>os.chdir()</code><br>3、创建目录:<code>os.mkdir()</code><br>4、删除目录:<code>os.rmdir()</code><br>5、显示当前目录下文件和目录列表：<code>os.listdir()</code><br>6、删除文件：<code>os.remove()</code><br>7、删除多个目录：<code>os.removedirs(r&quot;directory&quot;)</code><br>8、检验路径是否是一个文件：<code>os.path.isfile()</code><br>9、检验路径是否是一个目录：<code>os.path.isdir()</code><br>10、移动文件：<code>shutil.move(&#39;olddir&#39;,&#39;newdir&#39;)</code><br>后续更新中—</p>
@@ -487,6 +487,54 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">C4认证</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Linux基础</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">学习记录</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">版本管理</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">磁盘文件整理</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Python学习记录</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">高阶</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Python装饰器</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Python自动化办公</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Python处理Excel</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">实例</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Java学习</a>
               </li>
              
@@ -499,95 +547,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Python爬虫基础</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Python学习</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Python爬虫中级</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Python爬虫高级</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">SQL语句</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">数据库</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Linux学习</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Linux基础</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Linux磁盘管理</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Linux文件目录</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Linux进程管理</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Shell基础</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Linux之Shell函数</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Linux用户权限</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Python编程规范</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Python数据库学习</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">调试，DEBUG</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Python装饰器</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Python文件操作</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Python学习笔记</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Python图形用户界面</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Python单元测试</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">数据库学习目录</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -595,7 +555,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Python自动化办公</a>
+                <a href="javascript:void(0)" class="js-tag color4">Python学习</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -631,10 +591,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Python学习记录</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Python编程基础</a>
               </li>
              
@@ -643,43 +599,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">C4认证</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">磁盘文件整理</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Git</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">版本管理</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">学习记录</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">高阶</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Python处理Excel</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">实例</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">算法</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Flask框架</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -688,6 +608,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">树</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Flask框架</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -716,6 +640,82 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">基础</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Python爬虫基础</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Python爬虫中级</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Python爬虫高级</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Linux磁盘管理</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">SQL语句</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">数据库</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Linux文件目录</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Linux进程管理</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Shell基础</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Linux之Shell函数</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Python编程规范</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Linux用户权限</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">调试，DEBUG</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Python数据库学习</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Python图形用户界面</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Python文件操作</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Python学习笔记</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Python单元测试</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">数据库学习目录</a>
               </li>
              
               <li class="article-tag-list-item">

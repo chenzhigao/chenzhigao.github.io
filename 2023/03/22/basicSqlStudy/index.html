@@ -214,7 +214,7 @@
 <li>CREATE INDEX         创建索引</li>
 <li>DROP INDEX            删除索引</li>
 </ul>
-<h2 id="三、常用SQL语句"><a href="#三、常用SQL语句" class="headerlink" title="三、常用SQL语句"></a>三、常用SQL语句</h2><h3 id="1、CREATE语句"><a href="#1、CREATE语句" class="headerlink" title="1、CREATE语句"></a>1、CREATE语句</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> <span class="operator">&lt;</span>表名<span class="operator">&gt;</span> (</span><br><span class="line">    <span class="operator">&lt;</span>列名<span class="operator">&gt;</span> <span class="operator">&lt;</span>数据类型<span class="operator">&gt;</span> [列的完整性约束],</span><br><span class="line">    <span class="operator">&lt;</span>列名<span class="operator">&gt;</span> <span class="operator">&lt;</span>数据类型<span class="operator">&gt;</span> [列的完整性约束],</span><br><span class="line">    <span class="operator">&lt;</span>列名<span class="operator">&gt;</span> <span class="operator">&lt;</span>数据类型<span class="operator">&gt;</span> [列的完整性约束],</span><br><span class="line">...</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<h2 id="三、常用SQL语句"><a href="#三、常用SQL语句" class="headerlink" title="三、常用SQL语句"></a>三、常用SQL语句</h2><h3 id="1、CREATE语句"><a href="#1、CREATE语句" class="headerlink" title="1、CREATE语句"></a>1、CREATE语句</h3><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> <span class="operator">&lt;</span>表名<span class="operator">&gt;</span> (</span><br><span class="line">    <span class="operator">&lt;</span>列名<span class="operator">&gt;</span> <span class="operator">&lt;</span>数据类型<span class="operator">&gt;</span> [列的完整性约束],</span><br><span class="line">    <span class="operator">&lt;</span>列名<span class="operator">&gt;</span> <span class="operator">&lt;</span>数据类型<span class="operator">&gt;</span> [列的完整性约束],</span><br><span class="line">    <span class="operator">&lt;</span>列名<span class="operator">&gt;</span> <span class="operator">&lt;</span>数据类型<span class="operator">&gt;</span> [列的完整性约束],</span><br><span class="line">...</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
 <p>完整性约束</p>
 <table>
 <thead>
@@ -249,18 +249,18 @@
 </tr>
 </tbody></table>
 <h3 id="2、ALTER、DROP语句"><a href="#2、ALTER、DROP语句" class="headerlink" title="2、ALTER、DROP语句"></a>2、ALTER、DROP语句</h3><h3 id="（1）更改表中字段"><a href="#（1）更改表中字段" class="headerlink" title="（1）更改表中字段"></a>（1）更改表中字段</h3><p>增加列:</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> <span class="operator">&lt;</span>表名<span class="operator">&gt;</span> <span class="keyword">add</span> <span class="operator">&lt;</span>列名<span class="operator">&gt;</span> <span class="operator">&lt;</span>数据类型<span class="operator">&gt;</span> [列的完整性约束]</span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> <span class="operator">&lt;</span>表名<span class="operator">&gt;</span> <span class="keyword">add</span> <span class="operator">&lt;</span>列名<span class="operator">&gt;</span> <span class="operator">&lt;</span>数据类型<span class="operator">&gt;</span> [列的完整性约束]</span><br></pre></td></tr></table></figure>
 <p>删除列：</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> <span class="operator">&lt;</span>表名<span class="operator">&gt;</span> <span class="keyword">drop</span> <span class="operator">&lt;</span>列名<span class="operator">&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> <span class="operator">&lt;</span>表名<span class="operator">&gt;</span> <span class="keyword">drop</span> <span class="operator">&lt;</span>列名<span class="operator">&gt;</span></span><br></pre></td></tr></table></figure>
 
-<h3 id="（2）删除表"><a href="#（2）删除表" class="headerlink" title="（2）删除表"></a>（2）删除表</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">drop</span> <span class="keyword">table</span> <span class="operator">&lt;</span>表名<span class="operator">&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="（2）删除表"><a href="#（2）删除表" class="headerlink" title="（2）删除表"></a>（2）删除表</h3><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">drop</span> <span class="keyword">table</span> <span class="operator">&lt;</span>表名<span class="operator">&gt;</span></span><br></pre></td></tr></table></figure>
 
-<h3 id="3、INSERT语句"><a href="#3、INSERT语句" class="headerlink" title="3、INSERT语句"></a>3、INSERT语句</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> <span class="operator">&lt;</span>表名<span class="operator">&gt;</span> (<span class="operator">&lt;</span>列名<span class="number">1</span><span class="operator">&gt;</span>,<span class="operator">&lt;</span>列名<span class="number">2</span><span class="operator">&gt;</span>,<span class="operator">&lt;</span>列名<span class="number">3</span><span class="operator">&gt;</span>) <span class="keyword">values</span> (<span class="operator">&lt;</span>常量<span class="number">1</span><span class="operator">&gt;</span>,<span class="operator">&lt;</span>常量<span class="number">2</span><span class="operator">&gt;</span>,<span class="operator">&lt;</span>常量<span class="number">3</span><span class="operator">&gt;</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="3、INSERT语句"><a href="#3、INSERT语句" class="headerlink" title="3、INSERT语句"></a>3、INSERT语句</h3><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> <span class="operator">&lt;</span>表名<span class="operator">&gt;</span> (<span class="operator">&lt;</span>列名<span class="number">1</span><span class="operator">&gt;</span>,<span class="operator">&lt;</span>列名<span class="number">2</span><span class="operator">&gt;</span>,<span class="operator">&lt;</span>列名<span class="number">3</span><span class="operator">&gt;</span>) <span class="keyword">values</span> (<span class="operator">&lt;</span>常量<span class="number">1</span><span class="operator">&gt;</span>,<span class="operator">&lt;</span>常量<span class="number">2</span><span class="operator">&gt;</span>,<span class="operator">&lt;</span>常量<span class="number">3</span><span class="operator">&gt;</span>)</span><br></pre></td></tr></table></figure>
 
-<h3 id="4、UPDATE、DELETE语句"><a href="#4、UPDATE、DELETE语句" class="headerlink" title="4、UPDATE、DELETE语句"></a>4、UPDATE、DELETE语句</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">update</span> <span class="operator">&lt;</span>表名<span class="operator">&gt;</span> <span class="keyword">set</span> <span class="operator">&lt;</span>列名<span class="number">1</span><span class="operator">&gt;=</span><span class="operator">&lt;</span>表达式<span class="number">1</span><span class="operator">&gt;</span>,<span class="operator">&lt;</span>列名<span class="number">2</span><span class="operator">&gt;=</span><span class="operator">&lt;</span>表达式<span class="number">2</span><span class="operator">&gt;</span> <span class="keyword">where</span> <span class="operator">&lt;</span>条件<span class="operator">&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">delete</span> <span class="keyword">from</span> <span class="operator">&lt;</span>表名<span class="operator">&gt;</span> <span class="keyword">where</span> <span class="operator">&lt;</span>条件<span class="operator">&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="4、UPDATE、DELETE语句"><a href="#4、UPDATE、DELETE语句" class="headerlink" title="4、UPDATE、DELETE语句"></a>4、UPDATE、DELETE语句</h3><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">update</span> <span class="operator">&lt;</span>表名<span class="operator">&gt;</span> <span class="keyword">set</span> <span class="operator">&lt;</span>列名<span class="number">1</span><span class="operator">&gt;=</span><span class="operator">&lt;</span>表达式<span class="number">1</span><span class="operator">&gt;</span>,<span class="operator">&lt;</span>列名<span class="number">2</span><span class="operator">&gt;=</span><span class="operator">&lt;</span>表达式<span class="number">2</span><span class="operator">&gt;</span> <span class="keyword">where</span> <span class="operator">&lt;</span>条件<span class="operator">&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">delete</span> <span class="keyword">from</span> <span class="operator">&lt;</span>表名<span class="operator">&gt;</span> <span class="keyword">where</span> <span class="operator">&lt;</span>条件<span class="operator">&gt;</span></span><br></pre></td></tr></table></figure>
 
-<h3 id="5、SELECT语句"><a href="#5、SELECT语句" class="headerlink" title="5、SELECT语句"></a>5、SELECT语句</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span></span><br><span class="line">    <span class="operator">*</span><span class="operator">|</span><span class="operator">&lt;</span>字段列表<span class="operator">&gt;</span></span><br><span class="line"><span class="keyword">from</span> <span class="operator">&lt;</span>表名<span class="operator">&gt;</span></span><br><span class="line"><span class="keyword">where</span> <span class="operator">&lt;</span>条件<span class="operator">&gt;</span></span><br><span class="line"><span class="keyword">group</span> <span class="keyword">by</span> <span class="operator">&lt;</span>字段名<span class="operator">&gt;</span> </span><br></pre></td></tr></table></figure>
+<h3 id="5、SELECT语句"><a href="#5、SELECT语句" class="headerlink" title="5、SELECT语句"></a>5、SELECT语句</h3><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span></span><br><span class="line">    <span class="operator">*</span><span class="operator">|</span><span class="operator">&lt;</span>字段列表<span class="operator">&gt;</span></span><br><span class="line"><span class="keyword">from</span> <span class="operator">&lt;</span>表名<span class="operator">&gt;</span></span><br><span class="line"><span class="keyword">where</span> <span class="operator">&lt;</span>条件<span class="operator">&gt;</span></span><br><span class="line"><span class="keyword">group</span> <span class="keyword">by</span> <span class="operator">&lt;</span>字段名<span class="operator">&gt;</span> </span><br></pre></td></tr></table></figure>
 
 <p>常用查询条件：</p>
 <table>
@@ -296,7 +296,7 @@
 </tr>
 </tbody></table>
 <p>查询结果排序:</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">order</span> <span class="keyword">by</span>  <span class="operator">&lt;</span>字段名<span class="number">1</span><span class="operator">&gt;</span>,<span class="operator">&lt;</span>字段名<span class="number">2</span><span class="operator">&gt;</span> <span class="keyword">asc</span> <span class="operator">|</span> <span class="keyword">desc</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">order</span> <span class="keyword">by</span>  <span class="operator">&lt;</span>字段名<span class="number">1</span><span class="operator">&gt;</span>,<span class="operator">&lt;</span>字段名<span class="number">2</span><span class="operator">&gt;</span> <span class="keyword">asc</span> <span class="operator">|</span> <span class="keyword">desc</span></span><br></pre></td></tr></table></figure>
 <p>按照升序排序，含有空值的数据将在最后显示；<br>按照降序排序，含有空值的数据将在最先显示。</p>
 <h3 id="6、DROP、DELETE、TRUNCATE命令比较"><a href="#6、DROP、DELETE、TRUNCATE命令比较" class="headerlink" title="6、DROP、DELETE、TRUNCATE命令比较"></a>6、DROP、DELETE、TRUNCATE命令比较</h3><ul>
 <li>DROP是从数据库中删除表的定义（表的结构）以及它所有的数据；</li>
@@ -310,13 +310,13 @@
 <li>full join</li>
 </ul>
 <h3 id="（1）内连接"><a href="#（1）内连接" class="headerlink" title="（1）内连接"></a>（1）内连接</h3><p>只有结果中包含根据连接谓语（on后面的语句）所匹配的行，不包含那些不匹配的行。</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> students.name <span class="keyword">inner</span> <span class="keyword">join</span> teachers.name <span class="keyword">on</span> students.teacherId <span class="operator">=</span> teachers.Id</span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> students.name <span class="keyword">inner</span> <span class="keyword">join</span> teachers.name <span class="keyword">on</span> students.teacherId <span class="operator">=</span> teachers.Id</span><br></pre></td></tr></table></figure>
 <h3 id="（2）左外连接"><a href="#（2）左外连接" class="headerlink" title="（2）左外连接"></a>（2）左外连接</h3><p>左外连接是返回那些存在于左表而右表中却没有的行加上内连接的行，那些来自左表的未匹配的行会保留。</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> students.name <span class="keyword">left</span> <span class="keyword">join</span> teachers.name <span class="keyword">on</span> students.teacherId <span class="operator">=</span> teachers.Id</span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> students.name <span class="keyword">left</span> <span class="keyword">join</span> teachers.name <span class="keyword">on</span> students.teacherId <span class="operator">=</span> teachers.Id</span><br></pre></td></tr></table></figure>
 <h3 id="（3）右外连接"><a href="#（3）右外连接" class="headerlink" title="（3）右外连接"></a>（3）右外连接</h3><p>右外连接是返回那些存在于右表而左表中却没有的行加上内连接的行，那些来自右表的未匹配的行会保留。</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> students.name <span class="keyword">right</span> <span class="keyword">join</span> teachers.name <span class="keyword">on</span> students.teacherId <span class="operator">=</span> teachers.Id</span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> students.name <span class="keyword">right</span> <span class="keyword">join</span> teachers.name <span class="keyword">on</span> students.teacherId <span class="operator">=</span> teachers.Id</span><br></pre></td></tr></table></figure>
 <h3 id="（4）全外连接"><a href="#（4）全外连接" class="headerlink" title="（4）全外连接"></a>（4）全外连接</h3><p>左外和右外的结合。</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> students.name <span class="keyword">full</span> <span class="keyword">join</span> teachers.name <span class="keyword">on</span> students.teacherId <span class="operator">=</span> teachers.Id</span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> students.name <span class="keyword">full</span> <span class="keyword">join</span> teachers.name <span class="keyword">on</span> students.teacherId <span class="operator">=</span> teachers.Id</span><br></pre></td></tr></table></figure>
 <h2 id="四、SQL开发规范"><a href="#四、SQL开发规范" class="headerlink" title="四、SQL开发规范"></a>四、SQL开发规范</h2><blockquote>
 <p>1、禁止使用distinct，去重语句全部使用group by实现；<br>2、在关联表或进行子查询时，要先用条件优先对表进行过滤，再做下一步操作；<br>3、做完数据库操作后要commit；<br>4、禁止使用<code>select ＊ from table</code>，用具体的列名代替<code>*</code>，不要返回用不到的列；<br>5、select的显示列与group by的列，必须将一致最多的列放到最前面，即由多到少排列；<br>6、能用union all，不允许使用union。用union all或union合并结果集时where条件要写到最里层语句中，以求结果集最小。<br>7、在SQL除法计算中必须先判断分母是否为0，根据分母是否为零分别进行计算；<br>8、注意where条件中字段a!&#x3D;1或a!&#x3D;’’，获得的结果集会同时过滤掉a is null的情况；<br>9、禁止使用SQL语句实现行列转换；<br>10、在SQL标准中，NULL与数据计算结果仍为NULL，因此在计算前需要先处理计算项为NULL的情况。</p>
 </blockquote>
@@ -607,6 +607,54 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">C4认证</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Linux基础</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">学习记录</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">版本管理</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">磁盘文件整理</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Python学习记录</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">高阶</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Python装饰器</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Python自动化办公</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Python处理Excel</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">实例</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Java学习</a>
               </li>
              
@@ -619,95 +667,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Python爬虫基础</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Python学习</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Python爬虫中级</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Python爬虫高级</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">SQL语句</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">数据库</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Linux学习</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Linux基础</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Linux磁盘管理</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Linux文件目录</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Linux进程管理</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Shell基础</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Linux之Shell函数</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Linux用户权限</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Python编程规范</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Python数据库学习</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">调试，DEBUG</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Python装饰器</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Python文件操作</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Python学习笔记</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Python图形用户界面</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Python单元测试</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">数据库学习目录</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -715,7 +675,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Python自动化办公</a>
+                <a href="javascript:void(0)" class="js-tag color4">Python学习</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -751,10 +711,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Python学习记录</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Python编程基础</a>
               </li>
              
@@ -763,43 +719,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">C4认证</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">磁盘文件整理</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Git</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">版本管理</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">学习记录</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">高阶</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Python处理Excel</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">实例</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">算法</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Flask框架</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -808,6 +728,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">树</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Flask框架</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -836,6 +760,82 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">基础</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Python爬虫基础</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Python爬虫中级</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Python爬虫高级</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Linux磁盘管理</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">SQL语句</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">数据库</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Linux文件目录</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Linux进程管理</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Shell基础</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Linux之Shell函数</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Python编程规范</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Linux用户权限</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">调试，DEBUG</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Python数据库学习</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Python图形用户界面</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Python文件操作</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Python学习笔记</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Python单元测试</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">数据库学习目录</a>
               </li>
              
               <li class="article-tag-list-item">

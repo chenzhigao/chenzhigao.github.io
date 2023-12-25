@@ -190,7 +190,7 @@
 <h2 id="一、需求描述（简化的需求）"><a href="#一、需求描述（简化的需求）" class="headerlink" title="一、需求描述（简化的需求）"></a>一、需求描述（简化的需求）</h2><p>（1）每月月底上报考勤，根据出勤天数计算折人数，工人到手奖金根据折人数确定，<code>奖金=折人*基本工资</code>；<br>（2）每个月出勤天数超过21折人为<code>1</code>，不超过21折人数为<code>出勤天数/21</code>；<br>（3）工人所属不同基本工资不同；<br>（4）每个月各单位会索要分配明细（每个人应得奖金数）。</p>
 <h2 id="二、使用python包"><a href="#二、使用python包" class="headerlink" title="二、使用python包"></a>二、使用python包</h2><p>（1）xlrd<br>（2）xlwt</p>
 <h2 id="三、工作流程"><a href="#三、工作流程" class="headerlink" title="三、工作流程"></a>三、工作流程</h2><p>读excel：出勤信息表(有时各单位给出的考勤不在一个表中，可统一规范要求）、基本工资表（基本工资根据单位而不同）。<br>写excel：工资汇总表</p>
-<h3 id="工资汇总表生成"><a href="#工资汇总表生成" class="headerlink" title="工资汇总表生成"></a>工资汇总表生成</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> xlrd</span><br><span class="line"><span class="keyword">import</span> xlwt</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">getBasic</span>():</span><br><span class="line">    fileName = <span class="string">&#x27;基本工资表.xls&#x27;</span></span><br><span class="line">    <span class="comment"># 打开基本工资表,获得工作簿信息</span></span><br><span class="line">    excel_content = xlrd.open_workbook(fileName)</span><br><span class="line">    <span class="comment"># 因为我建的表就是第一个sheet，这里可以根据名字获取工作簿中sheet</span></span><br><span class="line">    data = excel_content.sheets()[<span class="number">0</span>]</span><br><span class="line">    nrows = data.nrows</span><br><span class="line">    basics = <span class="built_in">dict</span>()</span><br><span class="line">    <span class="comment"># 第0行为表头，从第一行开始</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, nrows):</span><br><span class="line">        department = data.row_values(i)[<span class="number">0</span>]</span><br><span class="line">        basics[department] = data.row_values(i)[<span class="number">1</span>]</span><br><span class="line">    <span class="keyword">return</span> basics</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">getAllattendences</span>():</span><br><span class="line">    fileName = <span class="string">&#x27;出勤信息表.xls&#x27;</span></span><br><span class="line">    <span class="comment"># 打开出勤表,获得工作簿信息</span></span><br><span class="line">    excel_content = xlrd.open_workbook(fileName)</span><br><span class="line">    <span class="comment"># 因为我建的表就是第一个sheet，这里可以根据名字获取工作簿中sheet</span></span><br><span class="line">    data = excel_content.sheets()[<span class="number">0</span>]</span><br><span class="line">    nrows = data.nrows</span><br><span class="line">    dataList = []</span><br><span class="line">    <span class="comment"># 第0行为表头，从第一行开始</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, nrows):</span><br><span class="line">        dataList.append(<span class="built_in">list</span>(data.row_values(i)))</span><br><span class="line">    <span class="keyword">return</span> dataList</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">generatePayAll</span>():</span><br><span class="line">    <span class="comment"># 新建一个工作簿</span></span><br><span class="line">    workbook = xlwt.Workbook(encoding=<span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line">    <span class="comment"># 增加一个sheet，并命名</span></span><br><span class="line">    worksheet = workbook.add_sheet(<span class="string">&quot;工资汇总&quot;</span>)</span><br><span class="line">    <span class="comment"># 填写表头</span></span><br><span class="line">    worksheet.write(<span class="number">0</span>, <span class="number">0</span>, label=<span class="string">&#x27;工作证号&#x27;</span>)</span><br><span class="line">    worksheet.write(<span class="number">0</span>, <span class="number">1</span>, label=<span class="string">&#x27;姓名&#x27;</span>)</span><br><span class="line">    worksheet.write(<span class="number">0</span>, <span class="number">2</span>, label=<span class="string">&#x27;单位&#x27;</span>)</span><br><span class="line">    worksheet.write(<span class="number">0</span>, <span class="number">3</span>, label=<span class="string">&#x27;出勤天数&#x27;</span>)</span><br><span class="line">    worksheet.write(<span class="number">0</span>, <span class="number">4</span>, label=<span class="string">&#x27;基本工资&#x27;</span>)</span><br><span class="line">    worksheet.write(<span class="number">0</span>, <span class="number">5</span>, label=<span class="string">&#x27;折人&#x27;</span>)</span><br><span class="line">    worksheet.write(<span class="number">0</span>, <span class="number">6</span>, label=<span class="string">&#x27;奖金&#x27;</span>)</span><br><span class="line">    <span class="comment"># 获取考勤数据和基本工资数据</span></span><br><span class="line">    basics = getBasic()</span><br><span class="line">    attendences = getAllattendences()</span><br><span class="line">    l = <span class="built_in">len</span>(attendences)</span><br><span class="line">    <span class="comment"># 逐行写入</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(l):</span><br><span class="line">        <span class="built_in">id</span> = attendences[i][<span class="number">0</span>]</span><br><span class="line">        name = attendences[i][<span class="number">1</span>]</span><br><span class="line">        department = attendences[i][<span class="number">2</span>]</span><br><span class="line">        days = <span class="built_in">int</span>(attendences[i][<span class="number">3</span>])</span><br><span class="line">        <span class="keyword">if</span> days &gt; <span class="number">21</span>:</span><br><span class="line">            zheRen = <span class="number">1</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            zheRen = attendences[i][<span class="number">3</span>] / <span class="number">21</span></span><br><span class="line">        pays = zheRen * basics[department]</span><br><span class="line">        worksheet.write(i + <span class="number">1</span>, <span class="number">0</span>, label=<span class="built_in">id</span>)</span><br><span class="line">        worksheet.write(i + <span class="number">1</span>, <span class="number">1</span>, label=name)</span><br><span class="line">        worksheet.write(i + <span class="number">1</span>, <span class="number">2</span>, label=department)</span><br><span class="line">        worksheet.write(i + <span class="number">1</span>, <span class="number">3</span>, label=days)</span><br><span class="line">        worksheet.write(i + <span class="number">1</span>, <span class="number">4</span>, label=basics[department])</span><br><span class="line">        worksheet.write(i + <span class="number">1</span>, <span class="number">5</span>, label=zheRen)</span><br><span class="line">        worksheet.write(i + <span class="number">1</span>, <span class="number">6</span>, label=pays)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">    generatePayAll()</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="工资汇总表生成"><a href="#工资汇总表生成" class="headerlink" title="工资汇总表生成"></a>工资汇总表生成</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> xlrd</span><br><span class="line"><span class="keyword">import</span> xlwt</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">getBasic</span>():</span><br><span class="line">    fileName = <span class="string">&#x27;基本工资表.xls&#x27;</span></span><br><span class="line">    <span class="comment"># 打开基本工资表,获得工作簿信息</span></span><br><span class="line">    excel_content = xlrd.open_workbook(fileName)</span><br><span class="line">    <span class="comment"># 因为我建的表就是第一个sheet，这里可以根据名字获取工作簿中sheet</span></span><br><span class="line">    data = excel_content.sheets()[<span class="number">0</span>]</span><br><span class="line">    nrows = data.nrows</span><br><span class="line">    basics = <span class="built_in">dict</span>()</span><br><span class="line">    <span class="comment"># 第0行为表头，从第一行开始</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, nrows):</span><br><span class="line">        department = data.row_values(i)[<span class="number">0</span>]</span><br><span class="line">        basics[department] = data.row_values(i)[<span class="number">1</span>]</span><br><span class="line">    <span class="keyword">return</span> basics</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">getAllattendences</span>():</span><br><span class="line">    fileName = <span class="string">&#x27;出勤信息表.xls&#x27;</span></span><br><span class="line">    <span class="comment"># 打开出勤表,获得工作簿信息</span></span><br><span class="line">    excel_content = xlrd.open_workbook(fileName)</span><br><span class="line">    <span class="comment"># 因为我建的表就是第一个sheet，这里可以根据名字获取工作簿中sheet</span></span><br><span class="line">    data = excel_content.sheets()[<span class="number">0</span>]</span><br><span class="line">    nrows = data.nrows</span><br><span class="line">    dataList = []</span><br><span class="line">    <span class="comment"># 第0行为表头，从第一行开始</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, nrows):</span><br><span class="line">        dataList.append(<span class="built_in">list</span>(data.row_values(i)))</span><br><span class="line">    <span class="keyword">return</span> dataList</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">generatePayAll</span>():</span><br><span class="line">    <span class="comment"># 新建一个工作簿</span></span><br><span class="line">    workbook = xlwt.Workbook(encoding=<span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line">    <span class="comment"># 增加一个sheet，并命名</span></span><br><span class="line">    worksheet = workbook.add_sheet(<span class="string">&quot;工资汇总&quot;</span>)</span><br><span class="line">    <span class="comment"># 填写表头</span></span><br><span class="line">    worksheet.write(<span class="number">0</span>, <span class="number">0</span>, label=<span class="string">&#x27;工作证号&#x27;</span>)</span><br><span class="line">    worksheet.write(<span class="number">0</span>, <span class="number">1</span>, label=<span class="string">&#x27;姓名&#x27;</span>)</span><br><span class="line">    worksheet.write(<span class="number">0</span>, <span class="number">2</span>, label=<span class="string">&#x27;单位&#x27;</span>)</span><br><span class="line">    worksheet.write(<span class="number">0</span>, <span class="number">3</span>, label=<span class="string">&#x27;出勤天数&#x27;</span>)</span><br><span class="line">    worksheet.write(<span class="number">0</span>, <span class="number">4</span>, label=<span class="string">&#x27;基本工资&#x27;</span>)</span><br><span class="line">    worksheet.write(<span class="number">0</span>, <span class="number">5</span>, label=<span class="string">&#x27;折人&#x27;</span>)</span><br><span class="line">    worksheet.write(<span class="number">0</span>, <span class="number">6</span>, label=<span class="string">&#x27;奖金&#x27;</span>)</span><br><span class="line">    <span class="comment"># 获取考勤数据和基本工资数据</span></span><br><span class="line">    basics = getBasic()</span><br><span class="line">    attendences = getAllattendences()</span><br><span class="line">    l = <span class="built_in">len</span>(attendences)</span><br><span class="line">    <span class="comment"># 逐行写入</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(l):</span><br><span class="line">        <span class="built_in">id</span> = attendences[i][<span class="number">0</span>]</span><br><span class="line">        name = attendences[i][<span class="number">1</span>]</span><br><span class="line">        department = attendences[i][<span class="number">2</span>]</span><br><span class="line">        days = <span class="built_in">int</span>(attendences[i][<span class="number">3</span>])</span><br><span class="line">        <span class="keyword">if</span> days &gt; <span class="number">21</span>:</span><br><span class="line">            zheRen = <span class="number">1</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            zheRen = attendences[i][<span class="number">3</span>] / <span class="number">21</span></span><br><span class="line">        pays = zheRen * basics[department]</span><br><span class="line">        worksheet.write(i + <span class="number">1</span>, <span class="number">0</span>, label=<span class="built_in">id</span>)</span><br><span class="line">        worksheet.write(i + <span class="number">1</span>, <span class="number">1</span>, label=name)</span><br><span class="line">        worksheet.write(i + <span class="number">1</span>, <span class="number">2</span>, label=department)</span><br><span class="line">        worksheet.write(i + <span class="number">1</span>, <span class="number">3</span>, label=days)</span><br><span class="line">        worksheet.write(i + <span class="number">1</span>, <span class="number">4</span>, label=basics[department])</span><br><span class="line">        worksheet.write(i + <span class="number">1</span>, <span class="number">5</span>, label=zheRen)</span><br><span class="line">        worksheet.write(i + <span class="number">1</span>, <span class="number">6</span>, label=pays)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">    generatePayAll()</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 <p>后续更新中。。。</p>
 
@@ -484,6 +484,54 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">C4认证</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Linux基础</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">学习记录</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">版本管理</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">磁盘文件整理</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Python学习记录</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">高阶</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Python装饰器</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Python自动化办公</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Python处理Excel</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">实例</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Java学习</a>
               </li>
              
@@ -496,95 +544,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Python爬虫基础</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Python学习</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Python爬虫中级</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Python爬虫高级</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">SQL语句</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">数据库</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Linux学习</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Linux基础</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Linux磁盘管理</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Linux文件目录</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Linux进程管理</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Shell基础</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Linux之Shell函数</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Linux用户权限</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Python编程规范</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Python数据库学习</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">调试，DEBUG</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Python装饰器</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Python文件操作</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Python学习笔记</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Python图形用户界面</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Python单元测试</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">数据库学习目录</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -592,7 +552,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Python自动化办公</a>
+                <a href="javascript:void(0)" class="js-tag color4">Python学习</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -628,10 +588,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Python学习记录</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Python编程基础</a>
               </li>
              
@@ -640,43 +596,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">C4认证</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">磁盘文件整理</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Git</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">版本管理</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">学习记录</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">高阶</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Python处理Excel</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">实例</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">算法</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Flask框架</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -685,6 +605,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">树</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Flask框架</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -713,6 +637,82 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">基础</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Python爬虫基础</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Python爬虫中级</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Python爬虫高级</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Linux磁盘管理</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">SQL语句</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">数据库</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Linux文件目录</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Linux进程管理</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Shell基础</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Linux之Shell函数</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Python编程规范</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Linux用户权限</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">调试，DEBUG</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Python数据库学习</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Python图形用户界面</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Python文件操作</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Python学习笔记</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Python单元测试</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">数据库学习目录</a>
               </li>
              
               <li class="article-tag-list-item">
