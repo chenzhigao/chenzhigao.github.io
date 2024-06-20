@@ -8,15 +8,15 @@
   <link rel="dns-prefetch" href="https://chenzhigao.github.io">
   <title>Python之json模块学习 | 阳光欢子的小站</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="JSON是（JavaScript Object Notation）的缩写，是一种轻量级的数据交换格式，常被用于Web应用程序中，也被广泛地应用于非Web应用程序中。">
+  <meta name="description" content="一、简介1、JSON简介JSON是（JavaScript Object Notation）的缩写，是一种轻量级的数据交换格式，常被用于Web应用程序中，也被广泛地应用于非Web应用程序中。 2、模块介绍import json Python的json模块是Python官方提供的一个用于解析和生成JSON数据格式的库。 JSON格式的数据由键值对组成，键一定是字符串，值可以是字符串、数字、布尔值、列">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python之json模块学习">
-<meta property="og:url" content="https://chenzhigao.github.io/2023/12/python-json/index.html">
+<meta property="og:url" content="https://chenzhigao.github.io/2024/06/python-tuwen-json/index.html">
 <meta property="og:site_name" content="阳光欢子的小站">
-<meta property="og:description" content="JSON是（JavaScript Object Notation）的缩写，是一种轻量级的数据交换格式，常被用于Web应用程序中，也被广泛地应用于非Web应用程序中。">
+<meta property="og:description" content="一、简介1、JSON简介JSON是（JavaScript Object Notation）的缩写，是一种轻量级的数据交换格式，常被用于Web应用程序中，也被广泛地应用于非Web应用程序中。 2、模块介绍import json Python的json模块是Python官方提供的一个用于解析和生成JSON数据格式的库。 JSON格式的数据由键值对组成，键一定是字符串，值可以是字符串、数字、布尔值、列">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2023-12-24T13:40:26.000Z">
-<meta property="article:modified_time" content="2023-12-24T13:46:21.427Z">
+<meta property="article:published_time" content="2024-06-18T13:40:26.000Z">
+<meta property="article:modified_time" content="2024-06-20T14:21:19.409Z">
 <meta property="article:author" content="chengzhigao">
 <meta property="article:tag" content="Python">
 <meta property="article:tag" content="json模块">
@@ -164,7 +164,7 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-python-json" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-python-tuwen-json" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -177,26 +177,60 @@
 
         
         <a href="" class="archive-article-date">
-  	<time datetime="2023-12-24T13:40:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-12-24</time>
+  	<time datetime="2024-06-18T13:40:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2024-06-18</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>JSON是（JavaScript Object Notation）的缩写，是一种轻量级的数据交换格式，常被用于Web应用程序中，也被广泛地应用于非Web应用程序中。</p>
-<span id="more"></span>
-
+        <span id="more"></span>
 <h2 id="一、简介"><a href="#一、简介" class="headerlink" title="一、简介"></a>一、简介</h2><h3 id="1、JSON简介"><a href="#1、JSON简介" class="headerlink" title="1、JSON简介"></a>1、JSON简介</h3><p>JSON是（JavaScript Object Notation）的缩写，是一种轻量级的数据交换格式，常被用于Web应用程序中，也被广泛地应用于非Web应用程序中。</p>
 <h3 id="2、模块介绍"><a href="#2、模块介绍" class="headerlink" title="2、模块介绍"></a>2、模块介绍</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> json</span><br></pre></td></tr></table></figure>
-<p>Python的json模块是Python官方提供的一个用于解析和生成JSON数据格式的库。<br>JSON格式的数据由键值对组成，键是字符串，值可以是字符串、数字、布尔值、列表、字典等。</p>
-<h2 id="二、常用函数"><a href="#二、常用函数" class="headerlink" title="二、常用函数"></a>二、常用函数</h2><h3 id="1、json-dumps"><a href="#1、json-dumps" class="headerlink" title="1、json.dumps()"></a>1、json.dumps()</h3><p>用于将Python对象序列化为JSON编码字符串。</p>
-<h4 id="1-使用示例"><a href="#1-使用示例" class="headerlink" title="(1)使用示例"></a>(1)使用示例</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> json</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">article = &#123;</span><br><span class="line">    <span class="string">&quot;title&quot;</span>: <span class="string">&quot;Python文件操作(一篇就足够了!)&quot;</span>,</span><br><span class="line">    <span class="string">&quot;author&quot;</span>: <span class="string">&quot;阳光欢子&quot;</span>,</span><br><span class="line">    <span class="string">&quot;url&quot;</span>: <span class="string">&quot;https://zhuanlan.zhihu.com/p/659529868&quot;</span>,</span><br><span class="line">    <span class="string">&quot;testNoneType&quot;</span>: <span class="literal">None</span>,</span><br><span class="line">    <span class="string">&quot;testTrueType&quot;</span>: <span class="literal">False</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">json_str = json.dumps(article, ensure_ascii=<span class="literal">False</span>, indent=<span class="number">4</span>)</span><br><span class="line"><span class="built_in">print</span>(json_str)</span><br></pre></td></tr></table></figure>
-
+<p>Python的json模块是Python官方提供的一个用于解析和生成JSON数据格式的库。 <strong>JSON格式的数据由键值对组成，键一定是字符串，值可以是字符串、数字、布尔值、列表、字典等。</strong></p>
+<h2 id="二、常用函数"><a href="#二、常用函数" class="headerlink" title="二、常用函数"></a>二、常用函数</h2><h3 id="1、Python对象序列化为JSON编码字符串"><a href="#1、Python对象序列化为JSON编码字符串" class="headerlink" title="1、Python对象序列化为JSON编码字符串"></a>1、Python对象序列化为JSON编码字符串</h3><blockquote>
+<p>函数：<code>json.dumps()</code><br>其他常用参数说明：<br><code>dumps(obj, *, skipkeys=False, ensure_ascii=True, check_circular=True, allow_nan=True, cls=None, indent=None, separators=None, default=None, sort_keys=False, **kw)</code></p>
+</blockquote>
+<p>函数参数说明：</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>skipkeys</td>
+<td>如果为True的话，则只能是字典对象，否则会TypeError错误, 默认False</td>
+</tr>
+<tr>
+<td>ensure_ascii</td>
+<td>默认为True，它保证输出每个字符都是ASCII字符。如果有些字符不能编码为ASCII字符，他们会被转义为Unicode转义字符，只有当值为False时，汉字才可以正常显示</td>
+</tr>
+<tr>
+<td>indent</td>
+<td>用于控制缩进格式，默认不缩进</td>
+</tr>
+<tr>
+<td>cls</td>
+<td>自定义序列化类，用于自定义类的序列化，后面会讲到</td>
+</tr>
+<tr>
+<td>separators</td>
+<td>序列化之后的字符串中不同部分的分割符。默认为(‘,’,’:’)</td>
+</tr>
+<tr>
+<td>sort_keys</td>
+<td>用于指定是否按照键进行排序，默认为False不排序</td>
+</tr>
+</tbody></table>
+<p>代码示例：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> json</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">article = &#123;</span><br><span class="line">    <span class="string">&quot;title&quot;</span>: <span class="string">&quot;Python文件操作(一篇就足够了!)&quot;</span>,</span><br><span class="line">    <span class="string">&quot;author&quot;</span>: <span class="string">&quot;阳光欢子&quot;</span>,</span><br><span class="line">    <span class="string">&quot;url&quot;</span>: <span class="string">&quot;https://zhuanlan.zhihu.com/p/659529868&quot;</span>,</span><br><span class="line">    <span class="string">&quot;testNoneType&quot;</span>: <span class="literal">None</span>,</span><br><span class="line">    <span class="string">&quot;testTrueType&quot;</span>: <span class="literal">False</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">json_str = json.dumps(article, ensure_ascii=<span class="literal">False</span>, indent=<span class="number">4</span>)</span><br><span class="line"><span class="built_in">print</span>(json_str)</span><br></pre></td></tr></table></figure>
 
 <p>输出：</p>
 <figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;title&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Python文件操作(一篇就足够了!)&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;author&quot;</span><span class="punctuation">:</span> <span class="string">&quot;阳光欢子&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://zhuanlan.zhihu.com/p/659529868&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;testNoneType&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">null</span></span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;testTrueType&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">false</span></span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
-<h4 id="2-Python原始类型向JSON类型转换"><a href="#2-Python原始类型向JSON类型转换" class="headerlink" title="(2)Python原始类型向JSON类型转换"></a>(2)Python原始类型向JSON类型转换</h4><p>对应关系:</p>
+
+<h3 id="2、Python原始类型向JSON类型转换"><a href="#2、Python原始类型向JSON类型转换" class="headerlink" title="2、Python原始类型向JSON类型转换"></a>2、Python原始类型向JSON类型转换</h3><p>对应关系:</p>
 <table>
 <thead>
 <tr>
@@ -233,8 +267,10 @@
 <td>array</td>
 </tr>
 </tbody></table>
-<h4 id="3-其他常用参数说明"><a href="#3-其他常用参数说明" class="headerlink" title="(3)其他常用参数说明"></a>(3)其他常用参数说明</h4><p><code>dumps(obj, *, skipkeys=False, ensure_ascii=True, check_circular=True, allow_nan=True, cls=None, indent=None, separators=None, default=None, sort_keys=False, **kw)</code></p>
-<p>常用函数参数说明：</p>
+<h3 id="3、JSON编码的字符串解码为Python对象"><a href="#3、JSON编码的字符串解码为Python对象" class="headerlink" title="3、JSON编码的字符串解码为Python对象"></a>3、JSON编码的字符串解码为Python对象</h3><blockquote>
+<p>函数：<code>json.loads()</code><br>其他常用参数说明：<br><code>loads(s, *, cls=None, object_hook=None, parse_float=None, parse_int=None, parse_constant=None, object_pairs_hook=None, **kw)</code></p>
+</blockquote>
+<p>函数参数说明：</p>
 <table>
 <thead>
 <tr>
@@ -243,37 +279,25 @@
 </tr>
 </thead>
 <tbody><tr>
-<td>skipkeys</td>
-<td>如果为True的话，则只能是字典对象，否则会TypeError错误, 默认False</td>
-</tr>
-<tr>
-<td>ensure_ascii</td>
-<td>默认为True，它保证输出每个字符都是ASCII字符。如果有些字符不能编码为ASCII字符，他们会被转义为Unicode转义字符，只有当值为False时，汉字才可以正常显示</td>
-</tr>
-<tr>
-<td>indent</td>
-<td>用于控制缩进格式，默认不缩进</td>
-</tr>
-<tr>
 <td>cls</td>
-<td>自定义序列化类，用于自定义类的序列化，后面会讲到</td>
+<td>支持自定义类的解码器，需要继承一个JSONDecoder类并重载（复写）其中的decode方法。默认值为None</td>
 </tr>
 <tr>
-<td>separators</td>
-<td>序列化之后的字符串中不同部分的分割符。默认为(‘,’,’:’)</td>
+<td>object_hook</td>
+<td>支持自定义解码过程中的钩子函数，用于控制解码后生成的Python对象的格式和类型。如果json串是数组，对于JSON串中的每个Python对象，该函数都会被调用一次，后面有使用说明。默认值为None</td>
 </tr>
 <tr>
-<td>sort_keys</td>
-<td>用于指定是否按照键进行排序，默认为False不排序</td>
+<td>object_pairs_hook</td>
+<td>类似object_hook,处理的是Python对象而不是Python字典</td>
 </tr>
 </tbody></table>
-<h3 id="2、json-loads"><a href="#2、json-loads" class="headerlink" title="2、json.loads()"></a>2、json.loads()</h3><h4 id="（1）使用示例"><a href="#（1）使用示例" class="headerlink" title="（1）使用示例"></a>（1）使用示例</h4><p>用于将一个JSON编码的字符串解码为Python对象。</p>
+<p>代码示例：</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> json</span><br><span class="line"></span><br><span class="line">json_str = <span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">&#123;</span></span><br><span class="line"><span class="string">    &quot;user&quot;: &quot;阳光欢子&quot;,</span></span><br><span class="line"><span class="string">    &quot;links&quot;: &#123;</span></span><br><span class="line"><span class="string">        &quot;zhihu&quot;: &quot;https://www.zhihu.com/people/chen-zhi-gao-45-80&quot;,</span></span><br><span class="line"><span class="string">        &quot;jianshu&quot;: &quot;https://www.jianshu.com/u/d5e198d8f025&quot;</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string">&#125;</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"></span><br><span class="line">python_object = json.loads(json_str)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(python_object))</span><br><span class="line"><span class="built_in">print</span>(python_object)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p>输出</p>
 <figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&lt;class &#x27;dict&#x27;&gt;</span><br><span class="line"><span class="punctuation">&#123;</span>&#x27;user&#x27;<span class="punctuation">:</span> &#x27;阳光欢子&#x27;<span class="punctuation">,</span> &#x27;links&#x27;<span class="punctuation">:</span> <span class="punctuation">&#123;</span>&#x27;zhihu&#x27;<span class="punctuation">:</span> &#x27;https<span class="punctuation">:</span><span class="comment">//www.zhihu.com/people/chen-zhi-gao-45-80&#x27;, &#x27;jianshu&#x27;: &#x27;https://www.jianshu.com/u/d5e198d8f025&#x27;&#125;&#125;</span></span><br></pre></td></tr></table></figure>
 
 
-<h4 id="2-JSON原始类型向Python类型转换"><a href="#2-JSON原始类型向Python类型转换" class="headerlink" title="(2)JSON原始类型向Python类型转换"></a>(2)JSON原始类型向Python类型转换</h4><p>对应关系：</p>
+<h3 id="4、JSON原始类型向Python类型转换"><a href="#4、JSON原始类型向Python类型转换" class="headerlink" title="4、JSON原始类型向Python类型转换"></a>4、JSON原始类型向Python类型转换</h3><p>对应关系：</p>
 <table>
 <thead>
 <tr>
@@ -314,33 +338,10 @@
 <td>None</td>
 </tr>
 </tbody></table>
-<h4 id="（3）其他常用参数说明"><a href="#（3）其他常用参数说明" class="headerlink" title="（3）其他常用参数说明"></a>（3）其他常用参数说明</h4><p><code>loads(s, *, cls=None, object_hook=None, parse_float=None, parse_int=None, parse_constant=None, object_pairs_hook=None, **kw)</code></p>
-<p>常用函数参数说明：</p>
-<table>
-<thead>
-<tr>
-<th>参数</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>cls</td>
-<td>支持自定义类的解码器，需要继承一个JSONDecoder类并重载（复写）其中的decode方法。默认值为None</td>
-</tr>
-<tr>
-<td>object_hook</td>
-<td>支持自定义解码过程中的钩子函数，用于控制解码后生成的Python对象的格式和类型。如果json串是数组，对于JSON串中的每个Python对象，该函数都会被调用一次，后面有使用说明。默认值为None</td>
-</tr>
-<tr>
-<td>object_pairs_hook</td>
-<td>类似object_hook,处理的是Python对象而不是Python字典</td>
-</tr>
-</tbody></table>
-<h3 id="3、json-dump"><a href="#3、json-dump" class="headerlink" title="3、json.dump()"></a>3、json.dump()</h3><p>将数据写入到json文件中。</p>
-<h4 id="（1）使用示例-1"><a href="#（1）使用示例-1" class="headerlink" title="（1）使用示例"></a>（1）使用示例</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> json</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">article = &#123;</span><br><span class="line">    <span class="string">&quot;title&quot;</span>: <span class="string">&quot;Python文件操作(一篇就足够了!)&quot;</span>,</span><br><span class="line">    <span class="string">&quot;author&quot;</span>: <span class="string">&quot;阳光欢子&quot;</span>,</span><br><span class="line">    <span class="string">&quot;url&quot;</span>: <span class="string">&quot;https://zhuanlan.zhihu.com/p/659529868&quot;</span>,</span><br><span class="line">    <span class="string">&quot;testNoneType&quot;</span>: <span class="literal">None</span>,</span><br><span class="line">    <span class="string">&quot;testTrueType&quot;</span>: <span class="literal">False</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(file=<span class="string">&#x27;test.json&#x27;</span>,mode=<span class="string">&#x27;w&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">    json.dump(article, f, ensure_ascii=<span class="literal">False</span>, indent=<span class="number">2</span>)</span><br></pre></td></tr></table></figure>
-<p>输出：<br>当前目录生成一个json文件。</p>
-<h4 id="（2）常用参数说明"><a href="#（2）常用参数说明" class="headerlink" title="（2）常用参数说明"></a>（2）常用参数说明</h4><p><code>dump(obj, fp, *, skipkeys=False, ensure_ascii=True, check_circular=True, allow_nan=True, cls=None, indent=None, separators=None, default=None, sort_keys=False, **kw) </code></p>
-<p>常用函数参数说明：</p>
+<h3 id="5、数据写入到JSON文件"><a href="#5、数据写入到JSON文件" class="headerlink" title="5、数据写入到JSON文件"></a>5、数据写入到JSON文件</h3><blockquote>
+<p>函数：<code>json.dump()</code><br>常用参数说明:<br><code>dump(obj, fp, *, skipkeys=False, ensure_ascii=True, check_circular=True, allow_nan=True, cls=None, indent=None, separators=None, default=None, sort_keys=False, **kw) </code></p>
+</blockquote>
+<p>函数参数说明：</p>
 <table>
 <thead>
 <tr>
@@ -369,14 +370,13 @@
 <td>用于指定是否按照键进行排序，默认为False不排序</td>
 </tr>
 </tbody></table>
-<h3 id="4、json-load"><a href="#4、json-load" class="headerlink" title="4、json.load()"></a>4、json.load()</h3><p>从json文件中读取数据。</p>
-<h4 id="（1）使用示例-2"><a href="#（1）使用示例-2" class="headerlink" title="（1）使用示例"></a>（1）使用示例</h4><p>使用上面生成文件：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> json</span><br><span class="line"></span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(file=<span class="string">&quot;test.json&quot;</span>, mode=<span class="string">&#x27;r&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">    article = json.load(f)</span><br><span class="line">    <span class="built_in">print</span>(<span class="built_in">type</span>(article))</span><br><span class="line">    <span class="built_in">print</span>(article)</span><br></pre></td></tr></table></figure>
-
-<p>输出：</p>
-<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&lt;class &#x27;dict&#x27;&gt;</span><br><span class="line"><span class="punctuation">&#123;</span>&#x27;title&#x27;<span class="punctuation">:</span> &#x27;Python文件操作(一篇就足够了!)&#x27;<span class="punctuation">,</span> &#x27;author&#x27;<span class="punctuation">:</span> &#x27;阳光欢子&#x27;<span class="punctuation">,</span> &#x27;url&#x27;<span class="punctuation">:</span> &#x27;https<span class="punctuation">:</span><span class="comment">//zhuanlan.zhihu.com/p/659529868&#x27;, &#x27;testNoneType&#x27;: None, &#x27;testTrueType&#x27;: False&#125;</span></span><br></pre></td></tr></table></figure>
-<h4 id="（2）常用参数说明-1"><a href="#（2）常用参数说明-1" class="headerlink" title="（2）常用参数说明"></a>（2）常用参数说明</h4><p><code>load(fp, *, cls=None, object_hook=None, parse_float=None, parse_int=None, parse_constant=None, object_pairs_hook=None, **kw)</code></p>
-<p>常用函数参数说明：</p>
+<p>代码示例：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> json</span><br><span class="line"></span><br><span class="line">article = &#123;</span><br><span class="line">    <span class="string">&quot;title&quot;</span>: <span class="string">&quot;Python文件操作(一篇就足够了!)&quot;</span>,</span><br><span class="line">    <span class="string">&quot;author&quot;</span>: <span class="string">&quot;阳光欢子&quot;</span>,</span><br><span class="line">    <span class="string">&quot;url&quot;</span>: <span class="string">&quot;https://zhuanlan.zhihu.com/p/659529868&quot;</span>,</span><br><span class="line">    <span class="string">&quot;testNoneType&quot;</span>: <span class="literal">None</span>,</span><br><span class="line">    <span class="string">&quot;testTrueType&quot;</span>: <span class="literal">False</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(file=<span class="string">&#x27;test.json&#x27;</span>,mode=<span class="string">&#x27;w&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">    json.dump(article, f, ensure_ascii=<span class="literal">False</span>, indent=<span class="number">2</span>)</span><br></pre></td></tr></table></figure>
+<p>输出： 当前目录生成一个<code>test.json</code>文件，内部写入文章信息。</p>
+<h3 id="6、JSON文件中读取数据"><a href="#6、JSON文件中读取数据" class="headerlink" title="6、JSON文件中读取数据"></a>6、JSON文件中读取数据</h3><blockquote>
+<p>函数:json.load()<br>常用参数说明:<br><code>load(fp, *, cls=None, object_hook=None, parse_float=None, parse_int=None, parse_constant=None, object_pairs_hook=None, **kw)</code></p>
+</blockquote>
+<p>函数参数说明：</p>
 <table>
 <thead>
 <tr>
@@ -397,22 +397,34 @@
 <td>类似object_hook,处理的是Python对象而不是Python字典</td>
 </tr>
 </tbody></table>
-<h3 id="5、json-JSONEncoder"><a href="#5、json-JSONEncoder" class="headerlink" title="5、json.JSONEncoder()"></a>5、json.JSONEncoder()</h3><p>自定义json编码，用于将自定义类序列化为json字符串。</p>
-<p>步骤：</p>
+<p>代码示例：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> json</span><br><span class="line"></span><br><span class="line"><span class="comment"># 读取5中生成的文件</span></span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(file=<span class="string">&quot;test.json&quot;</span>, mode=<span class="string">&#x27;r&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">    article = json.load(f)</span><br><span class="line">    <span class="built_in">print</span>(<span class="built_in">type</span>(article))</span><br><span class="line">    <span class="built_in">print</span>(article)</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&lt;class &#x27;dict&#x27;&gt;</span><br><span class="line"><span class="punctuation">&#123;</span>&#x27;title&#x27;<span class="punctuation">:</span> &#x27;Python文件操作(一篇就足够了!)&#x27;<span class="punctuation">,</span> &#x27;author&#x27;<span class="punctuation">:</span> &#x27;阳光欢子&#x27;<span class="punctuation">,</span> &#x27;url&#x27;<span class="punctuation">:</span> &#x27;https<span class="punctuation">:</span><span class="comment">//zhuanlan.zhihu.com/p/659529868&#x27;, &#x27;testNoneType&#x27;: None, &#x27;testTrueType&#x27;: False&#125;</span></span><br></pre></td></tr></table></figure>
+
+
+<h3 id="7、自定义json编码，用于将自定义类序列化为json字符串"><a href="#7、自定义json编码，用于将自定义类序列化为json字符串" class="headerlink" title="7、自定义json编码，用于将自定义类序列化为json字符串"></a>7、自定义json编码，用于将自定义类序列化为json字符串</h3><blockquote>
+<p>函数:<code>json.JSONEncoder()</code><br>步骤：</p>
+</blockquote>
 <ul>
 <li>定义自定义编码器类，继承自json.JSONEncoder类 </li>
 <li>重写JSONEncoder类的default方法。</li>
 </ul>
-<p>使用示例:</p>
+<p>代码示例：</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> json</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Article</span>():</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, title, author, url</span>):</span><br><span class="line">        self.title = title</span><br><span class="line">        self.author = author</span><br><span class="line">        self.url = url</span><br><span class="line"></span><br><span class="line"><span class="comment"># 自定义Encoder类</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">ArticleEncoder</span>(json.JSONEncoder):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">default</span>(<span class="params">self, obj</span>):</span><br><span class="line">        <span class="keyword">if</span> <span class="built_in">isinstance</span>(obj, Article):</span><br><span class="line">            <span class="keyword">return</span> &#123;</span><br><span class="line">                <span class="string">&#x27;title&#x27;</span>: obj.title,</span><br><span class="line">                <span class="string">&#x27;author&#x27;</span>: obj.author,</span><br><span class="line">                <span class="string">&#x27;url&#x27;</span>: obj.url</span><br><span class="line">            &#125;</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="built_in">super</span>().default(obj)</span><br><span class="line"></span><br><span class="line">article = Article(title=<span class="string">&#x27;Python文件操作(一篇就足够了!)&#x27;</span>, author=<span class="string">&#x27;阳光欢子&#x27;</span>, url=<span class="string">&#x27;https://zhuanlan.zhihu.com/p/659529868&#x27;</span>)</span><br><span class="line">json_str = json.dumps(article, cls=ArticleEncoder, ensure_ascii=<span class="literal">False</span>, indent=<span class="number">4</span>)</span><br><span class="line"><span class="built_in">print</span>(json_str)</span><br></pre></td></tr></table></figure>
 
 <p>输出：</p>
 <figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;title&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Python文件操作(一篇就足够了!)&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;author&quot;</span><span class="punctuation">:</span> <span class="string">&quot;阳光欢子&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://zhuanlan.zhihu.com/p/659529868&quot;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
-<h3 id="6、json-JSONDecoder"><a href="#6、json-JSONDecoder" class="headerlink" title="6、json.JSONDecoder()"></a>6、json.JSONDecoder()</h3><p>自定义Python解码，将json字符串反序列化微微自定义类对象。<br>步骤：</p>
+
+<h3 id="8、自定义Python解码，将json字符串反序列化微微自定义类对象"><a href="#8、自定义Python解码，将json字符串反序列化微微自定义类对象" class="headerlink" title="8、自定义Python解码，将json字符串反序列化微微自定义类对象"></a>8、自定义Python解码，将json字符串反序列化微微自定义类对象</h3><blockquote>
+<p>函数：<code>json.JSONDecoder()</code><br>自定义Python解码，将json字符串反序列化微微自定义类对象。<br>步骤：</p>
+</blockquote>
 <ul>
 <li>自定义反序列化类，继承json.JSONDecoder类</li>
-<li>第一函数钩子，将结果转化为对象<br>使用示例:</li>
+<li>第一函数钩子，将结果转化为对象</li>
 </ul>
+<p>代码示例：</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> json</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Article</span>():</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, title, author, url</span>):</span><br><span class="line">        self.title = title</span><br><span class="line">        self.author = author</span><br><span class="line">        self.url = url</span><br><span class="line"></span><br><span class="line"><span class="comment"># 自定义Decoder类</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">ArticleDecoder</span>(json.JSONDecoder):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, *args, **kwargs</span>):</span><br><span class="line">        <span class="built_in">super</span>().__init__(object_hook=self.dict_to_article, *args, **kwargs)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">dict_to_article</span>(<span class="params">self, article_dict</span>):</span><br><span class="line">        <span class="keyword">if</span> <span class="string">&#x27;title&#x27;</span> <span class="keyword">in</span> article_dict <span class="keyword">and</span> <span class="string">&#x27;author&#x27;</span> <span class="keyword">in</span> article_dict <span class="keyword">and</span> <span class="string">&#x27;url&#x27;</span> <span class="keyword">in</span> article_dict:</span><br><span class="line">            <span class="keyword">return</span> Article(article_dict[<span class="string">&#x27;title&#x27;</span>], article_dict[<span class="string">&#x27;author&#x27;</span>], article_dict[<span class="string">&#x27;url&#x27;</span>])</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">return</span> article_dict</span><br><span class="line"></span><br><span class="line">json_str = <span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">&#123;</span></span><br><span class="line"><span class="string">    &quot;title&quot;: &quot;Python文件操作(一篇就足够了!)&quot;,</span></span><br><span class="line"><span class="string">    &quot;author&quot;: &quot;阳光欢子&quot;,</span></span><br><span class="line"><span class="string">    &quot;url&quot;: &quot;https://zhuanlan.zhihu.com/p/659529868&quot;</span></span><br><span class="line"><span class="string">&#125;</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line">article = json.loads(json_str, cls=ArticleDecoder)</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(article))</span><br><span class="line"><span class="built_in">print</span>(article)</span><br></pre></td></tr></table></figure>
 
 <p>输出：</p>
@@ -522,7 +534,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://chenzhigao.github.io/2023/12/python-json/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://chenzhigao.github.io/2024/06/python-tuwen-json/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -536,18 +548,9 @@
   
 <nav id="article-nav">
   
-    <a href="../python-pandas-table-generate/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          第1部分：Python数据分析-pandas获取数据表
-        
-      </div>
-    </a>
   
-  
-    <a href="../python-simple-email/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Python实现定时发送邮件</div>
+    <a href="../python-tuwen-shujufenxi-duquyushuchu/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Python数据分析-读写表格数据</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -574,7 +577,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E7%AE%80%E4%BB%8B"><span class="toc-number">1.</span> <span class="toc-text">一、简介</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81JSON%E7%AE%80%E4%BB%8B"><span class="toc-number">1.1.</span> <span class="toc-text">1、JSON简介</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E6%A8%A1%E5%9D%97%E4%BB%8B%E7%BB%8D"><span class="toc-number">1.2.</span> <span class="toc-text">2、模块介绍</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0"><span class="toc-number">2.</span> <span class="toc-text">二、常用函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81json-dumps"><span class="toc-number">2.1.</span> <span class="toc-text">1、json.dumps()</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E4%BD%BF%E7%94%A8%E7%A4%BA%E4%BE%8B"><span class="toc-number">2.1.1.</span> <span class="toc-text">(1)使用示例</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-Python%E5%8E%9F%E5%A7%8B%E7%B1%BB%E5%9E%8B%E5%90%91JSON%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2"><span class="toc-number">2.1.2.</span> <span class="toc-text">(2)Python原始类型向JSON类型转换</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E5%85%B6%E4%BB%96%E5%B8%B8%E7%94%A8%E5%8F%82%E6%95%B0%E8%AF%B4%E6%98%8E"><span class="toc-number">2.1.3.</span> <span class="toc-text">(3)其他常用参数说明</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81json-loads"><span class="toc-number">2.2.</span> <span class="toc-text">2、json.loads()</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%881%EF%BC%89%E4%BD%BF%E7%94%A8%E7%A4%BA%E4%BE%8B"><span class="toc-number">2.2.1.</span> <span class="toc-text">（1）使用示例</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-JSON%E5%8E%9F%E5%A7%8B%E7%B1%BB%E5%9E%8B%E5%90%91Python%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2"><span class="toc-number">2.2.2.</span> <span class="toc-text">(2)JSON原始类型向Python类型转换</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%883%EF%BC%89%E5%85%B6%E4%BB%96%E5%B8%B8%E7%94%A8%E5%8F%82%E6%95%B0%E8%AF%B4%E6%98%8E"><span class="toc-number">2.2.3.</span> <span class="toc-text">（3）其他常用参数说明</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81json-dump"><span class="toc-number">2.3.</span> <span class="toc-text">3、json.dump()</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%881%EF%BC%89%E4%BD%BF%E7%94%A8%E7%A4%BA%E4%BE%8B-1"><span class="toc-number">2.3.1.</span> <span class="toc-text">（1）使用示例</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%882%EF%BC%89%E5%B8%B8%E7%94%A8%E5%8F%82%E6%95%B0%E8%AF%B4%E6%98%8E"><span class="toc-number">2.3.2.</span> <span class="toc-text">（2）常用参数说明</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4%E3%80%81json-load"><span class="toc-number">2.4.</span> <span class="toc-text">4、json.load()</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%881%EF%BC%89%E4%BD%BF%E7%94%A8%E7%A4%BA%E4%BE%8B-2"><span class="toc-number">2.4.1.</span> <span class="toc-text">（1）使用示例</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%882%EF%BC%89%E5%B8%B8%E7%94%A8%E5%8F%82%E6%95%B0%E8%AF%B4%E6%98%8E-1"><span class="toc-number">2.4.2.</span> <span class="toc-text">（2）常用参数说明</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5%E3%80%81json-JSONEncoder"><span class="toc-number">2.5.</span> <span class="toc-text">5、json.JSONEncoder()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6%E3%80%81json-JSONDecoder"><span class="toc-number">2.6.</span> <span class="toc-text">6、json.JSONDecoder()</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E7%AE%80%E4%BB%8B"><span class="toc-number">1.</span> <span class="toc-text">一、简介</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81JSON%E7%AE%80%E4%BB%8B"><span class="toc-number">1.1.</span> <span class="toc-text">1、JSON简介</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E6%A8%A1%E5%9D%97%E4%BB%8B%E7%BB%8D"><span class="toc-number">1.2.</span> <span class="toc-text">2、模块介绍</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0"><span class="toc-number">2.</span> <span class="toc-text">二、常用函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81Python%E5%AF%B9%E8%B1%A1%E5%BA%8F%E5%88%97%E5%8C%96%E4%B8%BAJSON%E7%BC%96%E7%A0%81%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="toc-number">2.1.</span> <span class="toc-text">1、Python对象序列化为JSON编码字符串</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81Python%E5%8E%9F%E5%A7%8B%E7%B1%BB%E5%9E%8B%E5%90%91JSON%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2"><span class="toc-number">2.2.</span> <span class="toc-text">2、Python原始类型向JSON类型转换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81JSON%E7%BC%96%E7%A0%81%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%A7%A3%E7%A0%81%E4%B8%BAPython%E5%AF%B9%E8%B1%A1"><span class="toc-number">2.3.</span> <span class="toc-text">3、JSON编码的字符串解码为Python对象</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4%E3%80%81JSON%E5%8E%9F%E5%A7%8B%E7%B1%BB%E5%9E%8B%E5%90%91Python%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2"><span class="toc-number">2.4.</span> <span class="toc-text">4、JSON原始类型向Python类型转换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5%E3%80%81%E6%95%B0%E6%8D%AE%E5%86%99%E5%85%A5%E5%88%B0JSON%E6%96%87%E4%BB%B6"><span class="toc-number">2.5.</span> <span class="toc-text">5、数据写入到JSON文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6%E3%80%81JSON%E6%96%87%E4%BB%B6%E4%B8%AD%E8%AF%BB%E5%8F%96%E6%95%B0%E6%8D%AE"><span class="toc-number">2.6.</span> <span class="toc-text">6、JSON文件中读取数据</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7%E3%80%81%E8%87%AA%E5%AE%9A%E4%B9%89json%E7%BC%96%E7%A0%81%EF%BC%8C%E7%94%A8%E4%BA%8E%E5%B0%86%E8%87%AA%E5%AE%9A%E4%B9%89%E7%B1%BB%E5%BA%8F%E5%88%97%E5%8C%96%E4%B8%BAjson%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="toc-number">2.7.</span> <span class="toc-text">7、自定义json编码，用于将自定义类序列化为json字符串</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8%E3%80%81%E8%87%AA%E5%AE%9A%E4%B9%89Python%E8%A7%A3%E7%A0%81%EF%BC%8C%E5%B0%86json%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E5%BE%AE%E5%BE%AE%E8%87%AA%E5%AE%9A%E4%B9%89%E7%B1%BB%E5%AF%B9%E8%B1%A1"><span class="toc-number">2.8.</span> <span class="toc-text">8、自定义Python解码，将json字符串反序列化微微自定义类对象</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -687,23 +690,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Python</a>
+                <a href="javascript:void(0)" class="js-tag color3">日常</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">String</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">PAT甲级</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">字符串</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">C4认证</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Python</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -719,11 +718,59 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">日常</a>
+                <a href="javascript:void(0)" class="js-tag color3">Linux基础</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color5">学习记录</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Python学习记录</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">高阶</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Python装饰器</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Python自动化办公</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Python处理Excel</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">实例</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Java学习</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">面试</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Mysql</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">String</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">PAT甲级</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">字符串</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -736,10 +783,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Python学习</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Python自动化办公</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -775,83 +818,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Python学习记录</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Python编程基础</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">tuple</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">算法</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Flask框架</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">树</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">代码坏味道</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">编程规范</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">常用模块</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">模块</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">时间模块</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Python正则表达式</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">基础</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Linux基础</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">学习记录</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">高阶</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Python装饰器</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Python处理Excel</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">实例</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -931,63 +902,47 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">json模块</a>
+                <a href="javascript:void(0)" class="js-tag color3">算法</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">数据分析</a>
+                <a href="javascript:void(0)" class="js-tag color3">Flask框架</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">pandas模块</a>
+                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">数据汇总</a>
+                <a href="javascript:void(0)" class="js-tag color2">树</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">数据预处理</a>
+                <a href="javascript:void(0)" class="js-tag color1">代码坏味道</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">数据提取</a>
+                <a href="javascript:void(0)" class="js-tag color5">编程规范</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">数据筛选</a>
+                <a href="javascript:void(0)" class="js-tag color5">常用模块</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">数据统计</a>
+                <a href="javascript:void(0)" class="js-tag color3">模块</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">检查数据表</a>
+                <a href="javascript:void(0)" class="js-tag color5">时间模块</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">导入与创建数据表</a>
+                <a href="javascript:void(0)" class="js-tag color2">Python正则表达式</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">yagmail</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">自动发送邮件</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Java学习</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">面试</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Mysql</a>
+                <a href="javascript:void(0)" class="js-tag color3">基础</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -996,6 +951,86 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">API</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Python零基础入门</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Python数据类型</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">图文</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">收发邮件</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Python操作Excel</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Python安装</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">json模块</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">PDF</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">PPT</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Python数据分析</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Python读写表格数据</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">检查数据表</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Python数据分析-清洗数据表</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">数据汇总</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">数据筛选</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">数据提取</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">数据统计</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">数据预处理</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">文件操作</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Word</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1023,6 +1058,26 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">数据分析</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">pandas模块</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">导入与创建数据表</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">yagmail</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">自动发送邮件</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">ChatGPT</a>
               </li>
              
@@ -1031,11 +1086,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">知乎运营</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">好问题选择</a>
+                <a href="javascript:void(0)" class="js-tag color5">json</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1047,10 +1098,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">json</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">定时任务</a>
               </li>
              
@@ -1059,55 +1106,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Python零基础入门</a>
+                <a href="javascript:void(0)" class="js-tag color5">知乎运营</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Python数据类型</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Python操作Excel</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">图文</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">文件操作</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">PDF</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Python数据分析</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">PPT</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Python安装</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Word</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">收发邮件</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Python读写表格数据</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Python数据分析-清洗数据表</a>
+                <a href="javascript:void(0)" class="js-tag color1">好问题选择</a>
               </li>
             
             <div class="clearfix"></div>
