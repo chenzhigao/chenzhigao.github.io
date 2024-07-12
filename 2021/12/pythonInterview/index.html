@@ -6,20 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://chenzhigao.github.io">
-  <title>Python面试总结 | 程序员肥仔的小站</title>
+  <title>Python面试总结-基础篇 | 程序员肥仔的小站</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="记录Python面试路上的心酸和泪水。">
+  <meta name="description" content="记录Python面试常被问到的基础问题。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Python面试总结">
+<meta property="og:title" content="Python面试总结-基础篇">
 <meta property="og:url" content="https://chenzhigao.github.io/2021/12/pythonInterview/index.html">
 <meta property="og:site_name" content="程序员肥仔的小站">
-<meta property="og:description" content="记录Python面试路上的心酸和泪水。">
+<meta property="og:description" content="记录Python面试常被问到的基础问题。">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-12-09T12:00:50.000Z">
-<meta property="article:modified_time" content="2024-01-06T10:35:29.013Z">
+<meta property="article:modified_time" content="2024-07-12T07:33:05.622Z">
 <meta property="article:author" content="chengzhigao">
-<meta property="article:tag" content="Python">
-<meta property="article:tag" content="面试">
+<meta property="article:tag" content="基础">
+<meta property="article:tag" content="笔记">
+<meta property="article:tag" content="Python面试">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="程序员肥仔的小站" type="application/atom+xml">
@@ -171,7 +172,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Python面试总结
+      Python面试总结-基础篇
     </h1>
   
 
@@ -184,7 +185,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>记录Python面试路上的心酸和泪水。</p>
+        <p>记录Python面试常被问到的基础问题。</p>
 <span id="more"></span> 
 <h3 id="1-Python中内置的数据结构有几种？"><a href="#1-Python中内置的数据结构有几种？" class="headerlink" title="1.Python中内置的数据结构有几种？"></a>1.Python中内置的数据结构有几种？</h3><p>a. 整型 <code>int</code>、浮点型 <code>float</code>、复数 <code>complex</code><br>b. 字符串 <code>str</code>、列表 <code>list</code>、元祖 <code>tuple</code><br>c. 字典 <code>dict</code> 、集合 <code>set</code></p>
 <h3 id="2、Python可变类型和不可变类型"><a href="#2、Python可变类型和不可变类型" class="headerlink" title="2、Python可变类型和不可变类型"></a>2、Python可变类型和不可变类型</h3><p>a. 可变类型有列表<code>list</code>,字典<code>dict</code>。不可变类型有字符串<code>str</code>,数字<code>number</code>,元组<code>tuple</code>。<br>b. 当进行修改操作时，可变类型传递的是内存中的地址，也就是说，直接修改内存中的值，并没有开辟新的内存。<br>c. 不可变类型被改变时，并没有改变原内存地址中的值，而是开辟一块新的内存，将原地址中的值复制过去，对这块新开辟的内存中的值进行操作。</p>
@@ -195,17 +196,30 @@
 <h3 id="4、列举几个Python的标准库，分别说明是做什么的？"><a href="#4、列举几个Python的标准库，分别说明是做什么的？" class="headerlink" title="4、列举几个Python的标准库，分别说明是做什么的？"></a>4、列举几个Python的标准库，分别说明是做什么的？</h3><p>a. <code>os</code>：提供了和操作系统相关联的函数。<br>b. <code>sys</code>:<br>c. <code>re</code>:<br>d. <code>math</code>:<br>e. <code>datetime</code>:<br>f. <code>collections</code>:</p>
 <h3 id="5、Python操作Mysql数据库"><a href="#5、Python操作Mysql数据库" class="headerlink" title="5、Python操作Mysql数据库"></a>5、Python操作Mysql数据库</h3><h3 id="6、抽象类和接口类的区别和联系"><a href="#6、抽象类和接口类的区别和联系" class="headerlink" title="6、抽象类和接口类的区别和联系"></a>6、抽象类和接口类的区别和联系</h3><p>抽象类：规定了一系列的方法，并规定了必须由继承类实现的方法。由于有抽象方法的存在，所以抽象类不能实例化。可以将抽象类理解为毛胚房，门窗，墙面的样式由你自己来定，所以抽象类作为基类的普通类的区别在于约束性更强。<br>接口类：与抽象类很相似，表现在接口中定义的方法，必须由引用类实现，但他与抽象类的根本区别在于用途；与不同个体间沟通的规则，你要进宿舍需要有钥匙，这个钥匙就是你与宿舍的接口，你的舍友也有这个接口，所以他也能进入宿舍，你用手机童话，那么手机就是你与他人交流的接口。<br>区别和关联：<br>（1）接口是抽象类的变体，接口中所有的方法都是抽象的，而抽象类中可以有非抽象方法，抽象类是声明方法的存在而不去实现他的类。<br>（2）接口可以继承，抽象类不行<br>（3）接口可以定义方法，没有实现的代码，而抽象类可以实现部分方法<br>（4）接口中基本数据类型为static而抽象类不是</p>
 <h3 id="7、编写函数的四个原则"><a href="#7、编写函数的四个原则" class="headerlink" title="7、编写函数的四个原则"></a>7、编写函数的四个原则</h3><p>函数设计要尽量短小<br>函数声明要做到合理、简单、易于使用<br>函数参数设计应该考虑向下兼容<br>一个函数只做一件事情，尽量保证函数语句粒度的一致性</p>
-<h3 id="8、什么是lambda函数？有什么好处？"><a href="#8、什么是lambda函数？有什么好处？" class="headerlink" title="8、什么是lambda函数？有什么好处？"></a>8、什么是lambda函数？有什么好处？</h3><p>lambda函数是一个可以接受任意多个参数（包括可选参数）并且返回单个表达式值的函数。<br>（1）lambda函数比较轻便，即用即扔，很适合需要完成一项功能，但是此功能只在此一处使用，连名字都很随意的情况下<br>（2）匿名函数，一般用来给filter，map这样的函数时编程服务。<br>（3）作为回调函数，传递给某些应用，比如消息处理。</p>
-<h3 id="9、赋值、浅拷贝和深拷贝的区别"><a href="#9、赋值、浅拷贝和深拷贝的区别" class="headerlink" title="9、赋值、浅拷贝和深拷贝的区别"></a>9、赋值、浅拷贝和深拷贝的区别</h3><p>####（1）赋值</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a = [<span class="number">1</span>,<span class="number">2</span>,[<span class="number">3</span>,<span class="number">4</span>]]</span><br><span class="line">b = a</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">id</span>(a) == <span class="built_in">id</span>(b)) <span class="comment"># True</span></span><br><span class="line"><span class="built_in">print</span>(a <span class="keyword">is</span> b) <span class="comment"># True</span></span><br></pre></td></tr></table></figure>
-<p>a和b指向相同的引用，地址相同。<br>####（2）浅拷贝</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> copy</span><br><span class="line"></span><br><span class="line">a = [<span class="number">1</span>,<span class="number">2</span>,[<span class="number">3</span>,<span class="number">4</span>]]</span><br><span class="line"><span class="comment"># 三种等效</span></span><br><span class="line">b = <span class="built_in">list</span>(a)</span><br><span class="line">b = a[:]</span><br><span class="line">b = [x <span class="keyword">for</span> x <span class="keyword">in</span> a]</span><br><span class="line">b = copy.cpoy(a)</span><br><span class="line"></span><br><span class="line">a[<span class="number">2</span>].append(<span class="number">5</span>)</span><br><span class="line"><span class="built_in">print</span>(b[<span class="number">2</span>]) <span class="comment"># [3,4,5]</span></span><br></pre></td></tr></table></figure>
+<h3 id="8、什么是lambda函数？有什么好处？"><a href="#8、什么是lambda函数？有什么好处？" class="headerlink" title="8、什么是lambda函数？有什么好处？"></a>8、什么是lambda函数？有什么好处？</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">lambda</span> 参数: 表达式</span><br></pre></td></tr></table></figure>
+<p>lambda函数是一个可以接受任意多个参数（包括可选参数）并且返回单个表达式值的函数。<br>（1）lambda函数比较轻便，即用即扔，很适合需要完成一项功能，但是此功能只在此一处使用，连名字都很随意的情况下<br>（2）匿名函数，一般用来给filter，map这样的函数时编程服务。<br>（3）作为回调函数，传递给某些应用，比如消息处理。</p>
+<h3 id="9、赋值、浅拷贝和深拷贝的区别"><a href="#9、赋值、浅拷贝和深拷贝的区别" class="headerlink" title="9、赋值、浅拷贝和深拷贝的区别"></a>9、赋值、浅拷贝和深拷贝的区别</h3><h4 id="（1）赋值"><a href="#（1）赋值" class="headerlink" title="（1）赋值"></a>（1）赋值</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a = [<span class="number">1</span>,<span class="number">2</span>,[<span class="number">3</span>,<span class="number">4</span>]]</span><br><span class="line">b = a</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">id</span>(a) == <span class="built_in">id</span>(b)) <span class="comment"># True</span></span><br><span class="line"><span class="built_in">print</span>(a <span class="keyword">is</span> b) <span class="comment"># True</span></span><br></pre></td></tr></table></figure>
+<p>a和b指向相同的引用，地址相同。</p>
+<h4 id="（2）浅拷贝"><a href="#（2）浅拷贝" class="headerlink" title="（2）浅拷贝"></a>（2）浅拷贝</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> copy</span><br><span class="line"></span><br><span class="line">a = [<span class="number">1</span>,<span class="number">2</span>,[<span class="number">3</span>,<span class="number">4</span>]]</span><br><span class="line"><span class="comment"># 三种等效</span></span><br><span class="line">b = <span class="built_in">list</span>(a)</span><br><span class="line">b = a[:]</span><br><span class="line">b = [x <span class="keyword">for</span> x <span class="keyword">in</span> a]</span><br><span class="line">b = copy.copy(a)</span><br><span class="line"></span><br><span class="line">a[<span class="number">2</span>].append(<span class="number">5</span>)</span><br><span class="line"><span class="built_in">print</span>(b[<span class="number">2</span>]) <span class="comment"># [3,4,5]</span></span><br></pre></td></tr></table></figure>
 <p>浅拷贝只改变第一层对象的引用，嵌套的列表的引用不变。</p>
-<h4 id="（4）深拷贝"><a href="#（4）深拷贝" class="headerlink" title="（4）深拷贝"></a>（4）深拷贝</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> copy</span><br><span class="line"></span><br><span class="line">a = [<span class="number">1</span>,<span class="number">2</span>,[<span class="number">3</span>,<span class="number">4</span>]]</span><br><span class="line"></span><br><span class="line">b = copy.deepcpoy(a)</span><br><span class="line"></span><br><span class="line">a[<span class="number">2</span>].append(<span class="number">5</span>)</span><br><span class="line"><span class="built_in">print</span>(b[<span class="number">2</span>]) <span class="comment"># [3,4]</span></span><br></pre></td></tr></table></figure>
+<h4 id="（3）深拷贝"><a href="#（3）深拷贝" class="headerlink" title="（3）深拷贝"></a>（3）深拷贝</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> copy</span><br><span class="line"></span><br><span class="line">a = [<span class="number">1</span>,<span class="number">2</span>,[<span class="number">3</span>,<span class="number">4</span>]]</span><br><span class="line"></span><br><span class="line">b = copy.deepcopy(a)</span><br><span class="line"></span><br><span class="line">a[<span class="number">2</span>].append(<span class="number">5</span>)</span><br><span class="line"><span class="built_in">print</span>(b[<span class="number">2</span>]) <span class="comment"># [3,4]</span></span><br></pre></td></tr></table></figure>
 <p>拷贝了对象的所有元素，包括多层嵌套的元素。</p>
-<h3 id="10、Python生成随机数"><a href="#10、Python生成随机数" class="headerlink" title="10、Python生成随机数"></a>10、Python生成随机数</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> random</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(random.random())  <span class="comment"># 生成一个0-1之间的随机浮点数</span></span><br><span class="line"><span class="built_in">print</span>(random.uniform(a,b)) <span class="comment"># 生成一个a与b之间的浮点数，包括a，b</span></span><br><span class="line"><span class="built_in">print</span>(random.randint(a,b)) <span class="comment"># 生成一个a与b之间的整数，包括a，b</span></span><br></pre></td></tr></table></figure>
+<h3 id="10、Python生成随机数"><a href="#10、Python生成随机数" class="headerlink" title="10、Python生成随机数"></a>10、Python生成随机数</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> random</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(random.random())  <span class="comment"># 生成一个0-1之间的随机浮点数</span></span><br><span class="line"><span class="built_in">print</span>(random.uniform(a,b)) <span class="comment"># 生成一个a与b之间的浮点数，包括a，b</span></span><br><span class="line"><span class="built_in">print</span>(random.randint(a,b)) <span class="comment"># 生成一个a与b之间的整数，包括a，b</span></span><br><span class="line"><span class="built_in">print</span>(random.choice(seq)) <span class="comment"># 从seq中随机取一个元素，序列可以是字符串，列表，元组</span></span><br><span class="line"><span class="built_in">print</span>(random.randrange(a, b, step)) <span class="comment"># 在指定的集合[a,b)中，以step为基数随机取一个数</span></span><br></pre></td></tr></table></figure>
 
 
+<h3 id="11、什么是Python？"><a href="#11、什么是Python？" class="headerlink" title="11、什么是Python？"></a>11、什么是Python？</h3><p>Python 是一种编程语言，它有对象、模块、线程、异常处理和自动内存管理，可以加入其他语言的对比。<br>Python 是一种解释型语言，Python在代码运行之前不需要解释。<br>Python 是动态类型语言，在声明变量时，不需要说明变量的类型。<br>Python 适合面向对象的编程，因为它支持通过组合与继承的方式定义类。<br>在 Python语言中，函数是第一类对象。<br>Python 代码编写快，但是运行速度比编译型语言通常要慢。<br>Python 用途广泛，常被用走”胶水语言”，可帮助其他语言和组件改善运行状况。使用Python，程序员可以专注于算法和数据结构的设计，而不用处理底层的细节。</p>
+<h3 id="12、Python是强语言类型还是弱语言类型？"><a href="#12、Python是强语言类型还是弱语言类型？" class="headerlink" title="12、Python是强语言类型还是弱语言类型？"></a>12、Python是强语言类型还是弱语言类型？</h3><p>Python是强类型的动态脚本语言。</p>
+<blockquote>
+<p>强类型：不允许不同类型相加<br>动态：不使用显示数据类型声明，且确定一个变量的类型是在第一次给他赋值的时候。<br>脚本语言：一般也是解释型语言，运行代码只需要一个解释器，不需要编译。</p>
+</blockquote>
+<h3 id="13、什么是解释性语言，什么是编译性语言？"><a href="#13、什么是解释性语言，什么是编译性语言？" class="headerlink" title="13、什么是解释性语言，什么是编译性语言？"></a>13、什么是解释性语言，什么是编译性语言？</h3><p>计算机不能直接理解高级语言，智能直接理解机器语言，所以必须把高级语言翻译成机器语言，计算机才能执行高级语言编写的程序。<br>解释性语言在运行程序时才进行翻译。<br>编译型余韵写的程序在执行之前，需要一个专门的编译过程，把程序编译成机器语言（可执行文件）。</p>
+<h3 id="14、什么是可变不可变类型？"><a href="#14、什么是可变不可变类型？" class="headerlink" title="14、什么是可变不可变类型？"></a>14、什么是可变不可变类型？</h3><p>可变不可变指的是内存中的值是否可以被改变，不可变类型指的是对象所在的内存块李米娜的值不可改变，有数值、字符串、元组；可变类型则可以改变，主要有列表、字典。</p>
+<h3 id="15、常用的Python标准库有哪些？"><a href="#15、常用的Python标准库有哪些？" class="headerlink" title="15、常用的Python标准库有哪些？"></a>15、常用的Python标准库有哪些？</h3><h3 id="16、Python中的整数缓存机制"><a href="#16、Python中的整数缓存机制" class="headerlink" title="16、Python中的整数缓存机制"></a>16、Python中的整数缓存机制</h3><p>请解释在执行的代码的以下结果：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a = <span class="number">256</span></span><br><span class="line">b = <span class="number">256</span></span><br><span class="line"><span class="built_in">print</span>(a <span class="keyword">is</span> b)  <span class="comment"># True</span></span><br><span class="line"></span><br><span class="line">x = <span class="number">257</span></span><br><span class="line">y = <span class="number">257</span></span><br><span class="line"><span class="built_in">print</span>(x <span class="keyword">is</span> y) <span class="comment"># False</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>解答：这是因为Python中的整数缓存机制。为了节省时间和内存成本，Python总是预先加载[-5,256]范围内的小整数。<br>因此，[-5,256]中的所有整数都已经保存在内存中。当声明此范围内的新整数变量时，Python只是将缓存的整数引用到它，不会创建任何新对象。</p>
+</blockquote>
+<h3 id="17、如何避免嵌套循环"><a href="#17、如何避免嵌套循环" class="headerlink" title="17、如何避免嵌套循环"></a>17、如何避免嵌套循环</h3><h3 id="18、类方法和静态方法的区别"><a href="#18、类方法和静态方法的区别" class="headerlink" title="18、类方法和静态方法的区别"></a>18、类方法和静态方法的区别</h3><h3 id="19、eval函数的使用"><a href="#19、eval函数的使用" class="headerlink" title="19、eval函数的使用"></a>19、eval函数的使用</h3><h3 id="20、Python中的抽象类"><a href="#20、Python中的抽象类" class="headerlink" title="20、Python中的抽象类"></a>20、Python中的抽象类</h3><h3 id="21、函数传参的机制"><a href="#21、函数传参的机制" class="headerlink" title="21、函数传参的机制"></a>21、函数传参的机制</h3><h3 id="22、Python中的垃圾回收"><a href="#22、Python中的垃圾回收" class="headerlink" title="22、Python中的垃圾回收"></a>22、Python中的垃圾回收</h3><h3 id="23、在Python函数中接收无限数量的参数"><a href="#23、在Python函数中接收无限数量的参数" class="headerlink" title="23、在Python函数中接收无限数量的参数"></a>23、在Python函数中接收无限数量的参数</h3><h3 id="24、Python中的一些推导式"><a href="#24、Python中的一些推导式" class="headerlink" title="24、Python中的一些推导式"></a>24、Python中的一些推导式</h3>
       
 
       
@@ -244,11 +258,15 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">基础</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">面试</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Python面试</a>
         		</li>
       		
 		</ul>
@@ -356,7 +374,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-Python%E4%B8%AD%E5%86%85%E7%BD%AE%E7%9A%84%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E6%9C%89%E5%87%A0%E7%A7%8D%EF%BC%9F"><span class="toc-number">1.</span> <span class="toc-text">1.Python中内置的数据结构有几种？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81Python%E5%8F%AF%E5%8F%98%E7%B1%BB%E5%9E%8B%E5%92%8C%E4%B8%8D%E5%8F%AF%E5%8F%98%E7%B1%BB%E5%9E%8B"><span class="toc-number">2.</span> <span class="toc-text">2、Python可变类型和不可变类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81Python%E4%B8%ADis%E5%92%8C-%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB%EF%BC%9F"><span class="toc-number">3.</span> <span class="toc-text">3、Python中is和&#x3D;&#x3D;有什么区别？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4%E3%80%81%E5%88%97%E4%B8%BE%E5%87%A0%E4%B8%AAPython%E7%9A%84%E6%A0%87%E5%87%86%E5%BA%93%EF%BC%8C%E5%88%86%E5%88%AB%E8%AF%B4%E6%98%8E%E6%98%AF%E5%81%9A%E4%BB%80%E4%B9%88%E7%9A%84%EF%BC%9F"><span class="toc-number">4.</span> <span class="toc-text">4、列举几个Python的标准库，分别说明是做什么的？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5%E3%80%81Python%E6%93%8D%E4%BD%9CMysql%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-number">5.</span> <span class="toc-text">5、Python操作Mysql数据库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6%E3%80%81%E6%8A%BD%E8%B1%A1%E7%B1%BB%E5%92%8C%E6%8E%A5%E5%8F%A3%E7%B1%BB%E7%9A%84%E5%8C%BA%E5%88%AB%E5%92%8C%E8%81%94%E7%B3%BB"><span class="toc-number">6.</span> <span class="toc-text">6、抽象类和接口类的区别和联系</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7%E3%80%81%E7%BC%96%E5%86%99%E5%87%BD%E6%95%B0%E7%9A%84%E5%9B%9B%E4%B8%AA%E5%8E%9F%E5%88%99"><span class="toc-number">7.</span> <span class="toc-text">7、编写函数的四个原则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8%E3%80%81%E4%BB%80%E4%B9%88%E6%98%AFlambda%E5%87%BD%E6%95%B0%EF%BC%9F%E6%9C%89%E4%BB%80%E4%B9%88%E5%A5%BD%E5%A4%84%EF%BC%9F"><span class="toc-number">8.</span> <span class="toc-text">8、什么是lambda函数？有什么好处？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9%E3%80%81%E8%B5%8B%E5%80%BC%E3%80%81%E6%B5%85%E6%8B%B7%E8%B4%9D%E5%92%8C%E6%B7%B1%E6%8B%B7%E8%B4%9D%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">9.</span> <span class="toc-text">9、赋值、浅拷贝和深拷贝的区别</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%884%EF%BC%89%E6%B7%B1%E6%8B%B7%E8%B4%9D"><span class="toc-number">9.1.</span> <span class="toc-text">（4）深拷贝</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10%E3%80%81Python%E7%94%9F%E6%88%90%E9%9A%8F%E6%9C%BA%E6%95%B0"><span class="toc-number">10.</span> <span class="toc-text">10、Python生成随机数</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-Python%E4%B8%AD%E5%86%85%E7%BD%AE%E7%9A%84%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E6%9C%89%E5%87%A0%E7%A7%8D%EF%BC%9F"><span class="toc-number">1.</span> <span class="toc-text">1.Python中内置的数据结构有几种？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81Python%E5%8F%AF%E5%8F%98%E7%B1%BB%E5%9E%8B%E5%92%8C%E4%B8%8D%E5%8F%AF%E5%8F%98%E7%B1%BB%E5%9E%8B"><span class="toc-number">2.</span> <span class="toc-text">2、Python可变类型和不可变类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81Python%E4%B8%ADis%E5%92%8C-%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB%EF%BC%9F"><span class="toc-number">3.</span> <span class="toc-text">3、Python中is和&#x3D;&#x3D;有什么区别？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4%E3%80%81%E5%88%97%E4%B8%BE%E5%87%A0%E4%B8%AAPython%E7%9A%84%E6%A0%87%E5%87%86%E5%BA%93%EF%BC%8C%E5%88%86%E5%88%AB%E8%AF%B4%E6%98%8E%E6%98%AF%E5%81%9A%E4%BB%80%E4%B9%88%E7%9A%84%EF%BC%9F"><span class="toc-number">4.</span> <span class="toc-text">4、列举几个Python的标准库，分别说明是做什么的？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5%E3%80%81Python%E6%93%8D%E4%BD%9CMysql%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-number">5.</span> <span class="toc-text">5、Python操作Mysql数据库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6%E3%80%81%E6%8A%BD%E8%B1%A1%E7%B1%BB%E5%92%8C%E6%8E%A5%E5%8F%A3%E7%B1%BB%E7%9A%84%E5%8C%BA%E5%88%AB%E5%92%8C%E8%81%94%E7%B3%BB"><span class="toc-number">6.</span> <span class="toc-text">6、抽象类和接口类的区别和联系</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7%E3%80%81%E7%BC%96%E5%86%99%E5%87%BD%E6%95%B0%E7%9A%84%E5%9B%9B%E4%B8%AA%E5%8E%9F%E5%88%99"><span class="toc-number">7.</span> <span class="toc-text">7、编写函数的四个原则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8%E3%80%81%E4%BB%80%E4%B9%88%E6%98%AFlambda%E5%87%BD%E6%95%B0%EF%BC%9F%E6%9C%89%E4%BB%80%E4%B9%88%E5%A5%BD%E5%A4%84%EF%BC%9F"><span class="toc-number">8.</span> <span class="toc-text">8、什么是lambda函数？有什么好处？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9%E3%80%81%E8%B5%8B%E5%80%BC%E3%80%81%E6%B5%85%E6%8B%B7%E8%B4%9D%E5%92%8C%E6%B7%B1%E6%8B%B7%E8%B4%9D%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">9.</span> <span class="toc-text">9、赋值、浅拷贝和深拷贝的区别</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%881%EF%BC%89%E8%B5%8B%E5%80%BC"><span class="toc-number">9.1.</span> <span class="toc-text">（1）赋值</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%882%EF%BC%89%E6%B5%85%E6%8B%B7%E8%B4%9D"><span class="toc-number">9.2.</span> <span class="toc-text">（2）浅拷贝</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%883%EF%BC%89%E6%B7%B1%E6%8B%B7%E8%B4%9D"><span class="toc-number">9.3.</span> <span class="toc-text">（3）深拷贝</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10%E3%80%81Python%E7%94%9F%E6%88%90%E9%9A%8F%E6%9C%BA%E6%95%B0"><span class="toc-number">10.</span> <span class="toc-text">10、Python生成随机数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11%E3%80%81%E4%BB%80%E4%B9%88%E6%98%AFPython%EF%BC%9F"><span class="toc-number">11.</span> <span class="toc-text">11、什么是Python？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#12%E3%80%81Python%E6%98%AF%E5%BC%BA%E8%AF%AD%E8%A8%80%E7%B1%BB%E5%9E%8B%E8%BF%98%E6%98%AF%E5%BC%B1%E8%AF%AD%E8%A8%80%E7%B1%BB%E5%9E%8B%EF%BC%9F"><span class="toc-number">12.</span> <span class="toc-text">12、Python是强语言类型还是弱语言类型？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#13%E3%80%81%E4%BB%80%E4%B9%88%E6%98%AF%E8%A7%A3%E9%87%8A%E6%80%A7%E8%AF%AD%E8%A8%80%EF%BC%8C%E4%BB%80%E4%B9%88%E6%98%AF%E7%BC%96%E8%AF%91%E6%80%A7%E8%AF%AD%E8%A8%80%EF%BC%9F"><span class="toc-number">13.</span> <span class="toc-text">13、什么是解释性语言，什么是编译性语言？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#14%E3%80%81%E4%BB%80%E4%B9%88%E6%98%AF%E5%8F%AF%E5%8F%98%E4%B8%8D%E5%8F%AF%E5%8F%98%E7%B1%BB%E5%9E%8B%EF%BC%9F"><span class="toc-number">14.</span> <span class="toc-text">14、什么是可变不可变类型？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#15%E3%80%81%E5%B8%B8%E7%94%A8%E7%9A%84Python%E6%A0%87%E5%87%86%E5%BA%93%E6%9C%89%E5%93%AA%E4%BA%9B%EF%BC%9F"><span class="toc-number">15.</span> <span class="toc-text">15、常用的Python标准库有哪些？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#16%E3%80%81Python%E4%B8%AD%E7%9A%84%E6%95%B4%E6%95%B0%E7%BC%93%E5%AD%98%E6%9C%BA%E5%88%B6"><span class="toc-number">16.</span> <span class="toc-text">16、Python中的整数缓存机制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#17%E3%80%81%E5%A6%82%E4%BD%95%E9%81%BF%E5%85%8D%E5%B5%8C%E5%A5%97%E5%BE%AA%E7%8E%AF"><span class="toc-number">17.</span> <span class="toc-text">17、如何避免嵌套循环</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#18%E3%80%81%E7%B1%BB%E6%96%B9%E6%B3%95%E5%92%8C%E9%9D%99%E6%80%81%E6%96%B9%E6%B3%95%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">18.</span> <span class="toc-text">18、类方法和静态方法的区别</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#19%E3%80%81eval%E5%87%BD%E6%95%B0%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="toc-number">19.</span> <span class="toc-text">19、eval函数的使用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#20%E3%80%81Python%E4%B8%AD%E7%9A%84%E6%8A%BD%E8%B1%A1%E7%B1%BB"><span class="toc-number">20.</span> <span class="toc-text">20、Python中的抽象类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#21%E3%80%81%E5%87%BD%E6%95%B0%E4%BC%A0%E5%8F%82%E7%9A%84%E6%9C%BA%E5%88%B6"><span class="toc-number">21.</span> <span class="toc-text">21、函数传参的机制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#22%E3%80%81Python%E4%B8%AD%E7%9A%84%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6"><span class="toc-number">22.</span> <span class="toc-text">22、Python中的垃圾回收</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#23%E3%80%81%E5%9C%A8Python%E5%87%BD%E6%95%B0%E4%B8%AD%E6%8E%A5%E6%94%B6%E6%97%A0%E9%99%90%E6%95%B0%E9%87%8F%E7%9A%84%E5%8F%82%E6%95%B0"><span class="toc-number">23.</span> <span class="toc-text">23、在Python函数中接收无限数量的参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#24%E3%80%81Python%E4%B8%AD%E7%9A%84%E4%B8%80%E4%BA%9B%E6%8E%A8%E5%AF%BC%E5%BC%8F"><span class="toc-number">24.</span> <span class="toc-text">24、Python中的一些推导式</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -938,6 +956,94 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">内卷效应</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Python自动化</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Python办公自动化</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Python批量创建文件</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Python自动备份文件</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Python面试</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">后端开发</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">项目结构</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">路由</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">视图函数</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">模版引擎</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">请求与响应</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">静态文件</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">文件上传</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">数据库集成</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">表单验证</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">调试</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">测试</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">安全性</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Python批量移动文件</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Python批量删除文件</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Python批量复制文件</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Python批量重命名文件</a>
               </li>
             
             <div class="clearfix"></div>
