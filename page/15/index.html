@@ -160,6 +160,96 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-python-decorator" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="../../2021/11/python-decorator/">Python学习</a>
+    </h1>
+  
+
+        
+        <a href="../../2021/11/python-decorator/" class="archive-article-date">
+  	<time datetime="2021-11-20T11:39:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-11-20</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Decorater</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">is_prime</span>(<span class="params">num</span>):</span><br><span class="line">	<span class="keyword">if</span> num&lt;<span class="number">2</span>:</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">	<span class="keyword">elif</span> num == <span class="number">2</span>:</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line">	<span class="keyword">else</span>:</span><br><span class="line">		<span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">2</span>,num):</span><br><span class="line">			<span class="keyword">if</span> num % i == <span class="number">0</span>:</span><br><span class="line">				<span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">		<span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">prime_nums</span>():</span><br><span class="line">	t1 = time.time()</span><br><span class="line">	<span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">2</span>,<span class="number">10000</span>):</span><br><span class="line">		<span class="keyword">if</span> is_prime(i):</span><br><span class="line">			<span class="built_in">print</span>(i)</span><br><span class="line">	t2 = time.time()</span><br><span class="line">	<span class="built_in">print</span>(t2-t1)</span><br><span class="line">prime_nums()</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>如果使用time函数的地方比较多，每次都这样写会比较麻烦，而且获取时间的逻辑和别的代码逻辑放到一起比较混乱。<br>装饰器如何使用？</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">display_time</span>(<span class="params">func</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">wrapper</span>():</span><br><span class="line">        t1 = time.time()</span><br><span class="line">        func()</span><br><span class="line">        t2 = time.time()</span><br><span class="line">        <span class="built_in">print</span>(t2 - t1)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> wrapper</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">is_prime</span>(<span class="params">num</span>):</span><br><span class="line">    <span class="keyword">if</span> num &lt; <span class="number">2</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">    <span class="keyword">elif</span> num == <span class="number">2</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">2</span>, num):</span><br><span class="line">            <span class="keyword">if</span> num % i == <span class="number">0</span>:</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line"></span><br><span class="line"><span class="meta">@display_time</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">prime_nums</span>():</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">2</span>, <span class="number">10000</span>):</span><br><span class="line">        <span class="keyword">if</span> is_prime(i):</span><br><span class="line">            <span class="built_in">print</span>(i)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">prime_nums()</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>带返回值</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">display_time</span>(<span class="params">func</span>):</span><br><span class="line">	<span class="keyword">def</span> <span class="title function_">wrapper</span>():</span><br><span class="line">		t1 = time.time()</span><br><span class="line">		result = func()</span><br><span class="line">		<span class="built_in">print</span>(<span class="string">&quot;Total time: &#123;:.4&#125; s&quot;</span>.<span class="built_in">format</span>(t2-t1))</span><br><span class="line">		<span class="keyword">return</span> result</span><br><span class="line">	<span class="keyword">return</span> wrapper        </span><br></pre></td></tr></table></figure>
+<p>函数带有参数的情况</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">display_time</span>(<span class="params">func</span>):</span><br><span class="line">	<span class="keyword">def</span> <span class="title function_">wrapper</span>(<span class="params">*args</span>):</span><br><span class="line">		t1 = time.time()</span><br><span class="line">		result = func(*args)</span><br><span class="line">		<span class="built_in">print</span>(<span class="string">&quot;Total time: &#123;:.4&#125; s&quot;</span>.<span class="built_in">format</span>(t2-t1))</span><br><span class="line">		<span class="keyword">return</span> result</span><br></pre></td></tr></table></figure>
+<p>*args表示有多个参数</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Python学习记录</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">高阶</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Python装饰器</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="../../2021/11/python-decorator/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-docker-compose" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -854,83 +944,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="../../2021/05/patA1132/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-patA1120" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="../../2021/05/patA1120/">patA1120</a>
-    </h1>
-  
-
-        
-        <a href="../../2021/05/patA1120/" class="archive-article-date">
-  	<time datetime="2021-05-10T13:58:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-05-10</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">String</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="../../2021/05/patA1120/">展开全文 >></a>
         </p>
       
 
