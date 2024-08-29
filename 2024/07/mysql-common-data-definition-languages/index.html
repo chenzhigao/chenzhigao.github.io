@@ -16,7 +16,7 @@
 <meta property="og:description" content="本文介绍MySQL经常用到的数据定义语言。数据定义语言（DDL）：用于创建、修改、删除数据库中的各种对象(数据库、表、视图、索引等)。对于业务分析人员来说，可以使用DDL完成分析逻辑的自用数据库的建设和修改。常用的命令有create、alter、drop。">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2024-07-15T07:51:17.000Z">
-<meta property="article:modified_time" content="2024-07-17T14:14:34.725Z">
+<meta property="article:modified_time" content="2024-08-29T14:20:52.501Z">
 <meta property="article:author" content="chengzhigao">
 <meta property="article:tag" content="SQL">
 <meta name="twitter:card" content="summary">
@@ -193,7 +193,7 @@
 <p>在创建表时，一定要声明使用的数据库。</p>
 </blockquote>
 <figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="comment">-- 1、使用test数据库</span></span><br><span class="line">use test;</span><br><span class="line"><span class="comment">-- 2、创建部门信息表</span></span><br><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> dept(</span><br><span class="line">    depid <span class="type">char</span>(<span class="number">3</span>) <span class="keyword">primary</span> key,</span><br><span class="line">    depname <span class="type">varchar</span>(<span class="number">20</span>),</span><br><span class="line">    peoplecount <span class="type">int</span></span><br><span class="line">);</span><br></pre></td></tr></table></figure>
-<p>其中<code>char(3)</code>,<code>varchar(20)</code>,<code>int</code>为数据类型，更多数据类型内容查看 <strong><a href="">MySQL数据类型</a></strong> 章节，<code>primary key</code>为约束条件，更多约束条件相关查看 <strong><a href="">MySQL约束条件</a></strong> 章节。</p>
+<p>其中<code>char(3)</code>,<code>varchar(20)</code>,<code>int</code>为数据类型，更多数据类型内容查看 <strong><a href="../mysql-data-type">MySQL数据类型</a></strong> 章节，<code>primary key</code>为约束条件，更多约束条件相关查看 <strong><a href="../mysql-constraints">MySQL约束条件</a></strong> 章节。</p>
 <h4 id="2、查看表"><a href="#2、查看表" class="headerlink" title="2、查看表"></a>2、查看表</h4><h4 id="（1）查看数据库下所有表"><a href="#（1）查看数据库下所有表" class="headerlink" title="（1）查看数据库下所有表"></a>（1）查看数据库下所有表</h4><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="comment">-- 查看当前数据库所有的表</span></span><br><span class="line"><span class="keyword">show</span> tables;</span><br></pre></td></tr></table></figure>
 <h4 id="（2）查看表结构"><a href="#（2）查看表结构" class="headerlink" title="（2）查看表结构"></a>（2）查看表结构</h4><blockquote>
 <p>若查看表之前未声明该表所在的数据库，需要用限定符指定数据库名称.表名。 </p>
