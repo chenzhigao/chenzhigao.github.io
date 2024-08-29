@@ -6,14 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://chenzhigao.github.io">
-  <title>程序员肥仔的小站</title>
+  <title>MySQL常用函数整理 | 程序员肥仔的小站</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="程序员肥仔的小站">
-<meta property="og:url" content="https://chenzhigao.github.io/index.html">
+  <meta name="description" content="本文介绍MySQL中经常用到的函数，包括数学函数、字符串函数、日期时间函数等等。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MySQL常用函数整理">
+<meta property="og:url" content="https://chenzhigao.github.io/2024/07/organize-common-mysql-functions/index.html">
 <meta property="og:site_name" content="程序员肥仔的小站">
+<meta property="og:description" content="本文介绍MySQL中经常用到的函数，包括数学函数、字符串函数、日期时间函数等等。">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2024-07-17T12:07:51.000Z">
+<meta property="article:modified_time" content="2024-08-29T13:48:51.161Z">
 <meta property="article:author" content="chengzhigao">
+<meta property="article:tag" content="SQL">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="程序员肥仔的小站" type="application/atom+xml">
@@ -53,13 +58,13 @@
 		<nav class="header-menu">
 			<ul>
 			
-				<li><a href="index.html">主页</a></li>
+				<li><a href="../../../index.html">主页</a></li>
 	        
-				<li><a href="/tags/%E7%AC%94%E8%AE%B0/">笔记</a></li>
+				<li><a href="../../../tags/%E7%AC%94%E8%AE%B0/">笔记</a></li>
 	        
-				<li><a href="/tags/%E5%8D%9A%E5%AE%A2/">博客</a></li>
+				<li><a href="../../../tags/%E5%8D%9A%E5%AE%A2/">博客</a></li>
 	        
-				<li><a href="/tags/%E6%97%A5%E5%B8%B8/">日常</a></li>
+				<li><a href="../../../tags/%E6%97%A5%E5%B8%B8/">日常</a></li>
 	        
 			</ul>
 		</nav>
@@ -137,13 +142,13 @@
 				<ul style="width: 70%">
 				
 				
-					<li style="width: 25%"><a href="index.html">主页</a></li>
+					<li style="width: 25%"><a href="../../../index.html">主页</a></li>
 		        
-					<li style="width: 25%"><a href="/tags/%E7%AC%94%E8%AE%B0/">笔记</a></li>
+					<li style="width: 25%"><a href="../../../tags/%E7%AC%94%E8%AE%B0/">笔记</a></li>
 		        
-					<li style="width: 25%"><a href="/tags/%E5%8D%9A%E5%AE%A2/">博客</a></li>
+					<li style="width: 25%"><a href="../../../tags/%E5%8D%9A%E5%AE%A2/">博客</a></li>
 		        
-					<li style="width: 25%"><a href="/tags/%E6%97%A5%E5%B8%B8/">日常</a></li>
+					<li style="width: 25%"><a href="../../../tags/%E6%97%A5%E5%B8%B8/">日常</a></li>
 		        
 				</ul>
 			</nav>
@@ -158,32 +163,462 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-python-extracts-the-text-content-in-ppt" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-organize-common-mysql-functions" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="2024/08/python-extracts-the-text-content-in-ppt/">Python提取PPT中文字内容</a>
+    <h1 class="article-title" itemprop="name">
+      MySQL常用函数整理
     </h1>
   
 
         
-        <a href="2024/08/python-extracts-the-text-content-in-ppt/" class="archive-article-date">
-  	<time datetime="2024-08-25T02:56:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2024-08-25</time>
+        <a href="" class="archive-article-date">
+  	<time datetime="2024-07-17T12:07:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2024-07-17</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>本文介绍如何使用Python的第三方库<code>python-pptx</code>提取PPT中的文字内容。</p>
-        
+        <p>本文介绍MySQL中经常用到的函数，包括数学函数、字符串函数、日期时间函数等等。</p>
+<span id="more"></span>
+<h2 id="MySQL函数"><a href="#MySQL函数" class="headerlink" title="MySQL函数"></a>MySQL函数</h2><h3 id="1、数学函数"><a href="#1、数学函数" class="headerlink" title="1、数学函数"></a>1、数学函数</h3><h4 id="（1）abs-x-：返回x的绝对值"><a href="#（1）abs-x-：返回x的绝对值" class="headerlink" title="（1）abs(x)：返回x的绝对值"></a>（1）abs(x)：返回x的绝对值</h4><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="comment">-- 返回-2的绝对值2</span></span><br><span class="line"><span class="keyword">select</span> <span class="built_in">abs</span>(<span class="number">-2</span>);</span><br></pre></td></tr></table></figure>
+<h4 id="（2）sqrt-x-返回x的平方根"><a href="#（2）sqrt-x-返回x的平方根" class="headerlink" title="（2）sqrt(x):返回x的平方根"></a>（2）sqrt(x):返回x的平方根</h4><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="comment">-- 返回16的平方根4</span></span><br><span class="line"><span class="keyword">select</span> <span class="built_in">sqrt</span>(<span class="number">16</span>);</span><br><span class="line"><span class="comment">-- -16没有平方根，返回null</span></span><br><span class="line"><span class="keyword">select</span> <span class="built_in">sqrt</span>(<span class="number">-16</span>);</span><br></pre></td></tr></table></figure>
+<h4 id="（3）round-x-d-：返回x的四舍五入值，保留d位小数"><a href="#（3）round-x-d-：返回x的四舍五入值，保留d位小数" class="headerlink" title="（3）round(x[,d])：返回x的四舍五入值，保留d位小数"></a>（3）round(x[,d])：返回x的四舍五入值，保留d位小数</h4><p> <strong>d的默认值为0.</strong> </p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="comment">-- 查询emp表中收入最高的员工工资是平均工资的多少倍,保留两位小数</span></span><br><span class="line"><span class="keyword">select</span> round(<span class="built_in">max</span>(sal)<span class="operator">/</span><span class="built_in">avg</span>(sal),<span class="number">2</span>) 倍数 <span class="keyword">from</span> emp;</span><br></pre></td></tr></table></figure>
+<p> <strong>常用数学函数整理如下：</strong> </p>
+<table>
+<thead>
+<tr>
+<th align="center">函数名</th>
+<th align="center">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">abs(x)</td>
+<td align="center">返回x的绝对值</td>
+</tr>
+<tr>
+<td align="center">ceiling(x)</td>
+<td align="center">返回大于或等于x的最小整数(进一取整)</td>
+</tr>
+<tr>
+<td align="center">exp(x)</td>
+<td align="center">返回e的x次方</td>
+</tr>
+<tr>
+<td align="center">floor(x)</td>
+<td align="center">返回小于或等于x的最大整数(去掉小数取整)</td>
+</tr>
+<tr>
+<td align="center">greatest(exprl, expr2, expr3,…)</td>
+<td align="center">返回列表中的最大值</td>
+</tr>
+<tr>
+<td align="center">least(exprl, expr2, expr3, …)</td>
+<td align="center">返回列表中的最小值</td>
+</tr>
+<tr>
+<td align="center">log(base, x)</td>
+<td align="center">返回以 base 为底的对数</td>
+</tr>
+<tr>
+<td align="center">mod(x,y)</td>
+<td align="center">返回x除以y以后的余数</td>
+</tr>
+<tr>
+<td align="center">pi()</td>
+<td align="center">返回圆周率</td>
+</tr>
+<tr>
+<td align="center">pow(x,y)</td>
+<td align="center">返回x的y次方</td>
+</tr>
+<tr>
+<td align="center">rand()</td>
+<td align="center">返回0~1的随机数</td>
+</tr>
+<tr>
+<td align="center">round(x[,d])</td>
+<td align="center">返回x的四舍五入值,保留d位小数(d的默认值为0)</td>
+</tr>
+<tr>
+<td align="center">sign(x)</td>
+<td align="center">返回x的符号值，x是负数、0、正数时分别返回-1、0和1</td>
+</tr>
+<tr>
+<td align="center">sqrt(x)</td>
+<td align="center">返回x的平方根</td>
+</tr>
+<tr>
+<td align="center">truncate(x,y)</td>
+<td align="center">返回数值x保留到小数点后y位的值(与round函数最大的区别是不会进行四舍五入)</td>
+</tr>
+</tbody></table>
+<h3 id="2、字符串函数"><a href="#2、字符串函数" class="headerlink" title="2、字符串函数"></a>2、字符串函数</h3><h4 id="（1）concat-s1-s2-…-字符串拼接"><a href="#（1）concat-s1-s2-…-字符串拼接" class="headerlink" title="（1）concat(s1,s2,…):字符串拼接"></a>（1）concat(s1,s2,…):字符串拼接</h4><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="comment">-- 将3个字符串合并为一个长字符串，返回&#x27;CDA数据分析&#x27;</span></span><br><span class="line"><span class="keyword">select</span> concat(<span class="string">&#x27;CDA&#x27;</span>,<span class="string">&#x27;数据&#x27;</span>,<span class="string">&#x27;分析&#x27;</span>);</span><br><span class="line"><span class="comment">-- 参数中包含空值，返回null</span></span><br><span class="line"><span class="keyword">select</span> concat(<span class="string">&#x27;CDA&#x27;</span>,<span class="keyword">null</span>,<span class="string">&#x27;分析&#x27;</span>);</span><br><span class="line"><span class="comment">-- 参数中包含空白值不影响结果，返回&#x27;CDA分析&#x27;</span></span><br><span class="line"><span class="keyword">select</span> concat(<span class="string">&#x27;CDA&#x27;</span>,<span class="string">&#x27;&#x27;</span>,<span class="string">&#x27;分析&#x27;</span>);</span><br></pre></td></tr></table></figure>
+<h4 id="（2）substring-s-start-length-字符串截取"><a href="#（2）substring-s-start-length-字符串截取" class="headerlink" title="（2）substring(s,start[,length]):字符串截取"></a>（2）substring(s,start[,length]):字符串截取</h4><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="comment">-- 从字符串第四位开始，截取长度为2个字符的字符串，返回&#x27;数据&#x27;</span></span><br><span class="line"><span class="keyword">select</span> <span class="built_in">substring</span>(<span class="string">&#x27;CDA数据分析&#x27;</span>,<span class="number">4</span>,<span class="number">2</span>)；</span><br><span class="line"><span class="comment">-- 从字符串第4位开始，截取到字符串结束，返回&#x27;数据分析&#x27;</span></span><br><span class="line"><span class="keyword">select</span> <span class="built_in">substring</span>(<span class="string">&#x27;CDA数据分析&#x27;</span>,<span class="number">4</span>);</span><br></pre></td></tr></table></figure>
+<h4 id="（3）replace-s-s1-s2-将字符串s中的s1用s2替换"><a href="#（3）replace-s-s1-s2-将字符串s中的s1用s2替换" class="headerlink" title="（3）replace(s,s1,s2):将字符串s中的s1用s2替换"></a>（3）replace(s,s1,s2):将字符串s中的s1用s2替换</h4><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="comment">-- 将emp表中job字段中的manager替换为leader</span></span><br><span class="line"><span class="keyword">select</span> job,replace(job,<span class="string">&#x27;manager&#x27;</span>,<span class="string">&#x27;leader&#x27;</span>) <span class="keyword">from</span> emp;</span><br></pre></td></tr></table></figure>
+<p> <strong>常用字符串函数整理如下：</strong> </p>
+<table>
+<thead>
+<tr>
+<th align="center">函数名</th>
+<th align="center">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">ascii(s)</td>
+<td align="center">返回字符串s的第一个字符的ASCII码</td>
+</tr>
+<tr>
+<td align="center">bin(n)</td>
+<td align="center">返回值为n的二进制的字符串表示</td>
+</tr>
+<tr>
+<td align="center">bit_length(s)</td>
+<td align="center">返回值为二进制的字符串s的长度</td>
+</tr>
+<tr>
+<td align="center">concat(s1,s2,…)</td>
+<td align="center">把字符串s1、s2等多个字符串合并为一个长字符串</td>
+</tr>
+<tr>
+<td align="center">concat_ws(x, s1,s2,,..)</td>
+<td align="center">同concat(s1,s2,…) 函数，但是每个字符串之间用x间隔，x可以是分隔符</td>
+</tr>
+<tr>
+<td align="center">field(s,s1,s2,…)</td>
+<td align="center">返回第一个字符串s在字符串列表(s1,s2,…) 中的位置</td>
+</tr>
+<tr>
+<td align="center">find_in_set(s1,s2)</td>
+<td align="center">返回在字符串s2中与s1匹配的字符串的位置</td>
+</tr>
+<tr>
+<td align="center">insert(str,x,y,instr)</td>
+<td align="center">将字符串str从第x位置开始，y个字符长的子串替换为字符串instr,返回结果</td>
+</tr>
+<tr>
+<td align="center">instr(str,substr)</td>
+<td align="center">返回子字符串substr在文本字符串str中第一次出现的位置</td>
+</tr>
+<tr>
+<td align="center">locate(s1,s)</td>
+<td align="center">从字符串s中获取s1的开始位置</td>
+</tr>
+<tr>
+<td align="center">left(s,n)</td>
+<td align="center">返回字符串s的前n个字符</td>
+</tr>
+<tr>
+<td align="center">length(s)</td>
+<td align="center">返回字符串s的字符长度</td>
+</tr>
+<tr>
+<td align="center">lower(s)&#x2F;lcase(s)</td>
+<td align="center">将字符串s的所有字母变成小写字母</td>
+</tr>
+<tr>
+<td align="center">ltrim(s)</td>
+<td align="center">去掉字符串s开头的空格</td>
+</tr>
+<tr>
+<td align="center">mid(s,n,len)</td>
+<td align="center">从字符串s的第n位置截取长度为len的子字符串，同substring(s,n,len)</td>
+</tr>
+<tr>
+<td align="center">position(s1,s)</td>
+<td align="center">返回字符串 s1 在字符串s中第一次出现的位置</td>
+</tr>
+<tr>
+<td align="center">quote(s)</td>
+<td align="center">用反斜线转义s中的单引号</td>
+</tr>
+<tr>
+<td align="center">repeat(s,n)</td>
+<td align="center">将字符串s重复n次</td>
+</tr>
+<tr>
+<td align="center">replace(s,s1,s2)</td>
+<td align="center">将字符串s2替代字符串s中的字符串s1</td>
+</tr>
+<tr>
+<td align="center">reverse(s)</td>
+<td align="center">将字符串 s的顺序反过来</td>
+</tr>
+<tr>
+<td align="center">right(s,n)</td>
+<td align="center">返回字符串s的后n个字符</td>
+</tr>
+<tr>
+<td align="center">rtrim(s)</td>
+<td align="center">去掉字符串s结尾的空格</td>
+</tr>
+<tr>
+<td align="center">stremp(s1,s2)</td>
+<td align="center">比较字符串s1和s2，若s1与s2相等，则返回0;若s1&gt;s2，则返回1;若 s1&lt;s2，则返回-1</td>
+</tr>
+<tr>
+<td align="center">substring(s, start[, length])</td>
+<td align="center">从字符串 s 的 start位置截取长度为length的子字符串</td>
+</tr>
+<tr>
+<td align="center">trim(s)</td>
+<td align="center">去掉字符串s开始和结尾处的空格</td>
+</tr>
+<tr>
+<td align="center">upper(s)&#x2F; ucase(s)</td>
+<td align="center">将字符串s的所有字母变成大写字母</td>
+</tr>
+</tbody></table>
+<h3 id="3、日期时间函数"><a href="#3、日期时间函数" class="headerlink" title="3、日期时间函数"></a>3、日期时间函数</h3><h4 id="（1）year-date-、month-date-、day-date-：返回指定日期的年、月、日。"><a href="#（1）year-date-、month-date-、day-date-：返回指定日期的年、月、日。" class="headerlink" title="（1）year(date)、month(date)、day(date)：返回指定日期的年、月、日。"></a>（1）year(date)、month(date)、day(date)：返回指定日期的年、月、日。</h4><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="comment">--获取日期中的年月日(日期时间、字符串或者数值均可被识别)</span></span><br><span class="line"><span class="keyword">select</span> <span class="keyword">year</span>(<span class="string">&#x27;2020-01-30&#x27;</span>) 年份,<span class="keyword">month</span>(<span class="string">&#x27;20200130&#x27;</span>) 月份， <span class="keyword">day</span>(<span class="number">20200130</span>) 日;</span><br></pre></td></tr></table></figure>
+<h4 id="（2）date-format-date-format-：根据format字符串格式化date值。"><a href="#（2）date-format-date-format-：根据format字符串格式化date值。" class="headerlink" title="（2）date_format(date,format)：根据format字符串格式化date值。"></a>（2）date_format(date,format)：根据format字符串格式化date值。</h4><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="comment">-- 按照日月年的格式返回日期</span></span><br><span class="line"><span class="keyword">select</span> date_format(<span class="string">&#x27;20-01-30 12:00:00&#x27;</span>,<span class="string">&#x27;%d-%m-%y&#x27;</span>) 日月年;</span><br></pre></td></tr></table></figure>
+
+<h4 id="3）date-add-date-interval-num-type-：对日期时间进行加法运算，date为datetime或date型的起始时间，interval为固定关键词，num为需要增加的时间间隔，type-用来指明-num的对应单位。"><a href="#3）date-add-date-interval-num-type-：对日期时间进行加法运算，date为datetime或date型的起始时间，interval为固定关键词，num为需要增加的时间间隔，type-用来指明-num的对应单位。" class="headerlink" title="(3）date_add(date,interval num type)：对日期时间进行加法运算，date为datetime或date型的起始时间，interval为固定关键词，num为需要增加的时间间隔，type 用来指明 num的对应单位。"></a>(3）date_add(date,interval num type)：对日期时间进行加法运算，date为datetime或date型的起始时间，interval为固定关键词，num为需要增加的时间间隔，type 用来指明 num的对应单位。</h4><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="comment">-- 计算 2020年1月1日2个月后的日期</span></span><br><span class="line"><span class="keyword">select</span> date_add(&quot;2020-01-01&quot;,<span class="type">interval</span> <span class="number">2</span> <span class="keyword">month</span>);</span><br></pre></td></tr></table></figure>
+<h4 id="（4）datediff-d1-d2-：计算结束日d1和起始日d2之间间隔的天数。curdate-返回当前日期。"><a href="#（4）datediff-d1-d2-：计算结束日d1和起始日d2之间间隔的天数。curdate-返回当前日期。" class="headerlink" title="（4）datediff(d1,d2)：计算结束日d1和起始日d2之间间隔的天数。curdate():返回当前日期。"></a>（4）datediff(d1,d2)：计算结束日d1和起始日d2之间间隔的天数。curdate():返回当前日期。</h4><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="comment">-- 计算员工的工龄(雇佣日期与当前日期的差)</span></span><br><span class="line"><span class="keyword">select</span> ename,<span class="built_in">floor</span>(datediff(curdate(),hiredate)<span class="operator">/</span><span class="number">365</span>) <span class="keyword">as</span> 工龄 <span class="keyword">from</span> emp;</span><br></pre></td></tr></table></figure>
+
+
+
+<p> <strong>常用日期时间函数整理如下：</strong> </p>
+<table>
+<thead>
+<tr>
+<th align="center">函数名</th>
+<th align="center">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">adddate(date,interval num type)&#x2F;date_add(date,interval num type)</td>
+<td align="center">计算起始日期 date加上长度为 num、单位为type的时间长度的日期</td>
+</tr>
+<tr>
+<td align="center">curdate()&#x2F;current_date()</td>
+<td align="center">返回当前日期</td>
+</tr>
+<tr>
+<td align="center">curtime()&#x2F;current_time()</td>
+<td align="center">返回当前时间</td>
+</tr>
+<tr>
+<td align="center">current_timestamp()&#x2F;localtimestamp()</td>
+<td align="center">返回当前日期和时间</td>
+</tr>
+<tr>
+<td align="center">date()</td>
+<td align="center">从日期、日期时间表达式中提取日期值，或将字符串型数据转为日期型数据</td>
+</tr>
+<tr>
+<td align="center">datediff(d1,d2)</td>
+<td align="center">计算结束日d1和起始日d2之间间隔的天数</td>
+</tr>
+<tr>
+<td align="center">date_format(date,format)</td>
+<td align="center">根据format字符串格式化date的值</td>
+</tr>
+<tr>
+<td align="center">date_sub(date,interval num type)&#x2F;subdate(date,interval num type)</td>
+<td align="center">计算起始日期date减去长度为num、单位为type的时间长度的日期</td>
+</tr>
+<tr>
+<td align="center">day(date)</td>
+<td align="center">返回日期date的日期部分</td>
+</tr>
+<tr>
+<td align="center">dayname(date)</td>
+<td align="center">返回日期date的星期名</td>
+</tr>
+<tr>
+<td align="center">dayofmonth(date)</td>
+<td align="center">计算日期date是本月的第几天(1-31)</td>
+</tr>
+<tr>
+<td align="center">dayofweek(date)</td>
+<td align="center">返回日期date所代表的一星期中的第几天(1-7)，1代表星期日，2代表星期一，以此类推</td>
+</tr>
+<tr>
+<td align="center">dayofyear(date)</td>
+<td align="center">计算日期date是本年的第几天</td>
+</tr>
+<tr>
+<td align="center">from_days(n)</td>
+<td align="center">计算从0000年1月1日开始n天后的日期</td>
+</tr>
+<tr>
+<td align="center">from unixtime(ts,f)</td>
+<td align="center">根据指定的f格式，格式化UNIX时间戳ts</td>
+</tr>
+<tr>
+<td align="center">hour(t)</td>
+<td align="center">返回t中的小时值(0-23)</td>
+</tr>
+<tr>
+<td align="center">last_day(date)</td>
+<td align="center">返回给定日期的那一月份的最后一天</td>
+</tr>
+<tr>
+<td align="center">maketime(hour, minute, second)</td>
+<td align="center">3个参数分别为小时、分钟、秒，将其组合为完整时间</td>
+</tr>
+<tr>
+<td align="center">minute(t)</td>
+<td align="center">返回(中的分钟值(0-59)</td>
+</tr>
+<tr>
+<td align="center">monthname(date)</td>
+<td align="center">返回日期 date中的月份名称</td>
+</tr>
+<tr>
+<td align="center">month(date)</td>
+<td align="center">返回日期date中的月份值(1-12)返回当前日期和时间</td>
+</tr>
+<tr>
+<td align="center">quarter(date)</td>
+<td align="center">返回日期date是第几季节(1-4)</td>
+</tr>
+<tr>
+<td align="center">second(t)</td>
+<td align="center">返回t中的秒钟值(0-59)</td>
+</tr>
+<tr>
+<td align="center">sec_to_ time(s)</td>
+<td align="center">将以秒为单位的时间s转换为时分秒的格式</td>
+</tr>
+<tr>
+<td align="center">str_to_date(string,format_mask)</td>
+<td align="center">将字符串转换为日期</td>
+</tr>
+<tr>
+<td align="center">time()</td>
+<td align="center">提取传入参数的时间值</td>
+</tr>
+<tr>
+<td align="center">time_format(t,f)</td>
+<td align="center">根据指定的f格式，格式化时间t</td>
+</tr>
+<tr>
+<td align="center">time_to_sec(t)</td>
+<td align="center">将时间t转换为秒</td>
+</tr>
+<tr>
+<td align="center">timediff(t1, t2)</td>
+<td align="center">计算t1和t2的时间差值</td>
+</tr>
+<tr>
+<td align="center">to_days(date)</td>
+<td align="center">计算日期date距离0000年1月1日的天数</td>
+</tr>
+<tr>
+<td align="center">unix_timestamp([date])</td>
+<td align="center">返回一个UNIX 时间戳(从1970-01-01 00:00:00开始的秒数，date默认值为当前时间)</td>
+</tr>
+<tr>
+<td align="center">weck(date)&#x2F; weekofyear(date)</td>
+<td align="center">计算日期 date是本年的第几周(0-53)</td>
+</tr>
+<tr>
+<td align="center">weekday(date)</td>
+<td align="center">计算日期 date 是星期几，0表示星期一，1表示星期二</td>
+</tr>
+<tr>
+<td align="center">year(date)</td>
+<td align="center">返回日期date的年份(1000-9999)</td>
+</tr>
+</tbody></table>
+<h3 id="4、分组合并函数"><a href="#4、分组合并函数" class="headerlink" title="4、分组合并函数"></a>4、分组合并函数</h3><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="comment">-- 查询各部门员工姓名，默认逗号分割</span></span><br><span class="line"><span class="keyword">select</span> deptno, group_concat(ename <span class="keyword">order</span> <span class="keyword">by</span> ename separator <span class="string">&#x27;/&#x27;</span>) 员工姓名列表 <span class="keyword">from</span> emp <span class="keyword">group</span> <span class="keyword">by</span> deptno;</span><br></pre></td></tr></table></figure>
+
+<h3 id="5、逻辑函数"><a href="#5、逻辑函数" class="headerlink" title="5、逻辑函数"></a>5、逻辑函数</h3><h4 id="（1）空值函数"><a href="#（1）空值函数" class="headerlink" title="（1）空值函数"></a>（1）空值函数</h4><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="comment">-- 查询每位员工的实发工资（基本工资+奖金）</span></span><br><span class="line"><span class="keyword">select</span> ename,sal<span class="operator">+</span>ifnull(comm,<span class="number">0</span>) 实发工资 <span class="keyword">from</span> emp;</span><br></pre></td></tr></table></figure>
+<h4 id="（2）if函数"><a href="#（2）if函数" class="headerlink" title="（2）if函数"></a>（2）if函数</h4><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="comment">-- 查询员工的工资级别，3000及以上为高，1500及一下为地，其余为中</span></span><br><span class="line"><span class="keyword">select</span> ename,sal,if(sal<span class="operator">&gt;=</span><span class="number">3000</span>,<span class="string">&#x27;高&#x27;</span>,if(sal<span class="operator">&lt;=</span><span class="number">1500</span>,<span class="string">&#x27;低&#x27;</span>,<span class="string">&#x27;中&#x27;</span>)) 工资级别 <span class="keyword">from</span> emp;</span><br></pre></td></tr></table></figure>
+<h4 id="（3）case逻辑表达式"><a href="#（3）case逻辑表达式" class="headerlink" title="（3）case逻辑表达式"></a>（3）case逻辑表达式</h4><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="comment">-- 查询员工的工资级别，3000及以上为高，1500及一下为地，其余为中</span></span><br><span class="line"><span class="keyword">select</span> ename,sal,</span><br><span class="line">    <span class="keyword">case</span> <span class="keyword">when</span> sal<span class="operator">&gt;=</span><span class="number">3000</span> <span class="keyword">then</span> <span class="string">&#x27;高&#x27;</span></span><br><span class="line">    <span class="keyword">when</span> sal<span class="operator">&lt;=</span><span class="number">1500</span> <span class="keyword">then</span> <span class="string">&#x27;低&#x27;</span></span><br><span class="line">    <span class="keyword">else</span> <span class="string">&#x27;中&#x27;</span> <span class="keyword">end</span> 工资级别 <span class="keyword">from</span> emp;</span><br></pre></td></tr></table></figure>
+<h3 id="6、开窗函数"><a href="#6、开窗函数" class="headerlink" title="6、开窗函数"></a>6、开窗函数</h3><p>对比单条记录与该记录所处分组之间的差别。</p>
+<h4 id="（1）over函数"><a href="#（1）over函数" class="headerlink" title="（1）over函数"></a>（1）over函数</h4><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="comment">-- 查询每位员工与公司所有员工的平均工资之间的情况</span></span><br><span class="line"><span class="keyword">select</span> <span class="operator">*</span>,<span class="built_in">avg</span>(sal) <span class="keyword">over</span>() 平均工资 <span class="keyword">from</span> emp;</span><br></pre></td></tr></table></figure>
+<h4 id="（2）partition-by子句"><a href="#（2）partition-by子句" class="headerlink" title="（2）partition by子句"></a>（2）partition by子句</h4><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="comment">-- 查询每位员工与所属部门平均工资之间的情况</span></span><br><span class="line"><span class="keyword">select</span> <span class="operator">*</span>,<span class="built_in">avg</span>(sal) <span class="keyword">over</span>(<span class="keyword">partition</span> <span class="keyword">by</span> deptno) 平均工资 <span class="keyword">from</span> emp;</span><br></pre></td></tr></table></figure>
+<h4 id="（3）order-by子句"><a href="#（3）order-by子句" class="headerlink" title="（3）order by子句"></a>（3）order by子句</h4><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="comment">-- 按入职日期查询各部门的累计工资</span></span><br><span class="line"><span class="keyword">select</span> <span class="operator">*</span>,<span class="built_in">sum</span>(sal) <span class="keyword">over</span>(<span class="keyword">partition</span> bydeptno <span class="keyword">order</span> <span class="keyword">by</span> hiredate) 累计工资 <span class="keyword">from</span> emp;</span><br></pre></td></tr></table></figure>
+<h4 id="（4）序号函数"><a href="#（4）序号函数" class="headerlink" title="（4）序号函数"></a>（4）序号函数</h4><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="comment">-- 查询各部门员工的工资排名</span></span><br><span class="line"><span class="keyword">select</span> <span class="operator">*</span>,</span><br><span class="line"><span class="built_in">row_number</span>() <span class="keyword">over</span>(<span class="keyword">order</span> <span class="keyword">by</span> sal <span class="keyword">desc</span>) 排名<span class="number">1</span>，</span><br><span class="line"><span class="built_in">dense_rank</span>() <span class="keyword">over</span>(<span class="keyword">order</span> <span class="keyword">by</span> sal <span class="keyword">desc</span>) 排名<span class="number">2</span>,</span><br><span class="line"><span class="built_in">rank</span>() <span class="keyword">over</span>(<span class="keyword">order</span> <span class="keyword">by</span> sal <span class="keyword">desc</span>) 排名<span class="number">3</span></span><br><span class="line"><span class="keyword">from</span> emp;</span><br></pre></td></tr></table></figure>
+<p> <strong>MySQL中常用的开窗函数：</strong> </p>
+<table>
+<thead>
+<tr>
+<th>函数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>cume_dist()</td>
+<td>计算一组值中一个值的累计分布</td>
+</tr>
+<tr>
+<td>dense_rank()</td>
+<td>根据 order by 子句为分区中的每一行分配一个等级。它将相同的等级分配给具有相等值的行。如果两行或更多行具有相同的排名,排名值序列中将没有间隙</td>
+</tr>
+<tr>
+<td>first_value()</td>
+<td>返回相对于窗口框架第一行的指定表达式的值</td>
+</tr>
+<tr>
+<td>lag()</td>
+<td>返回分区中当前行之前的第N行的值。如果不存在前一行，则返回null</td>
+</tr>
+<tr>
+<td>last_value()</td>
+<td>返回相对于窗口框架最后一行的指定表达式的值</td>
+</tr>
+<tr>
+<td>lead()</td>
+<td>返回分区中当前行之后的第N行的值。如果不存在后续行，则返回null</td>
+</tr>
+<tr>
+<td>nth_value()</td>
+<td>从窗口框架的第N行返回参数的值</td>
+</tr>
+<tr>
+<td>ntile()</td>
+<td>将每个窗口分区的行分配到指定数量的排名组中</td>
+</tr>
+<tr>
+<td>percent_rank()</td>
+<td>计算分区或结果集中行的百分数等级</td>
+</tr>
+<tr>
+<td>rank()</td>
+<td>与dense_rank()函数相似，不同之处在于当两行或更多行具有相同的等级时，等级值序列中存在间隙</td>
+</tr>
+<tr>
+<td>row_number()</td>
+<td>为分区中的每一行分配一个顺序整数</td>
+</tr>
+</tbody></table>
+
       
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/wechat.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -194,7 +629,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python办公自动化</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">SQL</a>
         		</li>
       		
 		</ul>
@@ -203,16 +638,84 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="2024/08/python-extracts-the-text-content-in-ppt/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://chenzhigao.github.io/2024/07/organize-common-mysql-functions/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="../c-language-basics/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          C语言基础
+        
+      </div>
+    </a>
+  
+  
+    <a href="../mysql-constraints/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">MySQL约束条件</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -227,684 +730,34 @@
         </div>
         
         
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-python-merge-pdf-files" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="2024/08/python-merge-pdf-files/">Python合并PDF文件</a>
-    </h1>
-  
-
-        
-        <a href="2024/08/python-merge-pdf-files/" class="archive-article-date">
-  	<time datetime="2024-08-20T12:35:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2024-08-20</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>本文介绍如何使用Python将多个pdf文件合并为一个总的pdf文件。</p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python办公自动化</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="2024/08/python-merge-pdf-files/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#MySQL%E5%87%BD%E6%95%B0"><span class="toc-number">1.</span> <span class="toc-text">MySQL函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E6%95%B0%E5%AD%A6%E5%87%BD%E6%95%B0"><span class="toc-number">1.1.</span> <span class="toc-text">1、数学函数</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%881%EF%BC%89abs-x-%EF%BC%9A%E8%BF%94%E5%9B%9Ex%E7%9A%84%E7%BB%9D%E5%AF%B9%E5%80%BC"><span class="toc-number">1.1.1.</span> <span class="toc-text">（1）abs(x)：返回x的绝对值</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%882%EF%BC%89sqrt-x-%E8%BF%94%E5%9B%9Ex%E7%9A%84%E5%B9%B3%E6%96%B9%E6%A0%B9"><span class="toc-number">1.1.2.</span> <span class="toc-text">（2）sqrt(x):返回x的平方根</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%883%EF%BC%89round-x-d-%EF%BC%9A%E8%BF%94%E5%9B%9Ex%E7%9A%84%E5%9B%9B%E8%88%8D%E4%BA%94%E5%85%A5%E5%80%BC%EF%BC%8C%E4%BF%9D%E7%95%99d%E4%BD%8D%E5%B0%8F%E6%95%B0"><span class="toc-number">1.1.3.</span> <span class="toc-text">（3）round(x[,d])：返回x的四舍五入值，保留d位小数</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%87%BD%E6%95%B0"><span class="toc-number">1.2.</span> <span class="toc-text">2、字符串函数</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%881%EF%BC%89concat-s1-s2-%E2%80%A6-%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%8B%BC%E6%8E%A5"><span class="toc-number">1.2.1.</span> <span class="toc-text">（1）concat(s1,s2,…):字符串拼接</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%882%EF%BC%89substring-s-start-length-%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%88%AA%E5%8F%96"><span class="toc-number">1.2.2.</span> <span class="toc-text">（2）substring(s,start[,length]):字符串截取</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%883%EF%BC%89replace-s-s1-s2-%E5%B0%86%E5%AD%97%E7%AC%A6%E4%B8%B2s%E4%B8%AD%E7%9A%84s1%E7%94%A8s2%E6%9B%BF%E6%8D%A2"><span class="toc-number">1.2.3.</span> <span class="toc-text">（3）replace(s,s1,s2):将字符串s中的s1用s2替换</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81%E6%97%A5%E6%9C%9F%E6%97%B6%E9%97%B4%E5%87%BD%E6%95%B0"><span class="toc-number">1.3.</span> <span class="toc-text">3、日期时间函数</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%881%EF%BC%89year-date-%E3%80%81month-date-%E3%80%81day-date-%EF%BC%9A%E8%BF%94%E5%9B%9E%E6%8C%87%E5%AE%9A%E6%97%A5%E6%9C%9F%E7%9A%84%E5%B9%B4%E3%80%81%E6%9C%88%E3%80%81%E6%97%A5%E3%80%82"><span class="toc-number">1.3.1.</span> <span class="toc-text">（1）year(date)、month(date)、day(date)：返回指定日期的年、月、日。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%882%EF%BC%89date-format-date-format-%EF%BC%9A%E6%A0%B9%E6%8D%AEformat%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%A0%BC%E5%BC%8F%E5%8C%96date%E5%80%BC%E3%80%82"><span class="toc-number">1.3.2.</span> <span class="toc-text">（2）date_format(date,format)：根据format字符串格式化date值。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3%EF%BC%89date-add-date-interval-num-type-%EF%BC%9A%E5%AF%B9%E6%97%A5%E6%9C%9F%E6%97%B6%E9%97%B4%E8%BF%9B%E8%A1%8C%E5%8A%A0%E6%B3%95%E8%BF%90%E7%AE%97%EF%BC%8Cdate%E4%B8%BAdatetime%E6%88%96date%E5%9E%8B%E7%9A%84%E8%B5%B7%E5%A7%8B%E6%97%B6%E9%97%B4%EF%BC%8Cinterval%E4%B8%BA%E5%9B%BA%E5%AE%9A%E5%85%B3%E9%94%AE%E8%AF%8D%EF%BC%8Cnum%E4%B8%BA%E9%9C%80%E8%A6%81%E5%A2%9E%E5%8A%A0%E7%9A%84%E6%97%B6%E9%97%B4%E9%97%B4%E9%9A%94%EF%BC%8Ctype-%E7%94%A8%E6%9D%A5%E6%8C%87%E6%98%8E-num%E7%9A%84%E5%AF%B9%E5%BA%94%E5%8D%95%E4%BD%8D%E3%80%82"><span class="toc-number">1.3.3.</span> <span class="toc-text">(3）date_add(date,interval num type)：对日期时间进行加法运算，date为datetime或date型的起始时间，interval为固定关键词，num为需要增加的时间间隔，type 用来指明 num的对应单位。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%884%EF%BC%89datediff-d1-d2-%EF%BC%9A%E8%AE%A1%E7%AE%97%E7%BB%93%E6%9D%9F%E6%97%A5d1%E5%92%8C%E8%B5%B7%E5%A7%8B%E6%97%A5d2%E4%B9%8B%E9%97%B4%E9%97%B4%E9%9A%94%E7%9A%84%E5%A4%A9%E6%95%B0%E3%80%82curdate-%E8%BF%94%E5%9B%9E%E5%BD%93%E5%89%8D%E6%97%A5%E6%9C%9F%E3%80%82"><span class="toc-number">1.3.4.</span> <span class="toc-text">（4）datediff(d1,d2)：计算结束日d1和起始日d2之间间隔的天数。curdate():返回当前日期。</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4%E3%80%81%E5%88%86%E7%BB%84%E5%90%88%E5%B9%B6%E5%87%BD%E6%95%B0"><span class="toc-number">1.4.</span> <span class="toc-text">4、分组合并函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5%E3%80%81%E9%80%BB%E8%BE%91%E5%87%BD%E6%95%B0"><span class="toc-number">1.5.</span> <span class="toc-text">5、逻辑函数</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%881%EF%BC%89%E7%A9%BA%E5%80%BC%E5%87%BD%E6%95%B0"><span class="toc-number">1.5.1.</span> <span class="toc-text">（1）空值函数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%882%EF%BC%89if%E5%87%BD%E6%95%B0"><span class="toc-number">1.5.2.</span> <span class="toc-text">（2）if函数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%883%EF%BC%89case%E9%80%BB%E8%BE%91%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="toc-number">1.5.3.</span> <span class="toc-text">（3）case逻辑表达式</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6%E3%80%81%E5%BC%80%E7%AA%97%E5%87%BD%E6%95%B0"><span class="toc-number">1.6.</span> <span class="toc-text">6、开窗函数</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%881%EF%BC%89over%E5%87%BD%E6%95%B0"><span class="toc-number">1.6.1.</span> <span class="toc-text">（1）over函数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%882%EF%BC%89partition-by%E5%AD%90%E5%8F%A5"><span class="toc-number">1.6.2.</span> <span class="toc-text">（2）partition by子句</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%883%EF%BC%89order-by%E5%AD%90%E5%8F%A5"><span class="toc-number">1.6.3.</span> <span class="toc-text">（3）order by子句</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%884%EF%BC%89%E5%BA%8F%E5%8F%B7%E5%87%BD%E6%95%B0"><span class="toc-number">1.6.4.</span> <span class="toc-text">（4）序号函数</span></a></li></ol></li></ol></li></ol>
+                    </div>
+                </span>
             </div>
         </div>
         
-        
     </div>
 </aside>
 
 
 
-
-  
-    <article id="post-python-converts-pdfs-to-images" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="2024/08/python-converts-pdfs-to-images/">Python将PDF转为图片</a>
-    </h1>
-  
-
-        
-        <a href="2024/08/python-converts-pdfs-to-images/" class="archive-article-date">
-  	<time datetime="2024-08-19T12:33:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2024-08-19</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>本文介绍如何使用Python将PDF转化为图片格式。</p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python办公自动化</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="2024/08/python-converts-pdfs-to-images/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-python-extracts-text-content-from-pdfs" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="2024/08/python-extracts-text-content-from-pdfs/">Python提取PDF中文字内容</a>
-    </h1>
-  
-
-        
-        <a href="2024/08/python-extracts-text-content-from-pdfs/" class="archive-article-date">
-  	<time datetime="2024-08-19T12:02:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2024-08-19</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>本文介绍如何使用Python的第三方库<code>PyPDF2</code>提取PDF中的文字内容。</p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python办公自动化</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="2024/08/python-extracts-text-content-from-pdfs/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-digital-notetaking-habits" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="2024/08/digital-notetaking-habits/">数字笔记习惯养成</a>
-    </h1>
-  
-
-        
-        <a href="2024/08/digital-notetaking-habits/" class="archive-article-date">
-  	<time datetime="2024-08-15T09:33:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2024-08-15</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>厨师的餐前准备工作，不仅可以提升厨师炒菜的效率，还可以让厨师炒出来的菜更加美味。为了更好的收集整理知识，我们也需要像厨师一样，有一套操作流程。本文分享几个非常实用的习惯。</p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">知识管理</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="2024/08/digital-notetaking-habits/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-psychological-counselor-professional-ethics-of-psychological-counseling-chapter-knowledge-point-compilation" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="2024/08/psychological-counselor-professional-ethics-of-psychological-counseling-chapter-knowledge-point-compilation/">心理咨询师-心理咨询专业伦理-章节知识点整理</a>
-    </h1>
-  
-
-        
-        <a href="2024/08/psychological-counselor-professional-ethics-of-psychological-counseling-chapter-knowledge-point-compilation/" class="archive-article-date">
-  	<time datetime="2024-08-12T09:26:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2024-08-12</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>本文整理心理咨询专业伦理的重要知识点。</p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">心理咨询师考试</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="2024/08/psychological-counselor-professional-ethics-of-psychological-counseling-chapter-knowledge-point-compilation/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-psychological-counselor-psychological-testing-skills-chapter-knowledge-point-compilation" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="2024/08/psychological-counselor-psychological-testing-skills-chapter-knowledge-point-compilation/">心理咨询师-心理测验技能-章节知识点整理</a>
-    </h1>
-  
-
-        
-        <a href="2024/08/psychological-counselor-psychological-testing-skills-chapter-knowledge-point-compilation/" class="archive-article-date">
-  	<time datetime="2024-08-12T09:25:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2024-08-12</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>本文整理心理测验技能的重要知识点。</p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">心理咨询师考试</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="2024/08/psychological-counselor-psychological-testing-skills-chapter-knowledge-point-compilation/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-counselor-counseling-skills-chapter-knowledge-point-compilation" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="2024/08/counselor-counseling-skills-chapter-knowledge-point-compilation/">心理咨询师-心理咨询技能-章节知识点整理</a>
-    </h1>
-  
-
-        
-        <a href="2024/08/counselor-counseling-skills-chapter-knowledge-point-compilation/" class="archive-article-date">
-  	<time datetime="2024-08-12T09:25:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2024-08-12</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>本文整理心理咨询技能的重要知识点。</p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">心理咨询师考试</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="2024/08/counselor-counseling-skills-chapter-knowledge-point-compilation/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-psychological-counselor-psychological-diagnostic-skills-chapter-knowledge-point-compilation" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="2024/08/psychological-counselor-psychological-diagnostic-skills-chapter-knowledge-point-compilation/">心理咨询师-心理诊断技能-章节知识点整理</a>
-    </h1>
-  
-
-        
-        <a href="2024/08/psychological-counselor-psychological-diagnostic-skills-chapter-knowledge-point-compilation/" class="archive-article-date">
-  	<time datetime="2024-08-12T09:25:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2024-08-12</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>本文整理心理诊断技能的重要知识点。</p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">心理咨询师考试</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="2024/08/psychological-counselor-psychological-diagnostic-skills-chapter-knowledge-point-compilation/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-psychological-counselor-introduction-to-psychological-counseling-chapter-knowledge-point-compilation" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="2024/08/psychological-counselor-introduction-to-psychological-counseling-chapter-knowledge-point-compilation/">心理咨询师-心理咨询概论-章节知识点整理</a>
-    </h1>
-  
-
-        
-        <a href="2024/08/psychological-counselor-introduction-to-psychological-counseling-chapter-knowledge-point-compilation/" class="archive-article-date">
-  	<time datetime="2024-08-12T09:25:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2024-08-12</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>本文整理心理咨询概论的重要知识点。</p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">心理咨询师考试</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="2024/08/psychological-counselor-introduction-to-psychological-counseling-chapter-knowledge-point-compilation/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
   
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="page/2/">2</a><a class="page-number" href="page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="page/20/">20</a><a class="extend next" rel="next" href="page/2/">Next &raquo;</a>
-    </nav>
   
+
+  
+
+  
+
+  
+
 
 
           </div>
@@ -926,8 +779,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,

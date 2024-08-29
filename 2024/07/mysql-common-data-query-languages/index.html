@@ -6,14 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://chenzhigao.github.io">
-  <title>程序员肥仔的小站</title>
+  <title>MySQL常用数据查询语言 | 程序员肥仔的小站</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="程序员肥仔的小站">
-<meta property="og:url" content="https://chenzhigao.github.io/index.html">
+  <meta name="description" content="本文介绍MySQL经常用到的数据查询语言。数据查询语言(DQL):用于查询数据库表中的记录，是业务分析人员最常用的语言类型，贯穿信息获取、数据获取、数据理解、数据清洗等多个环节，其主体结构为select &lt;字段名&gt; from &lt;表或视图名&gt; where &lt;查询条件&gt;。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MySQL常用数据查询语言">
+<meta property="og:url" content="https://chenzhigao.github.io/2024/07/mysql-common-data-query-languages/index.html">
 <meta property="og:site_name" content="程序员肥仔的小站">
+<meta property="og:description" content="本文介绍MySQL经常用到的数据查询语言。数据查询语言(DQL):用于查询数据库表中的记录，是业务分析人员最常用的语言类型，贯穿信息获取、数据获取、数据理解、数据清洗等多个环节，其主体结构为select &lt;字段名&gt; from &lt;表或视图名&gt; where &lt;查询条件&gt;。">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2024-07-15T08:49:12.000Z">
+<meta property="article:modified_time" content="2024-08-29T13:49:01.855Z">
 <meta property="article:author" content="chengzhigao">
+<meta property="article:tag" content="SQL">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="程序员肥仔的小站" type="application/atom+xml">
@@ -53,13 +58,13 @@
 		<nav class="header-menu">
 			<ul>
 			
-				<li><a href="index.html">主页</a></li>
+				<li><a href="../../../index.html">主页</a></li>
 	        
-				<li><a href="/tags/%E7%AC%94%E8%AE%B0/">笔记</a></li>
+				<li><a href="../../../tags/%E7%AC%94%E8%AE%B0/">笔记</a></li>
 	        
-				<li><a href="/tags/%E5%8D%9A%E5%AE%A2/">博客</a></li>
+				<li><a href="../../../tags/%E5%8D%9A%E5%AE%A2/">博客</a></li>
 	        
-				<li><a href="/tags/%E6%97%A5%E5%B8%B8/">日常</a></li>
+				<li><a href="../../../tags/%E6%97%A5%E5%B8%B8/">日常</a></li>
 	        
 			</ul>
 		</nav>
@@ -137,13 +142,13 @@
 				<ul style="width: 70%">
 				
 				
-					<li style="width: 25%"><a href="index.html">主页</a></li>
+					<li style="width: 25%"><a href="../../../index.html">主页</a></li>
 		        
-					<li style="width: 25%"><a href="/tags/%E7%AC%94%E8%AE%B0/">笔记</a></li>
+					<li style="width: 25%"><a href="../../../tags/%E7%AC%94%E8%AE%B0/">笔记</a></li>
 		        
-					<li style="width: 25%"><a href="/tags/%E5%8D%9A%E5%AE%A2/">博客</a></li>
+					<li style="width: 25%"><a href="../../../tags/%E5%8D%9A%E5%AE%A2/">博客</a></li>
 		        
-					<li style="width: 25%"><a href="/tags/%E6%97%A5%E5%B8%B8/">日常</a></li>
+					<li style="width: 25%"><a href="../../../tags/%E6%97%A5%E5%B8%B8/">日常</a></li>
 		        
 				</ul>
 			</nav>
@@ -158,32 +163,111 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-python-extracts-the-text-content-in-ppt" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-mysql-common-data-query-languages" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="2024/08/python-extracts-the-text-content-in-ppt/">Python提取PPT中文字内容</a>
+    <h1 class="article-title" itemprop="name">
+      MySQL常用数据查询语言
     </h1>
   
 
         
-        <a href="2024/08/python-extracts-the-text-content-in-ppt/" class="archive-article-date">
-  	<time datetime="2024-08-25T02:56:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2024-08-25</time>
+        <a href="" class="archive-article-date">
+  	<time datetime="2024-07-15T08:49:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2024-07-15</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>本文介绍如何使用Python的第三方库<code>python-pptx</code>提取PPT中的文字内容。</p>
-        
+        <p>本文介绍MySQL经常用到的数据查询语言。数据查询语言(DQL):用于查询数据库表中的记录，是业务分析人员最常用的语言类型，贯穿信息获取、数据获取、数据理解、数据清洗等多个环节，其主体结构为select &lt;字段名&gt; from &lt;表或视图名&gt; where &lt;查询条件&gt;。</p>
+<span id="more"></span>
+<h2 id="数据查询语言"><a href="#数据查询语言" class="headerlink" title="数据查询语言"></a>数据查询语言</h2><h3 id="一、单表查询"><a href="#一、单表查询" class="headerlink" title="一、单表查询"></a>一、单表查询</h3><h4 id="1、基础查询语句"><a href="#1、基础查询语句" class="headerlink" title="1、基础查询语句"></a>1、基础查询语句</h4><h4 id="（1）打印常量值"><a href="#（1）打印常量值" class="headerlink" title="（1）打印常量值"></a>（1）打印常量值</h4><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="comment">-- 单独使用select，打印一行1</span></span><br><span class="line"><span class="keyword">select</span> <span class="number">1</span>;</span><br></pre></td></tr></table></figure>
+<h4 id="（2）公式使用"><a href="#（2）公式使用" class="headerlink" title="（2）公式使用"></a>（2）公式使用</h4><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="comment">-- 单独使用select，打印一行2</span></span><br><span class="line"><span class="keyword">select</span> <span class="number">1</span><span class="operator">+</span><span class="number">1</span>;</span><br></pre></td></tr></table></figure>
+<h3 id="（3）表达式使用"><a href="#（3）表达式使用" class="headerlink" title="（3）表达式使用"></a>（3）表达式使用</h3><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="comment">-- 1+1=3不成立，返回0</span></span><br><span class="line"><span class="keyword">select</span> <span class="number">1</span><span class="operator">+</span><span class="number">1</span><span class="operator">=</span><span class="number">3</span>;</span><br><span class="line"><span class="comment">-- 1+1=2成立，返回1</span></span><br><span class="line"><span class="keyword">select</span> <span class="number">1</span><span class="operator">+</span><span class="number">1</span><span class="operator">=</span><span class="number">2</span>;</span><br></pre></td></tr></table></figure>
+<h4 id="（4）打印字段"><a href="#（4）打印字段" class="headerlink" title="（4）打印字段"></a>（4）打印字段</h4><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="comment">-- 查询empty表中员工及其工资</span></span><br><span class="line"><span class="keyword">select</span> empno,ename,sal <span class="keyword">from</span> emp;</span><br><span class="line"><span class="comment">-- 查询emp表的所有字段</span></span><br><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> emp;</span><br></pre></td></tr></table></figure>
+<h4 id="（5）去重"><a href="#（5）去重" class="headerlink" title="（5）去重"></a>（5）去重</h4><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="comment">-- 单字段去重，查询emp表中的部门</span></span><br><span class="line"><span class="keyword">select</span> <span class="keyword">distinct</span> deptno <span class="keyword">from</span> emp;</span><br><span class="line"><span class="comment">-- 多字段去重，查询emp表中不同的部门有哪些岗位</span></span><br><span class="line"><span class="keyword">select</span> <span class="keyword">distinct</span> deptno,job <span class="keyword">from</span> emp;</span><br></pre></td></tr></table></figure>
+<h4 id="（6）设置别名"><a href="#（6）设置别名" class="headerlink" title="（6）设置别名"></a>（6）设置别名</h4><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="comment">-- 查询每位员工调整后的薪资(基本工资+1000) </span></span><br><span class="line"><span class="comment">-- 使用as设置别名</span></span><br><span class="line"><span class="keyword">select</span> <span class="operator">*</span>,sal<span class="operator">+</span><span class="number">1000</span> <span class="keyword">as</span> 调薪 <span class="keyword">from</span> emp;</span><br></pre></td></tr></table></figure>
+<h4 id="2、条件查询"><a href="#2、条件查询" class="headerlink" title="2、条件查询"></a>2、条件查询</h4><h4 id="（1）单一条件查询"><a href="#（1）单一条件查询" class="headerlink" title="（1）单一条件查询"></a>（1）单一条件查询</h4><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="comment">-- emp表中的领导岗位员工</span></span><br><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> emp <span class="keyword">where</span> job<span class="operator">=</span><span class="string">&#x27;manager&#x27;</span>;</span><br></pre></td></tr></table></figure>
+<h4 id="（2）多条件查询"><a href="#（2）多条件查询" class="headerlink" title="（2）多条件查询"></a>（2）多条件查询</h4><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="comment">-- 查询10号部门和20号部门中sal低于2000的员工信息</span></span><br><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> emp <span class="keyword">where</span> deptno <span class="keyword">in</span> (<span class="number">10</span>,<span class="number">20</span>) <span class="keyword">and</span> sal<span class="operator">&lt;</span><span class="number">2000</span>;</span><br></pre></td></tr></table></figure>
+<h4 id="（3）连续范围查询"><a href="#（3）连续范围查询" class="headerlink" title="（3）连续范围查询"></a>（3）连续范围查询</h4><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="comment">-- 查询基本工资大于或等于2000且小于或等于3000的员工信息</span></span><br><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> emp <span class="keyword">where</span> sal<span class="operator">&gt;=</span><span class="number">2000</span> <span class="keyword">and</span> sal<span class="operator">&lt;=</span><span class="number">3000</span>; </span><br><span class="line"><span class="comment">-- 写法等价，返回相同的结果</span></span><br><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> emp <span class="keyword">where</span> sal <span class="keyword">between</span> <span class="number">2000</span> <span class="keyword">and</span> <span class="number">3000</span>;</span><br></pre></td></tr></table></figure>
+<h4 id="（4）空值查询"><a href="#（4）空值查询" class="headerlink" title="（4）空值查询"></a>（4）空值查询</h4><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="comment">-- 找出emp 表中的最高领导人(没有更高的上级员工) </span></span><br><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> emp <span class="keyword">where</span> mgr <span class="keyword">is</span> <span class="keyword">null</span>;</span><br></pre></td></tr></table></figure>
+<h4 id="（5）模糊查询"><a href="#（5）模糊查询" class="headerlink" title="（5）模糊查询"></a>（5）模糊查询</h4><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="comment">-- 查询姓名不以a开头的员工信息</span></span><br><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> emp <span class="keyword">where</span> ename <span class="keyword">not</span> <span class="keyword">like</span> <span class="string">&#x27;a%&#x27;</span>;</span><br><span class="line"><span class="comment">-- 查询姓名中包含a的员工信息</span></span><br><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> emp <span class="keyword">where</span> ename <span class="keyword">like</span> <span class="string">&#x27;%a%&#x27;</span>;</span><br><span class="line"><span class="comment">-- 查询姓名中第二个字符为a的员工信息</span></span><br><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> emp <span class="keyword">where</span> ename <span class="keyword">like</span> <span class="string">&#x27;_a%&#x27;</span>;</span><br></pre></td></tr></table></figure>
+<h4 id="3、查询结果排序"><a href="#3、查询结果排序" class="headerlink" title="3、查询结果排序"></a>3、查询结果排序</h4><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="comment">-- 查询部门10的员工信息并按sal降序显示</span></span><br><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> emp <span class="keyword">where</span> deptno <span class="operator">=</span> <span class="number">10</span> <span class="keyword">order</span> <span class="keyword">by</span> sal <span class="keyword">desc</span>;</span><br><span class="line"><span class="comment">-- 查询所有员工信息并按deptno升序、sal降序显示 </span></span><br><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> emp <span class="keyword">order</span> <span class="keyword">by</span> deptno,sal <span class="keyword">desc</span>；</span><br></pre></td></tr></table></figure>
+<h4 id="4、限制数量"><a href="#4、限制数量" class="headerlink" title="4、限制数量"></a>4、限制数量</h4><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="comment">-- 查询基本工资最高的前5位员工</span></span><br><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> emp <span class="keyword">order</span> <span class="keyword">by</span> sal <span class="keyword">desc</span> limit <span class="number">5</span>;</span><br><span class="line"><span class="comment">-- 查询基本工资从高到低顺序第6行~第10行的员工</span></span><br><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> emp <span class="keyword">order</span> <span class="keyword">by</span> sal <span class="keyword">desc</span> limit <span class="number">5</span>,<span class="number">5</span>;</span><br></pre></td></tr></table></figure>
+<h4 id="5、聚合函数"><a href="#5、聚合函数" class="headerlink" title="5、聚合函数"></a>5、聚合函数</h4><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="comment">-- 查询 emp 表中员工的最高工资、最低工资、平均工资及工资总和</span></span><br><span class="line"><span class="keyword">select</span> <span class="built_in">max</span>(sal) 最高工资,<span class="built_in">min</span>(sal) 最低工资,<span class="built_in">avg</span>(sal) 平均工资,<span class="built_in">sum</span>(sal) 工资总和 <span class="keyword">from</span> emp;</span><br><span class="line"><span class="comment">-- 返回emp 表的员工总数</span></span><br><span class="line"><span class="keyword">select</span> <span class="built_in">count</span>(<span class="operator">*</span>) 员工总数 <span class="keyword">from</span> emp; </span><br><span class="line"><span class="comment">-- 本质也是统计全表的记录数，与*效果一致 </span></span><br><span class="line"><span class="keyword">select</span> <span class="built_in">count</span>(<span class="number">1</span>) 员工总数 <span class="keyword">from</span> emp;</span><br><span class="line"><span class="comment">-- 返回 emp 表的部门总数</span></span><br><span class="line"><span class="keyword">select</span> <span class="built_in">count</span>(<span class="keyword">distinct</span> deptno) 部门总数 <span class="keyword">from</span> emp; </span><br><span class="line"><span class="comment">-- 统计有奖金的员工人数	</span></span><br><span class="line"><span class="comment">-- 忽略了 null，但是计算了0</span></span><br><span class="line"><span class="keyword">select</span> <span class="built_in">count</span>(comm) <span class="keyword">from</span> emp;</span><br><span class="line"><span class="comment">-- 从业务逻辑上来讲，奖金金额为0的员工不应该视为有奖金的员工</span></span><br><span class="line"><span class="keyword">select</span> <span class="built_in">count</span>(comm) <span class="keyword">from</span> emp <span class="keyword">where</span> comm<span class="operator">!=</span><span class="number">0</span>;</span><br></pre></td></tr></table></figure>
+<h4 id="6、分组查询"><a href="#6、分组查询" class="headerlink" title="6、分组查询"></a>6、分组查询</h4><p> <strong>组内聚合：</strong> </p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="comment">-- 查询公司内部不同奖金档位的获得人数</span></span><br><span class="line"><span class="keyword">select</span> comm,<span class="built_in">count</span>(<span class="operator">*</span>) <span class="keyword">from</span> emp <span class="keyword">group</span> <span class="keyword">by</span> comm;</span><br><span class="line"><span class="comment">-- 查询各部门不同职位的平均工资</span></span><br><span class="line"><span class="keyword">select</span> deptno,job,<span class="built_in">avg</span>(sal) <span class="keyword">as</span> 平均工资 <span class="keyword">from</span> emp <span class="keyword">group</span> <span class="keyword">by</span> deptno,job;</span><br></pre></td></tr></table></figure>
+<p> <strong>分组后筛选：</strong> </p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="comment">-- 查询各部门 clerk 的平均工资 - 用 having 子句筛选</span></span><br><span class="line"><span class="keyword">select</span> deptno, job,<span class="built_in">avg</span>(sal) 平均工资 <span class="keyword">from</span> emp <span class="keyword">group</span> <span class="keyword">by</span> deptno, job <span class="keyword">having</span> job<span class="operator">=</span><span class="string">&#x27;clerk&#x27;</span>;</span><br><span class="line"><span class="comment">-- 用 where 子句筛选</span></span><br><span class="line"><span class="keyword">select</span> deptno,job,<span class="built_in">avg</span>(sal) 平均工资 <span class="keyword">from</span> emp <span class="keyword">where</span> job<span class="operator">=</span><span class="string">&#x27;clerk&#x27;</span> <span class="keyword">group</span> <span class="keyword">by</span> deptno,job;</span><br><span class="line"><span class="comment">-- 查询平均工资大于2000 的部门</span></span><br><span class="line"><span class="keyword">select</span> deptno,<span class="built_in">avg</span>(sal) 平均工资<span class="keyword">from</span> emp <span class="keyword">group</span> <span class="keyword">by</span> deptno <span class="keyword">having</span> <span class="built_in">avg</span>(sal)<span class="operator">&gt;</span><span class="number">2000</span>;</span><br></pre></td></tr></table></figure>
+<h3 id="二、多表查询"><a href="#二、多表查询" class="headerlink" title="二、多表查询"></a>二、多表查询</h3><h4 id="1、纵向合并查询"><a href="#1、纵向合并查询" class="headerlink" title="1、纵向合并查询"></a>1、纵向合并查询</h4><p>纵向合并并不需要指明连接条件，而是单纯地把多个结果集进行纵向追加，因此被合并的多个结果集的字段数量、顺序必须完全一致，而其数据类型必须可以兼容。</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="comment">-- union 去重</span></span><br><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> t1 <span class="keyword">union</span></span><br><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> t2;</span><br><span class="line"><span class="comment">-- union all，其中(a，12)出现了2次 ，不去重</span></span><br><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> t1 <span class="keyword">union</span> <span class="keyword">all</span></span><br><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> t2;</span><br></pre></td></tr></table></figure>
+<h4 id="2、横向连接查询"><a href="#2、横向连接查询" class="headerlink" title="2、横向连接查询"></a>2、横向连接查询</h4><h4 id="（1）内连接"><a href="#（1）内连接" class="headerlink" title="（1）内连接"></a>（1）内连接</h4><p>内连接会按照连接条件，返回两个表中满足条件的记录，本质上是对两个表中记录取交集。<br> <strong>查询manager的姓名、所属部门名称和入职日期：</strong> </p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> ename,dname,job,hiredate <span class="keyword">from</span> emp</span><br><span class="line"><span class="keyword">inner</span> <span class="keyword">join</span> dept <span class="keyword">on</span> emp.deptno<span class="operator">=</span>dept.deptno</span><br><span class="line"><span class="keyword">where</span> job<span class="operator">=</span><span class="string">&#x27;manager&#x27;</span>;</span><br></pre></td></tr></table></figure>
+<h4 id="（2）左外连接"><a href="#（2）左外连接" class="headerlink" title="（2）左外连接"></a>（2）左外连接</h4><p>左外连接会按照连接条件，返回两个表中满足条件的记录，包括左表中的所有记录，右表匹配不到则显示null。左外连接左表作为主表。<br> <strong>查询每位员工的ename,dname,sal:</strong> </p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> ename,dname,sal <span class="keyword">from</span> emp</span><br><span class="line"><span class="keyword">left</span> <span class="keyword">join</span> dept <span class="keyword">on</span> emp.deptno<span class="operator">=</span>dept.deptno;</span><br></pre></td></tr></table></figure>
+<h4 id="（3）右外连接"><a href="#（3）右外连接" class="headerlink" title="（3）右外连接"></a>（3）右外连接</h4><p>右外连接会按照连接条件，返回两个表中满足条件的记录，包括右表中的所有记录，左表匹配不到则显示null。右外连接右表作为主表。<br> <strong>查询各地区的员工数量：</strong> </p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> loc,<span class="built_in">count</span>(empno) 员工数 <span class="keyword">from</span> emp</span><br><span class="line"><span class="keyword">right</span> <span class="keyword">join</span> dept <span class="keyword">on</span> emp.deptno<span class="operator">=</span>dept.deptno</span><br><span class="line"><span class="keyword">group</span> <span class="keyword">by</span> loc;</span><br></pre></td></tr></table></figure>
+<h4 id="（4）全外连接"><a href="#（4）全外连接" class="headerlink" title="（4）全外连接"></a>（4）全外连接</h4><p>全外连接会返回两个表中全部的记录，本质上是对两个表中的记录取并集。匹配不到null填充。</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> t1 <span class="keyword">left</span> <span class="keyword">join</span> t2 <span class="keyword">on</span> t1.公共字段<span class="number">1</span><span class="operator">=</span>t2.公共字段<span class="number">2</span></span><br><span class="line"><span class="keyword">union</span></span><br><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> t1 <span class="keyword">right</span> <span class="keyword">join</span> t2 <span class="keyword">on</span> t1.公共字段<span class="number">1</span><span class="operator">=</span>t2.公共字段<span class="number">2</span>;</span><br></pre></td></tr></table></figure>
+<h4 id="（5）自连接查询"><a href="#（5）自连接查询" class="headerlink" title="（5）自连接查询"></a>（5）自连接查询</h4><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="comment">-- 查询所有员工的姓名及指数领导的姓名</span></span><br><span class="line"><span class="keyword">select</span> 员工表.ename 员工姓名,领导表.ename 领导姓名 <span class="keyword">from</span> emp 员工表 <span class="keyword">left</span> <span class="keyword">join</span> emp 领导表 <span class="keyword">on</span> 员工表.mgr<span class="operator">=</span>领导表.empno;</span><br></pre></td></tr></table></figure>
+<h4 id="（6）多表连接"><a href="#（6）多表连接" class="headerlink" title="（6）多表连接"></a>（6）多表连接</h4><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="comment">-- 查询入职日期早于指数领导的员工的姓名及所属部门</span></span><br><span class="line"><span class="keyword">select</span> 员工表.empno,员工表.ename,dname <span class="keyword">from</span> emp 员工表</span><br><span class="line"><span class="keyword">left</span> <span class="keyword">join</span> emp 领导表 <span class="keyword">on</span> 员工表.mgr<span class="operator">=</span>领导表.empno</span><br><span class="line"><span class="keyword">left</span> <span class="keyword">join</span> dept <span class="keyword">on</span> 员工表.deptno<span class="operator">=</span>dept.deptno</span><br><span class="line"><span class="keyword">where</span> 员工表.hiredate<span class="operator">&lt;</span>领导表.hiredate;</span><br></pre></td></tr></table></figure>
+<h4 id="（7）交叉连接"><a href="#（7）交叉连接" class="headerlink" title="（7）交叉连接"></a>（7）交叉连接</h4><p>M*N条记录。</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> t1,t2;</span><br><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> t1 <span class="keyword">cross</span> <span class="keyword">join</span> t2;</span><br></pre></td></tr></table></figure>
+<h3 id="三、子查询"><a href="#三、子查询" class="headerlink" title="三、子查询"></a>三、子查询</h3><p>在日常业务中，分析人员要想获得最终分析所需的数据，需要对企业数据库中的数据进行多次处理，因此经常会遇到 <strong>单次查询无法找出某些需要的数据或者查询逻辑异常复杂的情况</strong> 。此时我们可以将单次完整查询所返回的虚拟结果集视为一个临时表，并对这个临时表进行再次的查询和处理，这就是子查询的作用。子查询又称为嵌套查询，指在一个查询语句中包含另一个或多个完整的查询语句。</p>
+<h4 id="1、子查询的语法规则"><a href="#1、子查询的语法规则" class="headerlink" title="1、子查询的语法规则"></a>1、子查询的语法规则</h4><p>(1)子查询必须用圆括号括起来。<br>(2)子查询最多可以嵌套到255层(个别查询可能会不支持255层的嵌套)。<br>(3)执行顺序由内到外，先执行内部的子查询，再执行外部的主查询。<br>(4)若子查询返回的结果集在主查询中作为一个表，则必须添加表别名;若需要引用表子查询中的计算字段，则必须添加列别名才可以引用。</p>
+<h4 id="2、子查询分类"><a href="#2、子查询分类" class="headerlink" title="2、子查询分类"></a>2、子查询分类</h4><p>按照子查询返回的结果不同，子查询可分为 <strong>标量子查询</strong> (返回的结果是一个单行单列的数据)、 <strong>行子查询</strong> (返回的结果是一条有多个字段的记录)、 <strong>列子查询</strong> (返回的结果是包含多条记录的单个字段)及 <strong>表子查询</strong> (返回的结果是一个拥有多个字段和多条记录的临时表)。<br>子查询根据需求的不同，可以搭配不同子句使用，如果需要将子查询返回的结果作为主查询的计算字段，那么可以将子查询放在select子句中；如果需要将子查询返回的结果作为主查询的筛选条件，那么可以将子查询放在where或having子句中；如果需要将子查询返回的结果作为主查询的一个表，那么可以将子查询放在 from 或 join 子句中。</p>
+<h4 id="3、select子查询"><a href="#3、select子查询" class="headerlink" title="3、select子查询"></a>3、select子查询</h4><p> <strong>查询各部门员工人数占比：</strong> </p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="comment">-- 第1步，查询整体员工数量</span></span><br><span class="line"><span class="keyword">select</span> <span class="built_in">count</span>(<span class="operator">*</span>) <span class="keyword">from</span> emp;</span><br><span class="line"><span class="comment">-- 第2步，将整体员工数量作为子查询来查询各部门员工人数占比</span></span><br><span class="line"><span class="keyword">select</span> deptno,<span class="built_in">count</span>(<span class="operator">*</span>) 员工人数,<span class="built_in">count</span>(<span class="operator">*</span>)<span class="operator">/</span>(<span class="keyword">select</span> <span class="built_in">count</span>(<span class="operator">*</span>) <span class="keyword">from</span> emp) 员工人数占比 <span class="keyword">from</span> emp <span class="keyword">group</span> <span class="keyword">by</span> deptno;</span><br></pre></td></tr></table></figure>
+<h4 id="4、from-join子查询"><a href="#4、from-join子查询" class="headerlink" title="4、from&#x2F;join子查询"></a>4、from&#x2F;join子查询</h4><p> <strong>查询各部门最高工资的员工：</strong> </p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="comment">-- 第1步，查询各部门最高工资</span></span><br><span class="line"><span class="keyword">select</span> deptno,<span class="built_in">max</span>(sal) <span class="keyword">from</span> emp <span class="keyword">group</span> <span class="keyword">by</span> deptno;</span><br><span class="line"><span class="comment">-- 第2步，找出所有部门内员工工资等于最高工资的员工</span></span><br><span class="line"><span class="keyword">select</span> empno,ename,sal,emp.deptno <span class="keyword">from</span> emp <span class="keyword">left</span> <span class="keyword">join</span> (<span class="keyword">select</span> deptno,<span class="built_in">max</span>(sal) <span class="keyword">as</span> 最高工资 <span class="keyword">from</span> emp <span class="keyword">group</span> <span class="keyword">by</span> deptno) <span class="keyword">as</span> t</span><br><span class="line"><span class="keyword">on</span> emp.deptno <span class="operator">=</span> t.deptno</span><br><span class="line"><span class="keyword">where</span> sal <span class="operator">=</span> 最高工资;</span><br></pre></td></tr></table></figure>
+
+<h4 id="5、where或having子查询"><a href="#5、where或having子查询" class="headerlink" title="5、where或having子查询"></a>5、where或having子查询</h4><h4 id="（1）比较操作字符"><a href="#（1）比较操作字符" class="headerlink" title="（1）比较操作字符"></a>（1）比较操作字符</h4><p> <strong>查询基本工资高于公司平均工资的员工信息：</strong> </p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="comment">-- 第1步，查询公司所有员工的平均工资</span></span><br><span class="line"><span class="keyword">select</span> <span class="built_in">avg</span>(sal) <span class="keyword">from</span> emp;</span><br><span class="line"><span class="comment">-- 第2步，使用比较操作字符将员工工资与子查询返回的平均工资进行比较</span></span><br><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> emp <span class="keyword">where</span> sal<span class="operator">&gt;</span>(<span class="keyword">select</span> <span class="built_in">avg</span>(sal) <span class="keyword">from</span> emp);</span><br></pre></td></tr></table></figure>
+<p>查询和smith同部门、同职位的员工：</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="comment">-- 第1步，查询smith的部门和职位</span></span><br><span class="line"><span class="keyword">select</span> deptno,job <span class="keyword">from</span> emp <span class="keyword">where</span> ename<span class="operator">=</span><span class="string">&#x27;smith&#x27;</span>;</span><br><span class="line"><span class="comment">-- 第2步，使用比较操作字符进行子查询</span></span><br><span class="line"><span class="keyword">select</span> empno,ename,deptno <span class="keyword">from</span> emp</span><br><span class="line"><span class="keyword">where</span> (deptno,job) <span class="operator">=</span> (<span class="keyword">select</span> deptno,job <span class="keyword">from</span> emp <span class="keyword">where</span> ename<span class="operator">=</span><span class="string">&#x27;smith&#x27;</span>) <span class="keyword">and</span> ename<span class="operator">&lt;&gt;</span><span class="string">&#x27;smith&#x27;</span>;</span><br></pre></td></tr></table></figure>
+<h4 id="（2）in关键字"><a href="#（2）in关键字" class="headerlink" title="（2）in关键字"></a>（2）in关键字</h4><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="comment">-- 查询各部门最高工资的员工</span></span><br><span class="line"><span class="keyword">select</span> empno,empname,sal,deptno <span class="keyword">from</span> emp <span class="keyword">where</span> (depno,sal) <span class="keyword">in</span> (<span class="keyword">select</span> depno,<span class="built_in">max</span>(sal) <span class="keyword">from</span> emp <span class="keyword">group</span> <span class="keyword">by</span> deptno);</span><br></pre></td></tr></table></figure>
+<p> <strong>查询普通员工的工资等级：</strong> </p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="comment">-- 第1步，查询那些人不是普通员工，即领导的工号</span></span><br><span class="line"><span class="keyword">select</span> <span class="keyword">distinct</span> mgr <span class="keyword">from</span> emp <span class="keyword">where</span> mgr <span class="keyword">is</span> <span class="keyword">not</span> <span class="keyword">null</span>;</span><br><span class="line"><span class="comment">-- 第2步，将领导的工号作为子查询来筛选数据</span></span><br><span class="line"><span class="keyword">select</span> empno,ename,sal <span class="keyword">from</span> emp <span class="keyword">where</span> empno <span class="keyword">not</span> <span class="keyword">in</span> (<span class="keyword">select</span> <span class="keyword">distinct</span> mgr <span class="keyword">from</span> emp <span class="keyword">where</span> mgr <span class="keyword">is</span> <span class="keyword">not</span> <span class="keyword">null</span>);</span><br></pre></td></tr></table></figure>
+<h4 id="（3）exists关键字"><a href="#（3）exists关键字" class="headerlink" title="（3）exists关键字"></a>（3）exists关键字</h4><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span><span class="operator">*</span> <span class="keyword">from</span> emp <span class="keyword">where</span> <span class="keyword">exists</span> (<span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> dept <span class="keyword">where</span> deptno<span class="operator">=</span><span class="number">20</span>) <span class="keyword">and</span> deptno <span class="operator">=</span><span class="number">20</span>; </span><br></pre></td></tr></table></figure>
+<p> <strong>需要强调的是，exists后接的子查询并不对数据进行筛选，只决定外查询执不执行。</strong> </p>
+<h4 id="（4）any-some关键字"><a href="#（4）any-some关键字" class="headerlink" title="（4）any&#x2F;some关键字"></a>（4）any&#x2F;some关键字</h4><p>查询基本工资高于30号部门员工的员工信息：</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="comment">-- 第1步，查询30号部门所有员工的基本工资</span></span><br><span class="line"><span class="keyword">select</span> sal <span class="keyword">from</span> emp <span class="keyword">where</span> deptno<span class="operator">=</span><span class="number">30</span>;</span><br><span class="line"><span class="comment">-- 第2步，将30号部门所有员工的基本工资作为资产寻对记录进行筛选</span></span><br><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> emp <span class="keyword">where</span> sal<span class="operator">&gt;</span><span class="keyword">any</span>(<span class="keyword">select</span> sal <span class="keyword">from</span> emp <span class="keyword">where</span> deptno<span class="operator">=</span><span class="number">30</span>) <span class="keyword">and</span> deptno<span class="operator">&lt;&gt;</span><span class="number">30</span>;</span><br></pre></td></tr></table></figure>
+<h4 id="（5）all关键字"><a href="#（5）all关键字" class="headerlink" title="（5）all关键字"></a>（5）all关键字</h4><p>查询基本工资高于30号部门所有员工的员工信息：</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="comment">-- 第1步，查询30号部门所有员工的基本工资</span></span><br><span class="line"><span class="keyword">select</span> sal <span class="keyword">from</span> emp <span class="keyword">where</span> deptno<span class="operator">=</span><span class="number">30</span>;</span><br><span class="line"><span class="comment">-- 第2步，将30号部门所有员工的基本工资作为资产寻对记录进行筛选</span></span><br><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> emp <span class="keyword">where</span> sal<span class="operator">&gt;</span><span class="keyword">all</span>(<span class="keyword">select</span> sal <span class="keyword">from</span> emp <span class="keyword">where</span> deptno<span class="operator">=</span><span class="number">30</span>) <span class="keyword">and</span> deptno<span class="operator">&lt;&gt;</span><span class="number">30</span>;</span><br></pre></td></tr></table></figure>
+
+
       
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/wechat.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -194,7 +278,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python办公自动化</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">SQL</a>
         		</li>
       		
 		</ul>
@@ -203,16 +287,84 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="2024/08/python-extracts-the-text-content-in-ppt/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://chenzhigao.github.io/2024/07/mysql-common-data-query-languages/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="../mysql-data-type/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          MySQL数据类型
+        
+      </div>
+    </a>
+  
+  
+    <a href="../mysql-common-data-manipulation-languages/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">MySQL常用数据操作语言</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -227,684 +379,34 @@
         </div>
         
         
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-python-merge-pdf-files" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="2024/08/python-merge-pdf-files/">Python合并PDF文件</a>
-    </h1>
-  
-
-        
-        <a href="2024/08/python-merge-pdf-files/" class="archive-article-date">
-  	<time datetime="2024-08-20T12:35:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2024-08-20</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>本文介绍如何使用Python将多个pdf文件合并为一个总的pdf文件。</p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python办公自动化</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="2024/08/python-merge-pdf-files/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E6%9F%A5%E8%AF%A2%E8%AF%AD%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text">数据查询语言</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E5%8D%95%E8%A1%A8%E6%9F%A5%E8%AF%A2"><span class="toc-number">1.1.</span> <span class="toc-text">一、单表查询</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1%E3%80%81%E5%9F%BA%E7%A1%80%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5"><span class="toc-number">1.1.1.</span> <span class="toc-text">1、基础查询语句</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%881%EF%BC%89%E6%89%93%E5%8D%B0%E5%B8%B8%E9%87%8F%E5%80%BC"><span class="toc-number">1.1.2.</span> <span class="toc-text">（1）打印常量值</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%882%EF%BC%89%E5%85%AC%E5%BC%8F%E4%BD%BF%E7%94%A8"><span class="toc-number">1.1.3.</span> <span class="toc-text">（2）公式使用</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%883%EF%BC%89%E8%A1%A8%E8%BE%BE%E5%BC%8F%E4%BD%BF%E7%94%A8"><span class="toc-number">1.2.</span> <span class="toc-text">（3）表达式使用</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%884%EF%BC%89%E6%89%93%E5%8D%B0%E5%AD%97%E6%AE%B5"><span class="toc-number">1.2.1.</span> <span class="toc-text">（4）打印字段</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%885%EF%BC%89%E5%8E%BB%E9%87%8D"><span class="toc-number">1.2.2.</span> <span class="toc-text">（5）去重</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%886%EF%BC%89%E8%AE%BE%E7%BD%AE%E5%88%AB%E5%90%8D"><span class="toc-number">1.2.3.</span> <span class="toc-text">（6）设置别名</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2%E3%80%81%E6%9D%A1%E4%BB%B6%E6%9F%A5%E8%AF%A2"><span class="toc-number">1.2.4.</span> <span class="toc-text">2、条件查询</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%881%EF%BC%89%E5%8D%95%E4%B8%80%E6%9D%A1%E4%BB%B6%E6%9F%A5%E8%AF%A2"><span class="toc-number">1.2.5.</span> <span class="toc-text">（1）单一条件查询</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%882%EF%BC%89%E5%A4%9A%E6%9D%A1%E4%BB%B6%E6%9F%A5%E8%AF%A2"><span class="toc-number">1.2.6.</span> <span class="toc-text">（2）多条件查询</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%883%EF%BC%89%E8%BF%9E%E7%BB%AD%E8%8C%83%E5%9B%B4%E6%9F%A5%E8%AF%A2"><span class="toc-number">1.2.7.</span> <span class="toc-text">（3）连续范围查询</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%884%EF%BC%89%E7%A9%BA%E5%80%BC%E6%9F%A5%E8%AF%A2"><span class="toc-number">1.2.8.</span> <span class="toc-text">（4）空值查询</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%885%EF%BC%89%E6%A8%A1%E7%B3%8A%E6%9F%A5%E8%AF%A2"><span class="toc-number">1.2.9.</span> <span class="toc-text">（5）模糊查询</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3%E3%80%81%E6%9F%A5%E8%AF%A2%E7%BB%93%E6%9E%9C%E6%8E%92%E5%BA%8F"><span class="toc-number">1.2.10.</span> <span class="toc-text">3、查询结果排序</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4%E3%80%81%E9%99%90%E5%88%B6%E6%95%B0%E9%87%8F"><span class="toc-number">1.2.11.</span> <span class="toc-text">4、限制数量</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5%E3%80%81%E8%81%9A%E5%90%88%E5%87%BD%E6%95%B0"><span class="toc-number">1.2.12.</span> <span class="toc-text">5、聚合函数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6%E3%80%81%E5%88%86%E7%BB%84%E6%9F%A5%E8%AF%A2"><span class="toc-number">1.2.13.</span> <span class="toc-text">6、分组查询</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%A4%9A%E8%A1%A8%E6%9F%A5%E8%AF%A2"><span class="toc-number">1.3.</span> <span class="toc-text">二、多表查询</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1%E3%80%81%E7%BA%B5%E5%90%91%E5%90%88%E5%B9%B6%E6%9F%A5%E8%AF%A2"><span class="toc-number">1.3.1.</span> <span class="toc-text">1、纵向合并查询</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2%E3%80%81%E6%A8%AA%E5%90%91%E8%BF%9E%E6%8E%A5%E6%9F%A5%E8%AF%A2"><span class="toc-number">1.3.2.</span> <span class="toc-text">2、横向连接查询</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%881%EF%BC%89%E5%86%85%E8%BF%9E%E6%8E%A5"><span class="toc-number">1.3.3.</span> <span class="toc-text">（1）内连接</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%882%EF%BC%89%E5%B7%A6%E5%A4%96%E8%BF%9E%E6%8E%A5"><span class="toc-number">1.3.4.</span> <span class="toc-text">（2）左外连接</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%883%EF%BC%89%E5%8F%B3%E5%A4%96%E8%BF%9E%E6%8E%A5"><span class="toc-number">1.3.5.</span> <span class="toc-text">（3）右外连接</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%884%EF%BC%89%E5%85%A8%E5%A4%96%E8%BF%9E%E6%8E%A5"><span class="toc-number">1.3.6.</span> <span class="toc-text">（4）全外连接</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%885%EF%BC%89%E8%87%AA%E8%BF%9E%E6%8E%A5%E6%9F%A5%E8%AF%A2"><span class="toc-number">1.3.7.</span> <span class="toc-text">（5）自连接查询</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%886%EF%BC%89%E5%A4%9A%E8%A1%A8%E8%BF%9E%E6%8E%A5"><span class="toc-number">1.3.8.</span> <span class="toc-text">（6）多表连接</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%887%EF%BC%89%E4%BA%A4%E5%8F%89%E8%BF%9E%E6%8E%A5"><span class="toc-number">1.3.9.</span> <span class="toc-text">（7）交叉连接</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E5%AD%90%E6%9F%A5%E8%AF%A2"><span class="toc-number">1.4.</span> <span class="toc-text">三、子查询</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1%E3%80%81%E5%AD%90%E6%9F%A5%E8%AF%A2%E7%9A%84%E8%AF%AD%E6%B3%95%E8%A7%84%E5%88%99"><span class="toc-number">1.4.1.</span> <span class="toc-text">1、子查询的语法规则</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2%E3%80%81%E5%AD%90%E6%9F%A5%E8%AF%A2%E5%88%86%E7%B1%BB"><span class="toc-number">1.4.2.</span> <span class="toc-text">2、子查询分类</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3%E3%80%81select%E5%AD%90%E6%9F%A5%E8%AF%A2"><span class="toc-number">1.4.3.</span> <span class="toc-text">3、select子查询</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4%E3%80%81from-join%E5%AD%90%E6%9F%A5%E8%AF%A2"><span class="toc-number">1.4.4.</span> <span class="toc-text">4、from&#x2F;join子查询</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5%E3%80%81where%E6%88%96having%E5%AD%90%E6%9F%A5%E8%AF%A2"><span class="toc-number">1.4.5.</span> <span class="toc-text">5、where或having子查询</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%881%EF%BC%89%E6%AF%94%E8%BE%83%E6%93%8D%E4%BD%9C%E5%AD%97%E7%AC%A6"><span class="toc-number">1.4.6.</span> <span class="toc-text">（1）比较操作字符</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%882%EF%BC%89in%E5%85%B3%E9%94%AE%E5%AD%97"><span class="toc-number">1.4.7.</span> <span class="toc-text">（2）in关键字</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%883%EF%BC%89exists%E5%85%B3%E9%94%AE%E5%AD%97"><span class="toc-number">1.4.8.</span> <span class="toc-text">（3）exists关键字</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%884%EF%BC%89any-some%E5%85%B3%E9%94%AE%E5%AD%97"><span class="toc-number">1.4.9.</span> <span class="toc-text">（4）any&#x2F;some关键字</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%885%EF%BC%89all%E5%85%B3%E9%94%AE%E5%AD%97"><span class="toc-number">1.4.10.</span> <span class="toc-text">（5）all关键字</span></a></li></ol></li></ol></li></ol>
+                    </div>
+                </span>
             </div>
         </div>
         
-        
     </div>
 </aside>
 
 
 
-
-  
-    <article id="post-python-converts-pdfs-to-images" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="2024/08/python-converts-pdfs-to-images/">Python将PDF转为图片</a>
-    </h1>
-  
-
-        
-        <a href="2024/08/python-converts-pdfs-to-images/" class="archive-article-date">
-  	<time datetime="2024-08-19T12:33:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2024-08-19</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>本文介绍如何使用Python将PDF转化为图片格式。</p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python办公自动化</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="2024/08/python-converts-pdfs-to-images/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-python-extracts-text-content-from-pdfs" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="2024/08/python-extracts-text-content-from-pdfs/">Python提取PDF中文字内容</a>
-    </h1>
-  
-
-        
-        <a href="2024/08/python-extracts-text-content-from-pdfs/" class="archive-article-date">
-  	<time datetime="2024-08-19T12:02:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2024-08-19</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>本文介绍如何使用Python的第三方库<code>PyPDF2</code>提取PDF中的文字内容。</p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python办公自动化</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="2024/08/python-extracts-text-content-from-pdfs/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-digital-notetaking-habits" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="2024/08/digital-notetaking-habits/">数字笔记习惯养成</a>
-    </h1>
-  
-
-        
-        <a href="2024/08/digital-notetaking-habits/" class="archive-article-date">
-  	<time datetime="2024-08-15T09:33:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2024-08-15</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>厨师的餐前准备工作，不仅可以提升厨师炒菜的效率，还可以让厨师炒出来的菜更加美味。为了更好的收集整理知识，我们也需要像厨师一样，有一套操作流程。本文分享几个非常实用的习惯。</p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">知识管理</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="2024/08/digital-notetaking-habits/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-psychological-counselor-professional-ethics-of-psychological-counseling-chapter-knowledge-point-compilation" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="2024/08/psychological-counselor-professional-ethics-of-psychological-counseling-chapter-knowledge-point-compilation/">心理咨询师-心理咨询专业伦理-章节知识点整理</a>
-    </h1>
-  
-
-        
-        <a href="2024/08/psychological-counselor-professional-ethics-of-psychological-counseling-chapter-knowledge-point-compilation/" class="archive-article-date">
-  	<time datetime="2024-08-12T09:26:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2024-08-12</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>本文整理心理咨询专业伦理的重要知识点。</p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">心理咨询师考试</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="2024/08/psychological-counselor-professional-ethics-of-psychological-counseling-chapter-knowledge-point-compilation/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-psychological-counselor-psychological-testing-skills-chapter-knowledge-point-compilation" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="2024/08/psychological-counselor-psychological-testing-skills-chapter-knowledge-point-compilation/">心理咨询师-心理测验技能-章节知识点整理</a>
-    </h1>
-  
-
-        
-        <a href="2024/08/psychological-counselor-psychological-testing-skills-chapter-knowledge-point-compilation/" class="archive-article-date">
-  	<time datetime="2024-08-12T09:25:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2024-08-12</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>本文整理心理测验技能的重要知识点。</p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">心理咨询师考试</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="2024/08/psychological-counselor-psychological-testing-skills-chapter-knowledge-point-compilation/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-counselor-counseling-skills-chapter-knowledge-point-compilation" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="2024/08/counselor-counseling-skills-chapter-knowledge-point-compilation/">心理咨询师-心理咨询技能-章节知识点整理</a>
-    </h1>
-  
-
-        
-        <a href="2024/08/counselor-counseling-skills-chapter-knowledge-point-compilation/" class="archive-article-date">
-  	<time datetime="2024-08-12T09:25:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2024-08-12</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>本文整理心理咨询技能的重要知识点。</p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">心理咨询师考试</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="2024/08/counselor-counseling-skills-chapter-knowledge-point-compilation/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-psychological-counselor-psychological-diagnostic-skills-chapter-knowledge-point-compilation" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="2024/08/psychological-counselor-psychological-diagnostic-skills-chapter-knowledge-point-compilation/">心理咨询师-心理诊断技能-章节知识点整理</a>
-    </h1>
-  
-
-        
-        <a href="2024/08/psychological-counselor-psychological-diagnostic-skills-chapter-knowledge-point-compilation/" class="archive-article-date">
-  	<time datetime="2024-08-12T09:25:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2024-08-12</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>本文整理心理诊断技能的重要知识点。</p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">心理咨询师考试</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="2024/08/psychological-counselor-psychological-diagnostic-skills-chapter-knowledge-point-compilation/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-psychological-counselor-introduction-to-psychological-counseling-chapter-knowledge-point-compilation" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="2024/08/psychological-counselor-introduction-to-psychological-counseling-chapter-knowledge-point-compilation/">心理咨询师-心理咨询概论-章节知识点整理</a>
-    </h1>
-  
-
-        
-        <a href="2024/08/psychological-counselor-introduction-to-psychological-counseling-chapter-knowledge-point-compilation/" class="archive-article-date">
-  	<time datetime="2024-08-12T09:25:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2024-08-12</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>本文整理心理咨询概论的重要知识点。</p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">心理咨询师考试</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="2024/08/psychological-counselor-introduction-to-psychological-counseling-chapter-knowledge-point-compilation/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
   
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="page/2/">2</a><a class="page-number" href="page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="page/20/">20</a><a class="extend next" rel="next" href="page/2/">Next &raquo;</a>
-    </nav>
   
+
+  
+
+  
+
+  
+
 
 
           </div>
@@ -926,8 +428,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
